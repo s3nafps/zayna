@@ -179,5 +179,17 @@
   "preview": {
     "title": "Aperçu des composants",
     "fixtureNote": "Données de test uniquement. Aucun contenu réel."
+  },
+  "store": {
+    "home": {
+      "title": "Nouveautés",
+      "mockNotice": "Catalogue de démonstration : produits fictifs, pas les données Shopify.",
+      "unavailable": "Le catalogue n’est pas encore connecté.",
+      "empty": "Aucun produit pour le moment."
+    },
+    "product": {
+      "material": "Matière",
+      "back": "Retour à la boutique"
+    }
   }
 }

@@ -25,6 +25,7 @@ pnpm test:e2e         # Playwright, desktop and Pixel 7 projects. Needs a build 
 pnpm db:migrate       # prisma migrate deploy (uses DATABASE_URL from .env)
 pnpm db:seed          # 58 wilayas, the owner account from ADMIN_SEED_*; communes when data/communes.json exists
 ZAYNA_SEED_FIXTURES=1 pnpm db:seed:fixtures   # dev only: 48 fake orders for the dashboard and orders list
+CATALOG_SOURCE=mock  # storefront catalogue: mock (dev only, made-up products) or none. Unset means mock outside production
 pnpm android:sync     # writes www/app-config.js from APP_URL, then cap sync android
 pnpm android:debug   # debug APK at android/app/build/outputs/apk/debug/app-debug.apk (needs the Android SDK)
 pnpm worker           # Redis reachability check. Real jobs arrive in Phase 4

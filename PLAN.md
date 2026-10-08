@@ -212,6 +212,7 @@ The storefront shows these claims to customers, so they need to be confirmed. Se
 - **D1. Shopify (blocks Phase 2).**
   - **Done:** Dev Dashboard app "Zayna COD Manager" is created and installed on the store `zayna-bijoux-dz`. Scopes: read/write orders, customers and fulfillments, plus read-only Storefront product listings and inventory.
   - **Credentials:** the owner shared the app's client ID and secret in chat. They are not in the repo and not in this sandbox. Keep them in a password manager and in the deployment environment. The owner has been advised to rotate the secret, because it was pasted into a chat.
+  - **Interim mock:** until the Storefront token is set, a development-only mock catalogue (`CATALOG_SOURCE=mock`, off in production) stands in for the catalog. Its products are made up and labelled as demo data. It is not Shopify data.
   - **Still needed:**
     1. A Storefront API token. The owner couldn't find it under the app's settings. Brief §8 says to issue it from the Headless sales channel, so that's the next place to look. The Admin API covers orders, so Phase 2 checkout can start without it. Catalog reads need it.
     2. ~~The exact `.myshopify.com` domain.~~ **Confirmed by the owner: `zayna-bijoux-dz.myshopify.com`.**
