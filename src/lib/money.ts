@@ -11,18 +11,31 @@ export type FormatMoneyOptions = {
   arabicDigits?: boolean;
 };
 
-// 4500 becomes "4 500 DA", with a non-breaking space as the thousands separator and before the currency.
-// Arabic uses "د.ج" as the currency suffix.
-export function formatDzd(amount: number, options: FormatMoneyOptions = {}): string {
+export type MoneyParts = {
+  // The number, grouped with non-breaking spaces. Render it isolated LTR so bidi cannot reorder digits.
+  digits: string;
+  // "DA" for French and English, "د.ج" for Arabic.
+  currency: string;
+};
+
+export function formatDzdParts(amount: number, options: FormatMoneyOptions = {}): MoneyParts {
   if (!Number.isSafeInteger(amount)) {
     throw new RangeError(`Money must be a safe integer DZD amount, received ${amount}`);
   }
   const { locale = "fr", arabicDigits = false } = options;
   const sign = amount < 0 ? "-" : "";
   const grouped = String(Math.abs(amount)).replace(/\B(?=(\d{3})+(?!\d))/g, NBSP);
-  const digits = arabicDigits
+  const localized = arabicDigits
     ? grouped.replace(/\d/g, (digit) => ARABIC_INDIC_DIGITS[Number(digit)] ?? digit)
     : grouped;
-  const currency = locale === "ar" ? "د.ج" : "DA";
-  return `${sign}${digits}${NBSP}${currency}`;
+  return {
+    digits: `${sign}${localized}`,
+    currency: locale === "ar" ? "د.ج" : "DA",
+  };
+}
+
+// 4500 becomes "4 500 DA", with a non-breaking space as the thousands separator and before the currency.
+export function formatDzd(amount: number, options: FormatMoneyOptions = {}): string {
+  const { digits, currency } = formatDzdParts(amount, options);
+  return `${digits}${NBSP}${currency}`;
 }

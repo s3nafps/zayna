@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formatDzd } from "./money";
+import { formatDzd, formatDzdParts } from "./money";
 
 const NBSP = " ";
 
@@ -33,5 +33,14 @@ describe("formatDzd", () => {
     expect(() => formatDzd(12.5)).toThrow(RangeError);
     expect(() => formatDzd(Number.NaN)).toThrow(RangeError);
     expect(() => formatDzd(Number.POSITIVE_INFINITY)).toThrow(RangeError);
+  });
+});
+
+describe("formatDzdParts", () => {
+  it("splits the number from the currency so the number can be isolated", () => {
+    expect(formatDzdParts(4500, { locale: "ar", arabicDigits: true })).toEqual({
+      digits: `٤${NBSP}٥٠٠`,
+      currency: "د.ج",
+    });
   });
 });
