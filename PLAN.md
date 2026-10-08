@@ -24,14 +24,17 @@ The owner asked for two things beyond the phases below: the **Android app** and 
 - **E3. Dashboard scope.** The Phase 3 dashboard: KPIs, a 7-day chart, top wilayas, the open-orders alert list, and a mobile seller layout with the COD pipeline. Quick actions need an orders list, so a read-only orders list with status tabs is built too. The confirm, edit and ship workflow stays in Phase 3.
 - **E4. Live data.** The dashboard reads the database. It shows real numbers once Shopify webhooks (Phase 3) fill it. For local development and screenshots, a dev-only fixture seed creates clearly fake orders. The UI contains no mock numbers.
 
+- **E5. Lint tooling.** ESLint is upgraded to 10.12.0, which is in support. `eslint-config-next` still declares ESLint 9 as its peer maximum, so the install prints one peer warning. Lint passes. It is a follow-up when eslint-config-next supports ESLint 10.
+- **E6. Android build.** The debug APK is built from the committed native project. Release signing needs a keystore that the owner holds, and a Play Store listing needs a developer account. Neither is in the sandbox. APP_URL must be HTTPS. The APK opens the not-configured screen until APP_URL is set in CI or locally.
+
 **Tasks:**
 
 - [x] E-auth: scrypt password hashing, HMAC session cookie, login and logout, role helper, owner seeded from `ADMIN_SEED_*`, login rate limit
 - [x] E-dash: KPI, 7-day, top-wilaya and alert metrics as pure functions, with tests (Africa/Algiers day boundaries)
 - [x] E-dash: desktop dashboard at `/admin` (1024px and up) and the mobile seller layout (COD pipeline and quick actions)
 - [x] E-orders: read-only orders list with status tabs, so the dashboard links work
-- [ ] E-android: Capacitor shell for the back-office, app name and icon, back-button handling, offline screen
-- [ ] E-android: Android SDK installed in the sandbox, debug APK built with Gradle, Android job in CI
+- [x] E-android: Capacitor 8.5.3 shell for the back-office (`dz.zayna.admin`), app name "Zayna", Android back button (`NativeBackButton`), offline and not-configured screen in the bundled loader. The loader opens `APP_URL/admin`. The app icon is still Capacitor's default.
+- [x] E-android: Android SDK (platform 36, build-tools 36.0.0) installed in the sandbox. Debug APK built with Gradle 8.14.3, and it passes the package, SDK and permission checks (only INTERNET). Android job added to CI, not run on GitHub yet. Not run on a device or emulator: this sandbox has no KVM.
 - [ ] E-android: release signing and the Play Store listing need a keystore and developer account from the owner (not done)
 
 ## Phase 0 — Planning (this PR)

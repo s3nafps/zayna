@@ -3,9 +3,23 @@
 import { createPrismaClient } from "../src/lib/prisma";
 
 const STATUSES = [
-  "NEW", "NEW", "NEW", "CONFIRMED", "PREPARING", "SHIPPED", "IN_TRANSIT", "OUT_FOR_DELIVERY",
-  "AT_STOPDESK", "DELIVERED", "DELIVERED", "DELIVERED", "COD_SETTLED", "RETURNED", "FAILED",
-  "UNREACHABLE", "CANCELLED",
+  "NEW",
+  "NEW",
+  "NEW",
+  "CONFIRMED",
+  "PREPARING",
+  "SHIPPED",
+  "IN_TRANSIT",
+  "OUT_FOR_DELIVERY",
+  "AT_STOPDESK",
+  "DELIVERED",
+  "DELIVERED",
+  "DELIVERED",
+  "COD_SETTLED",
+  "RETURNED",
+  "FAILED",
+  "UNREACHABLE",
+  "CANCELLED",
 ] as const;
 const WILAYAS = ["16", "31", "25", "19", "09", "15", "06"] as const;
 const TOTALS = [2800, 3600, 4500, 5200, 6800, 7400, 9100, 11800, 14000] as const;

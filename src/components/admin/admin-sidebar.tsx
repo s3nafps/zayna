@@ -35,7 +35,9 @@ export function AdminSidebar() {
             }`;
             const label = (
               <>
-                <span aria-hidden="true" className="material-symbols-outlined">{item.icon}</span>
+                <span aria-hidden="true" className="material-symbols-outlined">
+                  {item.icon}
+                </span>
                 {t(`nav.${item.key}`)}
               </>
             );

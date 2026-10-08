@@ -27,8 +27,15 @@ export type PipelineGroup = keyof typeof PIPELINE_GROUPS;
 export const PIPELINE_GROUP_KEYS = Object.keys(PIPELINE_GROUPS) as PipelineGroup[];
 
 // Open groups are still moving, so they count whatever their age. Finished groups count within the range.
-export const OPEN_GROUPS = ["toConfirm", "unreachable", "ready", "inRoute"] as const satisfies readonly PipelineGroup[];
-export const OPEN_STATUSES: readonly OrderStatusValue[] = OPEN_GROUPS.flatMap((group) => PIPELINE_GROUPS[group]);
+export const OPEN_GROUPS = [
+  "toConfirm",
+  "unreachable",
+  "ready",
+  "inRoute",
+] as const satisfies readonly PipelineGroup[];
+export const OPEN_STATUSES: readonly OrderStatusValue[] = OPEN_GROUPS.flatMap(
+  (group) => PIPELINE_GROUPS[group],
+);
 
 export type Range = "today" | "week";
 
@@ -95,7 +102,10 @@ export function computeKpis(orders: DashboardOrder[], windows: Windows): Kpis {
 // Pipeline counts for the mobile seller view. Open groups count all open orders. Finished groups count the range.
 export function computePipeline(orders: DashboardOrder[], windows: Windows): Record<PipelineGroup, number> {
   const active = orders.filter(isActive);
-  const counts = Object.fromEntries(PIPELINE_GROUP_KEYS.map((group) => [group, 0])) as Record<PipelineGroup, number>;
+  const counts = Object.fromEntries(PIPELINE_GROUP_KEYS.map((group) => [group, 0])) as Record<
+    PipelineGroup,
+    number
+  >;
   for (const order of active) {
     const group = groupOf(order.status);
     if (!group) continue;
@@ -126,13 +136,25 @@ export function computeDailySeries(orders: DashboardOrder[], now: Date, days = 7
   return keys.map((date) => points.get(date) ?? { date, count: 0, amount: 0 });
 }
 
-export type WilayaRow = { wilayaCode: string; count: number; amount: number; delivered: number; returns: number };
+export type WilayaRow = {
+  wilayaCode: string;
+  count: number;
+  amount: number;
+  delivered: number;
+  returns: number;
+};
 
 export function computeTopWilayas(orders: DashboardOrder[], windows: Windows, limit = 6): WilayaRow[] {
   const rows = new Map<string, WilayaRow>();
   for (const order of orders) {
     if (!isActive(order) || order.createdAt < windows.rangeStart) continue;
-    const row = rows.get(order.wilayaCode) ?? { wilayaCode: order.wilayaCode, count: 0, amount: 0, delivered: 0, returns: 0 };
+    const row = rows.get(order.wilayaCode) ?? {
+      wilayaCode: order.wilayaCode,
+      count: 0,
+      amount: 0,
+      delivered: 0,
+      returns: 0,
+    };
     row.count += 1;
     row.amount += order.total;
     const group = groupOf(order.status);
@@ -140,11 +162,16 @@ export function computeTopWilayas(orders: DashboardOrder[], windows: Windows, li
     if (group === "returns") row.returns += 1;
     rows.set(order.wilayaCode, row);
   }
-  return [...rows.values()].sort((a, b) => b.amount - a.amount || a.wilayaCode.localeCompare(b.wilayaCode)).slice(0, limit);
+  return [...rows.values()]
+    .sort((a, b) => b.amount - a.amount || a.wilayaCode.localeCompare(b.wilayaCode))
+    .slice(0, limit);
 }
 
 // Open orders that need a phone call, oldest first: the most urgent work at the top.
-export function computeAlerts(orders: DashboardOrder[], limit = 5): { total: number; items: DashboardOrder[] } {
+export function computeAlerts(
+  orders: DashboardOrder[],
+  limit = 5,
+): { total: number; items: DashboardOrder[] } {
   const needsCall = orders
     .filter((o) => o.status === "NEW" || o.status === "UNREACHABLE")
     .sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
