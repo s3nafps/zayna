@@ -15,18 +15,15 @@ import "../../globals.css";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { AdminSidebar } from "@/components/admin/admin-sidebar";
 
 // Back-office root. Not localized in the URL. The UI language defaults to French.
-export default async function AdminLayout({ children }: { children: ReactNode }) {
+// The sidebar and the login guard live in the (protected) group.
+export default async function AdminRootLayout({ children }: { children: ReactNode }) {
   const messages = await getMessages();
   return (
     <html lang="fr" dir="ltr">
-      <body className="flex min-h-screen">
-        <NextIntlClientProvider messages={messages}>
-          <AdminSidebar />
-          <div className="flex min-w-0 flex-1 flex-col">{children}</div>
-        </NextIntlClientProvider>
+      <body className="min-h-screen bg-surface font-sans text-on-surface antialiased">
+        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

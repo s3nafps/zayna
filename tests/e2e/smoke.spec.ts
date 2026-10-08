@@ -21,7 +21,7 @@ test.describe("storefront locale routing", () => {
     await expect(page.locator("html")).toHaveAttribute("dir", "ltr");
   });
 
-  test("the root redirects to the French locale", async ({ page }) => {
+  test("the root goes to French, whatever the browser language", async ({ page }) => {
     await page.goto("/");
     await expect(page).toHaveURL(/\/fr$/);
   });
@@ -36,13 +36,5 @@ test.describe("storefront locale routing", () => {
   test("an unknown locale is not found", async ({ page }) => {
     const response = await page.goto("/de");
     expect(response?.status()).toBe(404);
-  });
-});
-
-test.describe("back-office shell", () => {
-  test("the admin placeholder renders in French, without a locale prefix", async ({ page }) => {
-    await page.goto("/admin");
-    await expect(page.locator("html")).toHaveAttribute("lang", "fr");
-    await expect(page.getByRole("heading", { name: "Tableau de bord" })).toBeVisible();
   });
 });

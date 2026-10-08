@@ -1,5 +1,11 @@
 {
-  "nav": { "home": "Home", "shop": "Shop", "cart": "Cart", "track": "Track", "seller": "Seller" },
+  "nav": {
+    "home": "Home",
+    "shop": "Shop",
+    "cart": "Cart",
+    "track": "Track",
+    "seller": "Seller"
+  },
   "header": {
     "switchLocale": "Change language",
     "search": "Search",
@@ -7,7 +13,11 @@
     "account": "Account",
     "shippingNotice": "Delivery to 58 wilayas • Cash on delivery (COD)"
   },
-  "locales": { "ar": "AR", "fr": "FR", "en": "EN" },
+  "locales": {
+    "ar": "AR",
+    "fr": "FR",
+    "en": "EN"
+  },
   "cod": {
     "title": "Cash on delivery",
     "body": "Inspect your parcel before you pay.",
@@ -35,8 +45,11 @@
     "communePlaceholder": "Choose a commune",
     "communeNeedsWilaya": "Choose a wilaya first"
   },
-  "product": { "addToCart": "Add" },
+  "product": {
+    "addToCart": "Add"
+  },
   "admin": {
+    "brand": "Zayna",
     "nav": {
       "dashboard": "Dashboard",
       "orders": "Orders",
@@ -47,9 +60,117 @@
       "customers": "Customers",
       "settings": "Settings"
     },
-    "brand": "Zayna",
-    "placeholderTitle": "Dashboard",
-    "placeholderBody": "Available in Phase 3."
+    "login": {
+      "title": "Sign in",
+      "intro": "Owner and seller back-office",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "errors": {
+        "invalid": "Email or password is incorrect.",
+        "rateLimited": "Too many attempts. Try again in a few minutes.",
+        "server": "Something went wrong. Try again."
+      }
+    },
+    "logout": "Sign out",
+    "comingSoon": "Coming soon",
+    "roles": {
+      "OWNER": "Owner",
+      "AGENT": "Seller"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "updated": "Updated {date} at {time}",
+      "range": {
+        "label": "Period",
+        "today": "Today",
+        "week": "Last 7 days"
+      },
+      "kpi": {
+        "heading": "Key figures",
+        "newToday": "New orders",
+        "newTodayHint": "Created today",
+        "toConfirm": "To confirm",
+        "toConfirmHint": "Call needed",
+        "inRoute": "In transit",
+        "inRouteHint": "With couriers",
+        "delivered": "Delivered",
+        "deliveredHint": "Delivery rate: {rate}",
+        "deliveredShort": "Delivery rate",
+        "returns": "Returns and failures",
+        "returnsHint": "Return rate: {rate}",
+        "codInTransit": "COD in transit",
+        "codInTransitHint": "To collect on delivery"
+      },
+      "chart": {
+        "title": "Orders, last 7 days",
+        "summary": "{count} orders in 7 days",
+        "columns": {
+          "day": "Day",
+          "orders": "Orders",
+          "amount": "Amount"
+        }
+      },
+      "wilayas": {
+        "title": "Top wilayas",
+        "empty": "No orders in this period.",
+        "columns": {
+          "wilaya": "Wilaya",
+          "orders": "Orders",
+          "amount": "Amount"
+        }
+      },
+      "alerts": {
+        "title": "To call ({count})",
+        "body": "New and unreachable orders, oldest first.",
+        "empty": "No orders need a call."
+      },
+      "mobile": {
+        "todaySales": "Today's sales",
+        "pipeline": "COD pipeline",
+        "actions": "Quick actions",
+        "confirm": "Confirm",
+        "allOrders": "All orders"
+      },
+      "pipeline": {
+        "toConfirm": "To confirm",
+        "unreachable": "Unreachable",
+        "ready": "Ready to ship",
+        "inRoute": "In transit",
+        "delivered": "Delivered",
+        "returns": "Returns"
+      }
+    },
+    "orders": {
+      "title": "Orders",
+      "subtitle": "{count} orders",
+      "filtersLabel": "Filter orders",
+      "filters": {
+        "all": "All",
+        "toConfirm": "To confirm",
+        "unreachable": "Unreachable",
+        "ready": "Ready",
+        "inRoute": "In transit",
+        "delivered": "Delivered",
+        "returns": "Returns"
+      },
+      "columns": {
+        "number": "No.",
+        "date": "Date",
+        "customer": "Customer",
+        "wilaya": "Wilaya",
+        "total": "Amount",
+        "status": "Status"
+      },
+      "empty": "No orders in this list.",
+      "pagination": {
+        "label": "Pagination",
+        "previous": "Previous",
+        "next": "Next",
+        "page": "Page {page} of {pages}"
+      }
+    }
   },
   "common": {
     "emptyTable": "No data",

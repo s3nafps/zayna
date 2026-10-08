@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { defineConfig, devices } from "@playwright/test";
 
 // CHROMIUM_PATH lets sandboxes reuse a preinstalled browser. CI installs its own.

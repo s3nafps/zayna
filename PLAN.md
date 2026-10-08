@@ -13,6 +13,27 @@ Build plan for the Zayna COD jewelry platform. Section references (§) point to 
 
 ---
 
+## Scope update: Android app and dashboard (owner request)
+
+The owner asked for two things beyond the phases below: the **Android app** and the **dashboard**. Both are planned and built here.
+
+**Decisions (recorded so you can challenge them):**
+
+- **E1. Android app = mobile shell for the owner and agent back-office.** The owner's seller-dashboard mockup is the mobile view of the back-office. So the app is for confirming orders, calling customers and shipping from a phone. The storefront stays on the web. I chose **Capacitor** (wraps the web back-office in a native Android shell) over React Native. The back-office is server-rendered and already built, and a native rewrite would duplicate those screens for no gain yet.
+- **E2. Auth.** Auth.js v5 is still in beta, and Lucia is deprecated. So sessions use Node's built-in crypto: scrypt for passwords and an HMAC-signed httpOnly cookie. There is no third-party auth package. Roles are `OWNER` and `AGENT`.
+- **E3. Dashboard scope.** The Phase 3 dashboard: KPIs, a 7-day chart, top wilayas, the open-orders alert list, and a mobile seller layout with the COD pipeline. Quick actions need an orders list, so a read-only orders list with status tabs is built too. The confirm, edit and ship workflow stays in Phase 3.
+- **E4. Live data.** The dashboard reads the database. It shows real numbers once Shopify webhooks (Phase 3) fill it. For local development and screenshots, a dev-only fixture seed creates clearly fake orders. The UI contains no mock numbers.
+
+**Tasks:**
+
+- [x] E-auth: scrypt password hashing, HMAC session cookie, login and logout, role helper, owner seeded from `ADMIN_SEED_*`, login rate limit
+- [x] E-dash: KPI, 7-day, top-wilaya and alert metrics as pure functions, with tests (Africa/Algiers day boundaries)
+- [x] E-dash: desktop dashboard at `/admin` (1024px and up) and the mobile seller layout (COD pipeline and quick actions)
+- [x] E-orders: read-only orders list with status tabs, so the dashboard links work
+- [ ] E-android: Capacitor shell for the back-office, app name and icon, back-button handling, offline screen
+- [ ] E-android: Android SDK installed in the sandbox, debug APK built with Gradle, Android job in CI
+- [ ] E-android: release signing and the Play Store listing need a keystore and developer account from the owner (not done)
+
 ## Phase 0 — Planning (this PR)
 
 - [x] Read the brief (§0–§11)
@@ -51,18 +72,20 @@ Stitch folder → route. Rows marked _no mockup_ are built in the same design la
 
 ## Phase 1 — Foundation
 
-- [ ] Scaffold Next.js (App Router, TypeScript strict), with lint, format and typecheck scripts
-- [ ] Port design tokens into `tailwind.config.ts`: colors, radii, spacing, font scale, gold-tinted shadows. Conflicts resolved per **A1–A3**
-- [ ] Fonts: Playfair Display and Plus Jakarta Sans (Latin); Cairo (body) and Amiri (display) for Arabic, switched on `dir="rtl"`; Material Symbols Outlined for icons (**A4**)
-- [ ] `next-intl` with `/ar`, `/fr`, `/en` routing, default `fr`, `dir="rtl"` for Arabic
-- [ ] Lint rule (or check script) that rejects `left`/`right`/`ml-`/`mr-`/`pl-`/`pr-`/`text-left`-style classes. Use logical properties only
-- [ ] Shared components: header with AR/FR/EN switcher, bottom nav, product card, price, COD trust badge, wilaya/commune selector, status pill, admin sidebar, KPI card, data table
-- [ ] Prisma schema from §4, with the first migration
+- [x] Scaffold Next.js (App Router, TypeScript strict), with lint, format and typecheck scripts
+- [x] Port design tokens into `tailwind.config.ts`: colors, radii, spacing, font scale, gold-tinted shadows. Conflicts resolved per **A1–A3**
+- [x] Fonts: Playfair Display and Plus Jakarta Sans (Latin); Cairo (body) and Amiri (display) for Arabic, switched on `dir="rtl"`; Material Symbols Outlined for icons (**A4**)
+- [x] `next-intl` with `/ar`, `/fr`, `/en` routing, default `fr`, `dir="rtl"` for Arabic
+- [x] Lint rule (or check script) that rejects `left`/`right`/`ml-`/`mr-`/`pl-`/`pr-`/`text-left`-style classes. Use logical properties only
+- [x] Shared components: header with AR/FR/EN switcher, bottom nav, product card, price, COD trust badge, wilaya/commune selector, status pill, admin sidebar, KPI card, data table
+- [x] Prisma schema from §4, with the first migration
 - [ ] Seed the 58 wilayas (code 01–58, FR and AR names) from a bundled JSON. Communes are seeded from the source in **D3**
-- [ ] Dockerfile and `docker-compose.yml` (app, postgres, redis, worker) behind Caddy
-- [ ] GitHub Actions: lint, typecheck and test on PR; build and push the image on `main`
-- [ ] Vitest and Playwright set up, each with one passing smoke test
-- [ ] Screenshots of shared components in FR and AR (Playwright) for the PR
+- [x] Dockerfile and `docker-compose.yml` (app, postgres, redis, worker) behind Caddy
+- [x] GitHub Actions: lint, typecheck and test on PR; build and push the image on `main`
+- [x] Vitest and Playwright set up, each with one passing smoke test
+- [x] Screenshots of shared components in FR and AR (Playwright) for the PR
+
+> **Phase 1 status:** built, and it passes lint, typecheck, unit and e2e locally. Still open: the Docker image has not been built (Docker Hub rate-limited the base image), GitHub Actions has not run, and the seed waits for the commune source (D3). The 58-wilaya seed is done.
 
 ## Phase 2 — Storefront
 
