@@ -1,0 +1,62 @@
+{
+  "nav": { "home": "Accueil", "shop": "Boutique", "cart": "Panier", "track": "Suivi", "seller": "Vendeur" },
+  "header": {
+    "switchLocale": "Changer de langue",
+    "search": "Rechercher",
+    "cart": "Panier",
+    "account": "Compte",
+    "shippingNotice": "Livraison 58 wilayas • Paiement à la livraison (COD)"
+  },
+  "locales": { "ar": "AR", "fr": "FR", "en": "EN" },
+  "cod": {
+    "title": "Paiement à la livraison",
+    "body": "Inspectez votre colis avant de payer.",
+    "badge": "COD"
+  },
+  "status": {
+    "NEW": "Nouvelle",
+    "CONFIRMED": "Confirmée",
+    "UNREACHABLE": "Injoignable",
+    "CANCELLED": "Annulée",
+    "PREPARING": "En préparation",
+    "SHIPPED": "Expédiée",
+    "IN_TRANSIT": "En transit",
+    "OUT_FOR_DELIVERY": "En tournée",
+    "AT_STOPDESK": "Au bureau",
+    "DELIVERED": "Livrée",
+    "COD_SETTLED": "Encaissée",
+    "RETURNED": "Retournée",
+    "FAILED": "Échec"
+  },
+  "location": {
+    "wilayaLabel": "Wilaya",
+    "wilayaPlaceholder": "Choisir une wilaya",
+    "communeLabel": "Commune",
+    "communePlaceholder": "Choisir une commune",
+    "communeNeedsWilaya": "Choisissez d'abord une wilaya"
+  },
+  "product": { "addToCart": "Ajouter" },
+  "admin": {
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "orders": "Commandes",
+      "cod": "COD",
+      "products": "Produits",
+      "carriers": "Transporteurs",
+      "shippingRates": "Grille 58 wilayas",
+      "customers": "Clientes",
+      "settings": "Paramètres"
+    },
+    "brand": "Zayna",
+    "placeholderTitle": "Tableau de bord",
+    "placeholderBody": "Disponible en Phase 3."
+  },
+  "common": {
+    "emptyTable": "Aucune donnée",
+    "pageSoon": "Cette page arrive dans une phase suivante."
+  },
+  "preview": {
+    "title": "Aperçu des composants",
+    "fixtureNote": "Données de test uniquement. Aucun contenu réel."
+  }
+}

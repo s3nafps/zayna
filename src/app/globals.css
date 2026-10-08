@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: #fff8f3;
+  }
+
+  body {
+    @apply bg-surface font-sans text-on-surface antialiased;
+  }
+
+  /* Tabular figures keep prices and counts aligned */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}

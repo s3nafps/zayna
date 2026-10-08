@@ -1,0 +1,62 @@
+{
+  "nav": { "home": "Home", "shop": "Shop", "cart": "Cart", "track": "Track", "seller": "Seller" },
+  "header": {
+    "switchLocale": "Change language",
+    "search": "Search",
+    "cart": "Cart",
+    "account": "Account",
+    "shippingNotice": "Delivery to 58 wilayas • Cash on delivery (COD)"
+  },
+  "locales": { "ar": "AR", "fr": "FR", "en": "EN" },
+  "cod": {
+    "title": "Cash on delivery",
+    "body": "Inspect your parcel before you pay.",
+    "badge": "COD"
+  },
+  "status": {
+    "NEW": "New",
+    "CONFIRMED": "Confirmed",
+    "UNREACHABLE": "Unreachable",
+    "CANCELLED": "Cancelled",
+    "PREPARING": "Preparing",
+    "SHIPPED": "Shipped",
+    "IN_TRANSIT": "In transit",
+    "OUT_FOR_DELIVERY": "Out for delivery",
+    "AT_STOPDESK": "At stop desk",
+    "DELIVERED": "Delivered",
+    "COD_SETTLED": "Cash settled",
+    "RETURNED": "Returned",
+    "FAILED": "Failed"
+  },
+  "location": {
+    "wilayaLabel": "Wilaya",
+    "wilayaPlaceholder": "Choose a wilaya",
+    "communeLabel": "Commune",
+    "communePlaceholder": "Choose a commune",
+    "communeNeedsWilaya": "Choose a wilaya first"
+  },
+  "product": { "addToCart": "Add" },
+  "admin": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "orders": "Orders",
+      "cod": "COD",
+      "products": "Products",
+      "carriers": "Carriers",
+      "shippingRates": "58-wilaya rates",
+      "customers": "Customers",
+      "settings": "Settings"
+    },
+    "brand": "Zayna",
+    "placeholderTitle": "Dashboard",
+    "placeholderBody": "Available in Phase 3."
+  },
+  "common": {
+    "emptyTable": "No data",
+    "pageSoon": "This page arrives in a later phase."
+  },
+  "preview": {
+    "title": "Component preview",
+    "fixtureNote": "Test fixtures only. No real content."
+  }
+}

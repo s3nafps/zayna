@@ -1,0 +1,62 @@
+{
+  "nav": { "home": "الرئيسية", "shop": "المتجر", "cart": "السلة", "track": "تتبع", "seller": "البائع" },
+  "header": {
+    "switchLocale": "تغيير اللغة",
+    "search": "بحث",
+    "cart": "السلة",
+    "account": "الحساب",
+    "shippingNotice": "توصيل إلى 58 ولاية • الدفع عند الاستلام"
+  },
+  "locales": { "ar": "AR", "fr": "FR", "en": "EN" },
+  "cod": {
+    "title": "الدفع عند الاستلام",
+    "body": "افحص طردك قبل الدفع.",
+    "badge": "الدفع عند الاستلام"
+  },
+  "status": {
+    "NEW": "جديدة",
+    "CONFIRMED": "مؤكدة",
+    "UNREACHABLE": "غير قابلة للوصول",
+    "CANCELLED": "ملغاة",
+    "PREPARING": "قيد التحضير",
+    "SHIPPED": "تم الشحن",
+    "IN_TRANSIT": "في الطريق",
+    "OUT_FOR_DELIVERY": "في طور التوصيل",
+    "AT_STOPDESK": "في مكتب الاستلام",
+    "DELIVERED": "تم التسليم",
+    "COD_SETTLED": "تم استلام المبلغ",
+    "RETURNED": "مرتجعة",
+    "FAILED": "فشلت"
+  },
+  "location": {
+    "wilayaLabel": "الولاية",
+    "wilayaPlaceholder": "اختر الولاية",
+    "communeLabel": "البلدية",
+    "communePlaceholder": "اختر البلدية",
+    "communeNeedsWilaya": "اختر الولاية أولاً"
+  },
+  "product": { "addToCart": "أضف" },
+  "admin": {
+    "nav": {
+      "dashboard": "لوحة التحكم",
+      "orders": "الطلبات",
+      "cod": "الدفع عند الاستلام",
+      "products": "المنتجات",
+      "carriers": "شركات النقل",
+      "shippingRates": "أسعار 58 ولاية",
+      "customers": "الزبائن",
+      "settings": "الإعدادات"
+    },
+    "brand": "زينة",
+    "placeholderTitle": "لوحة التحكم",
+    "placeholderBody": "متوفرة في المرحلة 3."
+  },
+  "common": {
+    "emptyTable": "لا توجد بيانات",
+    "pageSoon": "هذه الصفحة ستتوفر في مرحلة لاحقة."
+  },
+  "preview": {
+    "title": "معاينة المكونات",
+    "fixtureNote": "بيانات تجريبية فقط. لا يوجد محتوى حقيقي."
+  }
+}
