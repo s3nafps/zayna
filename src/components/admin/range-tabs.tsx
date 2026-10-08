@@ -21,7 +21,9 @@ export function RangeTabs({ current, labels }: RangeTabsProps) {
             href={`/admin?range=${option.value}`}
             aria-current={active ? "page" : undefined}
             className={`inline-flex min-h-tap items-center rounded-full px-4 font-sans text-label-md font-semibold transition-colors ${
-              active ? "bg-primary-container text-on-primary-container shadow-atmospheric" : "text-on-surface-variant hover:text-on-surface"
+              active
+                ? "bg-primary-container text-on-primary-container shadow-atmospheric"
+                : "text-on-surface-variant hover:text-on-surface"
             }`}
           >
             {option.label}

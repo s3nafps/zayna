@@ -10,7 +10,7 @@ Zayna is a jewelry e-commerce platform for the Algerian market. All products are
 
 ## Status
 
-Phase 1 (foundation) is built on the branch: scaffold, tokens, i18n, shared components, Prisma schema and wilaya seed, tests, Docker and CI. Phases 2 onward are not started. `PLAN.md` has the phased checklist and the open decisions. Check it before starting work, and tick items off as they land.
+Phase 1 (foundation), the back-office login and dashboard, and the Android shell are built on the branch: scaffold, tokens, i18n, shared components, Prisma schema and wilaya seed, tests, Docker and CI. Phases 2 onward are not started. `PLAN.md` has the phased checklist and the open decisions. Check it before starting work, and tick items off as they land.
 
 ## Commands
 
@@ -23,7 +23,10 @@ pnpm format:check     # Prettier
 pnpm test             # Vitest unit tests
 pnpm test:e2e         # Playwright, desktop and Pixel 7 projects. Needs a build first
 pnpm db:migrate       # prisma migrate deploy (uses DATABASE_URL from .env)
-pnpm db:seed          # 58 wilayas; communes when data/communes.json exists
+pnpm db:seed          # 58 wilayas, the owner account from ADMIN_SEED_*; communes when data/communes.json exists
+ZAYNA_SEED_FIXTURES=1 pnpm db:seed:fixtures   # dev only: 48 fake orders for the dashboard and orders list
+pnpm android:sync     # writes www/app-config.js from APP_URL, then cap sync android
+pnpm android:debug   # debug APK at android/app/build/outputs/apk/debug/app-debug.apk (needs the Android SDK)
 pnpm worker           # Redis reachability check. Real jobs arrive in Phase 4
 docker compose up     # app, worker, postgres, redis, caddy
 ```

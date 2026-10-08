@@ -23,3 +23,14 @@ test-results
 .claude/
 .windsurf/
 skills-lock.json
+
+# Android (Capacitor). The native project is committed. Build outputs and machine paths are not.
+android/app/build/
+android/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/release/
+*.jks
+*.keystore
+www/app-config.js

@@ -15,7 +15,12 @@ import {
 const NOW = new Date("2026-10-08T12:00:00Z");
 
 let counter = 0;
-function order(status: OrderStatusValue, createdAt: string, total: number, wilayaCode = "16"): DashboardOrder {
+function order(
+  status: OrderStatusValue,
+  createdAt: string,
+  total: number,
+  wilayaCode = "16",
+): DashboardOrder {
   counter += 1;
   return {
     id: `o${counter}`,

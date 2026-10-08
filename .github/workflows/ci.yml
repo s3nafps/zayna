@@ -11,7 +11,7 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     services:
       postgres:
         image: postgres:16-alpine
@@ -27,7 +27,11 @@ jobs:
           --health-timeout 3s
           --health-retries 20
     env:
+      # CI-only values for a throwaway database. They are not real credentials.
       DATABASE_URL: postgresql://zayna:zayna_ci@localhost:5432/zayna?schema=public
+      AUTH_SECRET: ci-only-auth-secret-at-least-thirty-two-characters
+      ADMIN_SEED_EMAIL: owner@zayna.test
+      ADMIN_SEED_PASSWORD: ci-owner-password-123
       NEXT_TELEMETRY_DISABLED: "1"
     steps:
       - uses: actions/checkout@v4
@@ -56,6 +60,11 @@ jobs:
       - name: Migrate and seed
         run: pnpm db:migrate && pnpm db:seed
 
+      - name: Dev fixtures for dashboard and orders
+        run: pnpm db:seed:fixtures
+        env:
+          ZAYNA_SEED_FIXTURES: "1"
+
       - name: Build
         run: pnpm build
 
@@ -73,4 +82,46 @@ jobs:
           path: |
             playwright-report
             test-results
+          retention-days: 7
+
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install Android platform and build tools
+        run: sdkmanager --install "platforms;android-36" "build-tools;36.0.0"
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Sync the web loader into the Android project
+        run: pnpm android:sync
+        env:
+          # Optional repository variable. Without it the APK builds and shows the configuration message.
+          APP_URL: ${{ vars.APP_URL }}
+
+      - name: Debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: zayna-android-debug
+          path: android/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 7

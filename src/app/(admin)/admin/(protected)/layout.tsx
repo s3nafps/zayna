@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 import { AdminSidebar } from "@/components/admin/admin-sidebar";
+import { NativeBackButton } from "@/components/mobile/native-back-button";
 import { requireUser } from "@/lib/auth/session-cookie";
 import { logoutAction } from "../login/actions";
 
@@ -10,6 +11,7 @@ export default async function ProtectedAdminLayout({ children }: { children: Rea
   const t = await getTranslations("admin");
   return (
     <div className="flex min-h-screen w-full">
+      <NativeBackButton />
       <AdminSidebar />
       <div className="flex min-w-0 flex-1 flex-col">
         <header className="flex items-center justify-between gap-3 border-b border-gold-border bg-surface-container-lowest px-margin py-2">

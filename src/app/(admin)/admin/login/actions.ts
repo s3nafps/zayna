@@ -31,7 +31,9 @@ export async function loginAction(_previous: LoginState, formData: FormData): Pr
   }
 
   const user = await getPrisma().user.findUnique({ where: { email } });
-  const passwordOk = user ? await verifyPassword(password, user.passwordHash) : await verifyAgainstDummy(password);
+  const passwordOk = user
+    ? await verifyPassword(password, user.passwordHash)
+    : await verifyAgainstDummy(password);
   if (!user || !passwordOk) {
     loginLimiter.recordFailure(key, now);
     return { error: "invalid" };

@@ -40,7 +40,9 @@ describe("session tokens", () => {
   it("rejects a token whose payload was edited", () => {
     const token = createSessionToken({ uid: "u1", role: "AGENT" }, SECRET, NOW);
     const [, signature] = token.split(".");
-    const forged = Buffer.from(JSON.stringify({ uid: "u1", role: "OWNER", exp: 9999999999 })).toString("base64url");
+    const forged = Buffer.from(JSON.stringify({ uid: "u1", role: "OWNER", exp: 9999999999 })).toString(
+      "base64url",
+    );
     expect(readSessionToken(`${forged}.${signature}`, SECRET, NOW)).toBeNull();
   });
 

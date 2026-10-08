@@ -33,7 +33,10 @@ export function LoginForm() {
         />
       </div>
       {state?.error ? (
-        <p role="alert" className="rounded-lg bg-error-container px-3 py-2 font-sans text-body-sm text-on-error-container">
+        <p
+          role="alert"
+          className="rounded-lg bg-error-container px-3 py-2 font-sans text-body-sm text-on-error-container"
+        >
           {t(`errors.${state.error}`)}
         </p>
       ) : null}

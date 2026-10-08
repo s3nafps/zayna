@@ -16,7 +16,9 @@ export async function DataTable({ columns, rows, compact = false }: DataTablePro
   const t = await getTranslations("common");
   return (
     <div className="overflow-x-auto rounded-xl border border-gold-border bg-surface-container-lowest">
-      <table className={`w-full border-collapse text-start font-sans text-body-md ${compact ? "" : "min-w-[640px]"}`}>
+      <table
+        className={`w-full border-collapse text-start font-sans text-body-md ${compact ? "" : "min-w-[640px]"}`}
+      >
         <thead className="bg-surface-container-low">
           <tr>
             {columns.map((column) => (

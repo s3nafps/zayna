@@ -78,7 +78,9 @@ export default async function OrdersPage({
     <div className="flex flex-col gap-6 p-margin lg:p-margin-desktop">
       <header className="flex flex-col gap-1">
         <h1 className="font-display text-headline-lg font-medium text-on-surface">{t("title")}</h1>
-        <p className="font-sans text-body-sm text-on-surface-variant">{t("subtitle", { count: result.total })}</p>
+        <p className="font-sans text-body-sm text-on-surface-variant">
+          {t("subtitle", { count: result.total })}
+        </p>
       </header>
 
       <nav aria-label={t("filtersLabel")} className="flex flex-wrap gap-2">
@@ -112,7 +114,10 @@ export default async function OrdersPage({
       {result.pageCount > 1 ? (
         <nav aria-label={t("pagination.label")} className="flex items-center justify-between gap-3">
           {page > 1 ? (
-            <Link href={hrefFor(filter, page - 1)} className="min-h-tap rounded-lg border border-gold-border px-4 py-2 font-sans text-label-lg">
+            <Link
+              href={hrefFor(filter, page - 1)}
+              className="min-h-tap rounded-lg border border-gold-border px-4 py-2 font-sans text-label-lg"
+            >
               {t("pagination.previous")}
             </Link>
           ) : (
@@ -122,7 +127,10 @@ export default async function OrdersPage({
             {t("pagination.page", { page, pages: result.pageCount, size: PAGE_SIZE })}
           </span>
           {page < result.pageCount ? (
-            <Link href={hrefFor(filter, page + 1)} className="min-h-tap rounded-lg border border-gold-border px-4 py-2 font-sans text-label-lg">
+            <Link
+              href={hrefFor(filter, page + 1)}
+              className="min-h-tap rounded-lg border border-gold-border px-4 py-2 font-sans text-label-lg"
+            >
               {t("pagination.next")}
             </Link>
           ) : (

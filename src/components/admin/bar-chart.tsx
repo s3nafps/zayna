@@ -34,8 +34,20 @@ export function BarChart({
           const y = HEIGHT - PAD - height;
           return (
             <g key={point.label}>
-              <rect x={x} y={y} width={barWidth} height={Math.max(height, 2)} rx={4} className="fill-primary-container" />
-              <text x={x + barWidth / 2} y={HEIGHT - 8} textAnchor="middle" className="fill-on-surface-variant text-[12px]">
+              <rect
+                x={x}
+                y={y}
+                width={barWidth}
+                height={Math.max(height, 2)}
+                rx={4}
+                className="fill-primary-container"
+              />
+              <text
+                x={x + barWidth / 2}
+                y={HEIGHT - 8}
+                textAnchor="middle"
+                className="fill-on-surface-variant text-[12px]"
+              >
                 {point.label}
               </text>
             </g>

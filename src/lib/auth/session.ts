@@ -17,11 +17,7 @@ function sign(body: string, secret: string): string {
 }
 
 // Token format: base64url(JSON payload) + "." + base64url(HMAC-SHA256(payload)).
-export function createSessionToken(
-  user: { uid: string; role: Role },
-  secret: string,
-  nowMs: number,
-): string {
+export function createSessionToken(user: { uid: string; role: Role }, secret: string, nowMs: number): string {
   const payload: SessionPayload = {
     uid: user.uid,
     role: user.role,

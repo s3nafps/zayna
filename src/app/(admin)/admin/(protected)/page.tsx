@@ -22,7 +22,11 @@ import { formatDzd } from "@/lib/money";
 // Live numbers from the database. Never cached.
 export const dynamic = "force-dynamic";
 
-const DAY_FORMAT = new Intl.DateTimeFormat("fr-DZ", { timeZone: "Africa/Algiers", day: "2-digit", month: "2-digit" });
+const DAY_FORMAT = new Intl.DateTimeFormat("fr-DZ", {
+  timeZone: "Africa/Algiers",
+  day: "2-digit",
+  month: "2-digit",
+});
 const DATE_FORMAT = new Intl.DateTimeFormat("fr-DZ", {
   timeZone: "Africa/Algiers",
   weekday: "long",
@@ -30,13 +34,14 @@ const DATE_FORMAT = new Intl.DateTimeFormat("fr-DZ", {
   month: "long",
   year: "numeric",
 });
-const TIME_FORMAT = new Intl.DateTimeFormat("fr-DZ", { timeZone: "Africa/Algiers", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+const TIME_FORMAT = new Intl.DateTimeFormat("fr-DZ", {
+  timeZone: "Africa/Algiers",
+  hour: "2-digit",
+  minute: "2-digit",
+  hourCycle: "h23",
+});
 
-export default async function DashboardPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ range?: string }>;
-}) {
+export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ range?: string }> }) {
   const { range: rangeParam } = await searchParams;
   const range: Range = rangeParam === "today" ? "today" : "week";
   const now = new Date();
@@ -120,14 +125,25 @@ export default async function DashboardPage({
             {t("updated", { date: dateLabel, time: timeLabel })}
           </p>
         </div>
-        <RangeTabs current={range} labels={{ today: t("range.today"), week: t("range.week"), group: t("range.label") }} />
+        <RangeTabs
+          current={range}
+          labels={{ today: t("range.today"), week: t("range.week"), group: t("range.label") }}
+        />
       </header>
 
       {/* Desktop and tablet: 1024px and up */}
       <div className="hidden flex-col gap-6 lg:flex">
         <section aria-label={t("kpi.heading")} className="grid grid-cols-3 gap-gutter-desktop">
-          <KpiCard label={t("kpi.newToday")} value={formatCount(kpis.newToday)} hint={t("kpi.newTodayHint")} />
-          <KpiCard label={t("kpi.toConfirm")} value={formatCount(kpis.toConfirm)} hint={t("kpi.toConfirmHint")} />
+          <KpiCard
+            label={t("kpi.newToday")}
+            value={formatCount(kpis.newToday)}
+            hint={t("kpi.newTodayHint")}
+          />
+          <KpiCard
+            label={t("kpi.toConfirm")}
+            value={formatCount(kpis.toConfirm)}
+            hint={t("kpi.toConfirmHint")}
+          />
           <KpiCard label={t("kpi.inRoute")} value={formatCount(kpis.inRoute)} hint={t("kpi.inRouteHint")} />
           <KpiCard
             label={t("kpi.delivered")}
@@ -139,7 +155,11 @@ export default async function DashboardPage({
             value={formatCount(kpis.returns)}
             hint={t("kpi.returnsHint", { rate: formatRate(kpis.returnRate) })}
           />
-          <KpiCard label={t("kpi.codInTransit")} value={formatDzd(kpis.codInTransit)} hint={t("kpi.codInTransitHint")} />
+          <KpiCard
+            label={t("kpi.codInTransit")}
+            value={formatDzd(kpis.codInTransit)}
+            hint={t("kpi.codInTransitHint")}
+          />
         </section>
 
         <section className="grid grid-cols-5 gap-gutter-desktop">
@@ -148,7 +168,11 @@ export default async function DashboardPage({
               title={t("chart.title")}
               points={chartPoints}
               summary={t("chart.summary", { count: series.reduce((sum, p) => sum + p.count, 0) })}
-              columnLabels={{ day: t("chart.columns.day"), orders: t("chart.columns.orders"), amount: t("chart.columns.amount") }}
+              columnLabels={{
+                day: t("chart.columns.day"),
+                orders: t("chart.columns.orders"),
+                amount: t("chart.columns.amount"),
+              }}
             />
           </div>
           <div className="col-span-2 flex flex-col gap-3 rounded-xl border border-gold-border bg-surface-container-lowest p-4 shadow-atmospheric">
@@ -204,7 +228,9 @@ export default async function DashboardPage({
                   href={card.href}
                   className="flex min-h-tap flex-col gap-1 rounded-xl border border-gold-border bg-surface-container-lowest p-3 shadow-atmospheric"
                 >
-                  <span className="font-sans text-label-md text-on-surface-variant">{t(`pipeline.${card.group}`)}</span>
+                  <span className="font-sans text-label-md text-on-surface-variant">
+                    {t(`pipeline.${card.group}`)}
+                  </span>
                   <span className="font-sans text-headline-md font-semibold text-on-surface tabular">
                     {formatCount(card.count)}
                   </span>
@@ -254,7 +280,11 @@ export default async function DashboardPage({
                   <span className="font-sans text-body-sm text-on-surface-variant">
                     {order.customerName} · {wilayaLabel(order.wilayaCode)} · {formatDzd(order.total)}
                   </span>
-                  <a href={`tel:${order.phone}`} className="font-sans text-label-md text-primary underline" dir="ltr">
+                  <a
+                    href={`tel:${order.phone}`}
+                    className="font-sans text-label-md text-primary underline"
+                    dir="ltr"
+                  >
                     {order.phone}
                   </a>
                 </li>
