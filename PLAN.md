@@ -24,28 +24,28 @@ Build plan for the Zayna COD jewelry platform. Section references (§) point to 
 
 ## Screen map
 
-Stitch folder → route. Rows marked *no mockup* are built in the same design language.
+Stitch folder → route. Rows marked _no mockup_ are built in the same design language.
 
-| Screen | Route | Phase |
-|---|---|---|
-| Storefront home (`accueil_zayna_jewelry`) | `/[locale]` | 2 |
-| Product page (`fiche_produit_collier_fatima`) | `/[locale]/products/[handle]` | 2 |
-| Collection listing with filters *(no mockup)* | `/[locale]/collections/[handle]` | 2 |
-| Search *(no mockup)* | `/[locale]/search` | 2 |
-| Cart *(no mockup)* | `/[locale]/cart` | 2 |
-| COD checkout (`commander_paiement_livraison_cod`) | `/[locale]/checkout` | 2 |
-| Order confirmation (`confirmation_de_commande_zayna_jewelry`) | `/[locale]/order/[id]/thanks` | 2 |
-| Order tracking (`suivi_de_commande_zayna_jewelry`) | `/[locale]/track` | 2 |
-| Admin login *(no mockup)* | `/admin/login` | 3 |
-| Owner dashboard, desktop (`tableau_de_bord_espace_propri_taire_zayna`) | `/admin` | 3 |
-| Seller dashboard, mobile (`espace_vendeur_tableau_de_bord`) | `/admin` (mobile layout) | 3 |
-| Orders (`gestion_des_commandes_zayna_admin`) | `/admin/orders` | 3 |
-| Products *(no mockup, read-only)* | `/admin/products` | 3 |
-| Settings *(no mockup)* | `/admin/settings` | 3 (store, origin, users); 6 (message templates) |
-| Carriers (`int_grations_transporteurs_zayna_admin`) | `/admin/carriers` | 4 (Yalidine); 5 (others) |
-| Shipping rates (`grille_tarifaire_58_wilayas_zayna_admin`) | `/admin/shipping-rates` | 5 |
-| COD reconciliation *(sidebar item "COD", no mockup)* | `/admin/cod` | 5 |
-| Customers *(no mockup)* | `/admin/customers` | 6 |
+| Screen                                                                 | Route                            | Phase                                           |
+| ---------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
+| Storefront home (`accueil_zayna_jewelry`)                              | `/[locale]`                      | 2                                               |
+| Product page (`fiche_produit_collier_fatima`)                          | `/[locale]/products/[handle]`    | 2                                               |
+| Collection listing with filters _(no mockup)_                          | `/[locale]/collections/[handle]` | 2                                               |
+| Search _(no mockup)_                                                   | `/[locale]/search`               | 2                                               |
+| Cart _(no mockup)_                                                     | `/[locale]/cart`                 | 2                                               |
+| COD checkout (`commander_paiement_livraison_cod`)                      | `/[locale]/checkout`             | 2                                               |
+| Order confirmation (`confirmation_de_commande_zayna_jewelry`)          | `/[locale]/order/[id]/thanks`    | 2                                               |
+| Order tracking (`suivi_de_commande_zayna_jewelry`)                     | `/[locale]/track`                | 2                                               |
+| Admin login _(no mockup)_                                              | `/admin/login`                   | 3                                               |
+| Owner dashboard, desktop (`tableau_de_bord_espace_propri_taire_zayna`) | `/admin`                         | 3                                               |
+| Seller dashboard, mobile (`espace_vendeur_tableau_de_bord`)            | `/admin` (mobile layout)         | 3                                               |
+| Orders (`gestion_des_commandes_zayna_admin`)                           | `/admin/orders`                  | 3                                               |
+| Products _(no mockup, read-only)_                                      | `/admin/products`                | 3                                               |
+| Settings _(no mockup)_                                                 | `/admin/settings`                | 3 (store, origin, users); 6 (message templates) |
+| Carriers (`int_grations_transporteurs_zayna_admin`)                    | `/admin/carriers`                | 4 (Yalidine); 5 (others)                        |
+| Shipping rates (`grille_tarifaire_58_wilayas_zayna_admin`)             | `/admin/shipping-rates`          | 5                                               |
+| COD reconciliation _(sidebar item "COD", no mockup)_                   | `/admin/cod`                     | 5                                               |
+| Customers _(no mockup)_                                                | `/admin/customers`               | 6                                               |
 
 ---
 
@@ -69,10 +69,10 @@ Stitch folder → route. Rows marked *no mockup* are built in the same design la
 - [ ] Shopify Storefront API client (`server-only`), pinned API version in one constant (verify the current stable version first)
 - [ ] Catalog reads: products, collections, search. Translated fields for AR/FR/EN, falling back to FR
 - [ ] Home, from Shopify collections. ISR with time-based revalidation (webhook-driven revalidation arrives in Phase 3)
-- [ ] Collection listing with filters *(no mockup)*
+- [ ] Collection listing with filters _(no mockup)_
 - [ ] Product page: gallery, variants (size, metal), COD badge, "Commander" and add-to-cart, live wilaya fee estimator
-- [ ] Search *(no mockup)*
-- [ ] Cart *(no mockup)*: cookie-based. Prices are never trusted from the client
+- [ ] Search _(no mockup)_
+- [ ] Cart _(no mockup)_: cookie-based. Prices are never trusted from the client
 - [ ] Checkout (one page, §5): Zod validation, server-side re-pricing, live shipping fee from `ShippingRate`, phone normalization, optional note
 - [ ] Stop Desk option hidden behind a flag until Phase 4 supplies centers. HOME only until then
 - [ ] Shopify Admin token manager: client-credentials grant, cached in Redis, refreshed before the 24h expiry. Support static `SHOPIFY_ADMIN_TOKEN` as well
@@ -158,7 +158,7 @@ Items are grouped by what they block. Each has my recommendation. If you don't o
 
 The storefront shows these claims to customers, so they need to be confirmed. Several contradict each other.
 
-- **B1. Metal claims conflict. This matters most.** Pages say "Or 18k garanti", "Or 18k véritable", "Or 18k massif", "Vermeil 18k" and "Argent 925 Doré". The Khamsa Fatima spec says "Acier chirurgical 316L plaqué Or 18K" with PVD plating. These can't all be true, and plating and solid gold are a consumer-law distinction. **Need:** the true material for every product. The app will read material from Shopify product metafields. It won't use copy.
+- **B1. Metal claims. Resolved by owner: all products are stainless steel.** The mockups' gold, vermeil and 925 silver claims ("Or 18k garanti", "Or 18k véritable", "Or 18k massif", "Vermeil 18k", "Argent 925 Doré") are dropped from all copy. Brief §0 lists 18k gold, vermeil and 925 silver as the catalog. That is superseded by this decision. **Still open (small):** the Khamsa Fatima spec says "plaqué Or 18K" (gold plating). Gold plating is still a gold claim, so I'll drop it too unless you say otherwise. Material stays a per-product Shopify metafield, so the app shows whatever the product record says, and no metal name is hard-coded.
 - **B2. Return/exchange window.** The home page says 7 days. The product page, checkout and confirmation say 3 days. **Need:** one value.
 - **B3. Warranty.** "Garantie brillance 12 mois" appears on the product page. **Need:** confirm or drop.
 - **B4. Shipping fees and "Livraison incluse".** Mockups use 500 DA home and 350 DA stop desk. The product page says "Livraison incluse" and totals 7 300 DA, but checkout charges 500 DA. Other copy says fees run 400–900 DA. **Recommend:** follow the brief. Fees come from `ShippingRate` and are shown at checkout. Drop "Livraison incluse". **Need:** the real rates (see D2).

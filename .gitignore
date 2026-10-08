@@ -1,0 +1,19 @@
+# dependencies and build output
+node_modules
+.next
+out
+coverage
+*.tsbuildinfo
+next-env.d.ts
+
+# generated Prisma client (run `prisma generate`)
+src/generated
+
+# test output
+playwright-report
+test-results
+
+# secrets and local environment
+.env
+.env.*
+!.env.example

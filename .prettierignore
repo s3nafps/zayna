@@ -1,0 +1,13 @@
+.next
+node_modules
+src/generated
+coverage
+playwright-report
+test-results
+pnpm-lock.yaml
+next-env.d.ts
+.agents
+.claude
+.windsurf
+skills-lock.json
+design

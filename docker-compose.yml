@@ -1,0 +1,83 @@
+# App, worker, Postgres, Redis, and Caddy for automatic HTTPS. Brief §2 (Deploy).
+name: zayna
+
+x-app-build: &app-build
+  build: .
+  image: zayna:local
+  env_file: .env
+  environment:
+    DATABASE_URL: postgresql://zayna:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}@postgres:5432/zayna?schema=public
+    REDIS_URL: redis://redis:6379
+    HOSTNAME: 0.0.0.0
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+  restart: unless-stopped
+
+services:
+  app:
+    <<: *app-build
+    expose:
+      - "3000"
+
+  worker:
+    <<: *app-build
+    command: ["pnpm", "worker"]
+    # The worker does not run migrations. The app does.
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      app:
+        condition: service_started
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: zayna
+      POSTGRES_USER: zayna
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U zayna -d zayna"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      APP_DOMAIN: ${APP_DOMAIN:-localhost}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - app
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  redisdata:
+  caddy_data:
+  caddy_config:
