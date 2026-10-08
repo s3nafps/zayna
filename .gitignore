@@ -17,3 +17,9 @@ test-results
 .env
 .env.*
 !.env.example
+
+# Prisma agent-skill docs installed by tooling. Not project code.
+.agents/
+.claude/
+.windsurf/
+skills-lock.json
