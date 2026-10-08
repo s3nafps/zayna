@@ -1,5 +1,11 @@
 {
-  "nav": { "home": "Accueil", "shop": "Boutique", "cart": "Panier", "track": "Suivi", "seller": "Vendeur" },
+  "nav": {
+    "home": "Accueil",
+    "shop": "Boutique",
+    "cart": "Panier",
+    "track": "Suivi",
+    "seller": "Vendeur"
+  },
   "header": {
     "switchLocale": "Changer de langue",
     "search": "Rechercher",
@@ -7,7 +13,11 @@
     "account": "Compte",
     "shippingNotice": "Livraison 58 wilayas • Paiement à la livraison (COD)"
   },
-  "locales": { "ar": "AR", "fr": "FR", "en": "EN" },
+  "locales": {
+    "ar": "AR",
+    "fr": "FR",
+    "en": "EN"
+  },
   "cod": {
     "title": "Paiement à la livraison",
     "body": "Inspectez votre colis avant de payer.",
@@ -35,8 +45,11 @@
     "communePlaceholder": "Choisir une commune",
     "communeNeedsWilaya": "Choisissez d'abord une wilaya"
   },
-  "product": { "addToCart": "Ajouter" },
+  "product": {
+    "addToCart": "Ajouter"
+  },
   "admin": {
+    "brand": "Zayna",
     "nav": {
       "dashboard": "Tableau de bord",
       "orders": "Commandes",
@@ -47,9 +60,117 @@
       "customers": "Clientes",
       "settings": "Paramètres"
     },
-    "brand": "Zayna",
-    "placeholderTitle": "Tableau de bord",
-    "placeholderBody": "Disponible en Phase 3."
+    "login": {
+      "title": "Connexion",
+      "intro": "Espace propriétaire et vendeurs",
+      "email": "E-mail",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion…",
+      "errors": {
+        "invalid": "E-mail ou mot de passe incorrect.",
+        "rateLimited": "Trop de tentatives. Réessayez dans quelques minutes.",
+        "server": "Une erreur est survenue. Réessayez."
+      }
+    },
+    "logout": "Déconnexion",
+    "comingSoon": "Bientôt disponible",
+    "roles": {
+      "OWNER": "Propriétaire",
+      "AGENT": "Vendeur"
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "updated": "Mis à jour le {date} à {time}",
+      "range": {
+        "label": "Période",
+        "today": "Aujourd'hui",
+        "week": "7 derniers jours"
+      },
+      "kpi": {
+        "heading": "Indicateurs clés",
+        "newToday": "Nouvelles commandes",
+        "newTodayHint": "Créées aujourd'hui",
+        "toConfirm": "À confirmer",
+        "toConfirmHint": "Appel nécessaire",
+        "inRoute": "En route",
+        "inRouteHint": "Chez les transporteurs",
+        "delivered": "Livrées",
+        "deliveredHint": "Taux de livraison : {rate}",
+        "deliveredShort": "Taux de livraison",
+        "returns": "Retours et échecs",
+        "returnsHint": "Taux de retour : {rate}",
+        "codInTransit": "COD en transit",
+        "codInTransitHint": "À encaisser à la livraison"
+      },
+      "chart": {
+        "title": "Commandes des 7 derniers jours",
+        "summary": "{count} commandes sur 7 jours",
+        "columns": {
+          "day": "Jour",
+          "orders": "Commandes",
+          "amount": "Montant"
+        }
+      },
+      "wilayas": {
+        "title": "Top wilayas",
+        "empty": "Aucune commande pour cette période.",
+        "columns": {
+          "wilaya": "Wilaya",
+          "orders": "Commandes",
+          "amount": "Montant"
+        }
+      },
+      "alerts": {
+        "title": "À appeler ({count})",
+        "body": "Commandes nouvelles ou injoignables, les plus anciennes en premier.",
+        "empty": "Aucune commande à appeler."
+      },
+      "mobile": {
+        "todaySales": "Ventes du jour",
+        "pipeline": "Pipeline COD",
+        "actions": "Actions rapides",
+        "confirm": "Confirmer",
+        "allOrders": "Toutes les commandes"
+      },
+      "pipeline": {
+        "toConfirm": "À confirmer",
+        "unreachable": "Injoignables",
+        "ready": "Prêtes à expédier",
+        "inRoute": "En route",
+        "delivered": "Livrées",
+        "returns": "Retours"
+      }
+    },
+    "orders": {
+      "title": "Commandes",
+      "subtitle": "{count} commandes",
+      "filtersLabel": "Filtrer les commandes",
+      "filters": {
+        "all": "Toutes",
+        "toConfirm": "À confirmer",
+        "unreachable": "Injoignables",
+        "ready": "Prêtes",
+        "inRoute": "En route",
+        "delivered": "Livrées",
+        "returns": "Retours"
+      },
+      "columns": {
+        "number": "N°",
+        "date": "Date",
+        "customer": "Cliente",
+        "wilaya": "Wilaya",
+        "total": "Montant",
+        "status": "Statut"
+      },
+      "empty": "Aucune commande dans cette liste.",
+      "pagination": {
+        "label": "Pagination",
+        "previous": "Précédent",
+        "next": "Suivant",
+        "page": "Page {page} sur {pages}"
+      }
+    }
   },
   "common": {
     "emptyTable": "Aucune donnée",

@@ -2,6 +2,7 @@
 // Wilayas come from data/wilayas.json. Communes come from data/communes.json when it exists (PLAN.md, D3).
 import { existsSync, readFileSync } from "node:fs";
 import { createPrismaClient } from "../src/lib/prisma";
+import { hashPassword } from "../src/lib/auth/password";
 
 type WilayaSeed = { code: string; nameFr: string; nameAr: string };
 type CommuneSeed = { wilayaCode: string; nameFr: string; nameAr: string; postalCode?: string | null };
@@ -22,6 +23,27 @@ function assertWilayas(list: WilayaSeed[]): void {
   });
 }
 
+// Creates the owner account from ADMIN_SEED_EMAIL and ADMIN_SEED_PASSWORD. Existing accounts are left alone,
+// so re-running the seed never changes a password.
+async function seedOwner(prisma: ReturnType<typeof createPrismaClient>): Promise<void> {
+  const email = process.env.ADMIN_SEED_EMAIL?.trim().toLowerCase();
+  const password = process.env.ADMIN_SEED_PASSWORD;
+  if (!email || !password) {
+    console.log("owner: ADMIN_SEED_EMAIL or ADMIN_SEED_PASSWORD not set, skipped");
+    return;
+  }
+  if (password.length < 12) {
+    throw new Error("ADMIN_SEED_PASSWORD must be at least 12 characters");
+  }
+  const existing = await prisma.user.findUnique({ where: { email } });
+  if (existing) {
+    console.log("owner: account already exists, left unchanged");
+    return;
+  }
+  await prisma.user.create({ data: { email, passwordHash: await hashPassword(password), role: "OWNER" } });
+  console.log("owner: account created");
+}
+
 async function main(): Promise<void> {
   const prisma = createPrismaClient();
   try {
@@ -35,6 +57,8 @@ async function main(): Promise<void> {
       });
     }
     console.log(`wilayas: ${wilayas.length} upserted`);
+
+    await seedOwner(prisma);
 
     const communesFile = new URL("../data/communes.json", import.meta.url);
     if (!existsSync(communesFile)) {

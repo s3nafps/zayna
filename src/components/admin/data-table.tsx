@@ -7,14 +7,16 @@ export type DataTableRow = { id: string; cells: Record<string, ReactNode> };
 export type DataTableProps = {
   columns: DataTableColumn[];
   rows: DataTableRow[];
+  // Compact tables fit narrow cards. Full tables keep a minimum width and scroll sideways instead.
+  compact?: boolean;
 };
 
 // Admin list table. Columns align to the start edge, so RTL works without changes.
-export async function DataTable({ columns, rows }: DataTableProps) {
+export async function DataTable({ columns, rows, compact = false }: DataTableProps) {
   const t = await getTranslations("common");
   return (
     <div className="overflow-x-auto rounded-xl border border-gold-border bg-surface-container-lowest">
-      <table className="w-full min-w-[640px] border-collapse text-start font-sans text-body-md">
+      <table className={`w-full border-collapse text-start font-sans text-body-md ${compact ? "" : "min-w-[640px]"}`}>
         <thead className="bg-surface-container-low">
           <tr>
             {columns.map((column) => (
