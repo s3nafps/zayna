@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#92f7be", "surface-container-highest": "#e7e1dc", "error-container": "#ffdad6", "surface-container-low": "#f9f2ed", "error": "#ba1a1a", "on-error-container": "#93000a", "surface": "#fff8f3", "on-secondary-container": "#67615f", "inverse-primary": "#ecc246", "surface-container": "#f3ede7", "outline-variant": "#d1c5af", "on-tertiary-fixed-variant": "#005232", "on-secondary-fixed-variant": "#4b4644", "primary": "#755b00", "surface-variant": "#e7e1dc", "inverse-surface": "#32302d", "on-tertiary-fixed": "#002111", "surface-dim": "#dfd9d4", "tertiary-fixed-dim": "#76daa3", "outline": "#7f7663", "secondary-container": "#e7dedb", "primary-container": "#c9a227", "surface-container-lowest": "#ffffff", "on-background": "#1d1b18", "tertiary": "#006d44", "secondary": "#635d5b", "inverse-on-surface": "#f6f0ea", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#584400", "on-secondary-fixed": "#1e1b19", "on-primary-container": "#4b3a00", "on-surface": "#1d1b18", "primary-fixed": "#ffe08e", "on-primary-fixed": "#241a00", "surface-container-high": "#ede7e2", "on-secondary": "#ffffff", "secondary-fixed-dim": "#cdc5c2", "on-surface-variant": "#4d4635", "primary-fixed-dim": "#ecc246", "secondary-fixed": "#e9e1de", "tertiary-container": "#54b985", "background": "#fff8f3", "surface-bright": "#fff8f3", "on-tertiary-container": "#00462a", "on-error": "#ffffff", "on-primary": "#ffffff", "surface-tint": "#755b00" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "margin-desktop": "2.5rem", "margin": "1rem", "space-sm": "0.5rem", "gutter": "0.75rem", "gutter-desktop": "1.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "currency-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "headline-xl-mobile": ["Playfair Display"], "headline-xl": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "currency-display": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(201,162,39,0.06)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Retour" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Zayna Jewelry Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vfu0MHcZJypg7ZDvHn6nVaUEvO-28_BqNT7otbpwWS0sZuHrIkyCzK4VvX_NVGFRbXG6DRtSJZpMxNfag6dw68Ai6P4wjKdc-QEJinyYRETrZ7xgPRbX1C88e4GSUw3-hqrj8tnVGJ69Cgruhnk3ERKKWxTCC3_HtAZ5yQBR8GvZDacoxRs3dNLorMAza60fuPofd1P4mpDrG-mI0Dib2lgM1yMAlHWAwpdv7EXp4"/><h1 class="font-headline-md text-headline-md text-on-surface truncate max-w-[180px]">Product Details</h1></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-32">
+<!-- Top Luxury Banner -->
+<div class="px-margin pt-space-sm pb-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Atelier Zayna • Alger Centre</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4.9</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(128)</span>
+</div>
+</div>
+<!-- Product Gallery Section -->
+<div class="relative w-full px-margin mb-space-md">
+<!-- Main Carousel Display -->
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden bg-surface-container shadow-md">
+<div class="relative w-full h-full flex transition-transform duration-500 ease-out" id="gallery-container" style="transform: translateX(0%);">
+<!-- Slide 1 -->
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Close-up macro studio portrait of an opulent 18k yellow gold Khamsa Hand of Fatima pendant necklace resting smoothly over champagne draped silk fabric. Delicate filigree openwork engravings sparkle under warm soft jewelry studio lighting. Natural subtle sparkles and reflections, rich cream and gold palette, pristine French luxury craftsmanship." id="slide-img-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChv23cSgET2Fex4cy5WhVMesPIh1N7wmKp_kyhjORI_YXuSdD39P6USKo7NKmUUq0eYWyay_S8cXCaQZLr8kTmNui3_PpwrsNmcq1FDTHZ0T6zWOc6iiiCaWeA_WqzpCKEYces_KSPobPpMertzulvbk6OVnQSpmVr2P_hLvonIaxvGqUIerHExQseVBh0KlejoHOaKXJrAtqkAMRb3HrQd_6aJ_eO1FNIsiWDYBw"/>
+</div>
+<!-- Slide 2 -->
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="An elegant Algerian woman wearing a minimalist warm ivory dress, adorned with a refined 18k yellow gold Khamsa pendant necklace resting against her collarbone. Soft warm morning daylight, natural glow, soft-focus background, sophisticated bridal beauty, timeless North African high jewelry aesthetics." id="slide-img-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSkOc36VcGLqQxmNYYYc5O80DLChfR2kw32CHZBsQCKIBUTm02O6ZsG5R7RUZeVvRqh7FzGL7BvSixG_rNHl-d5UsCGprzUTiwX9cK55yJI8si4VjXT6VzL4nS2sc9rZrBYXaO07OWWM-QVV-B6at8XauZh4lrVN3PR4fQda3k1SHkIMuIcvYWl0DMddgABodzksjNrk3hlwYVATCicv26ChkGs_3FlGHQEN86yX8"/>
+</div>
+<!-- Slide 3 -->
+<div class="w-full h-full flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Luxury presentation jewelry gift box crafted from warm ivory matte leather with embossed gold foil Arabic calligraphy logo Zayna. Soft velvet cushion inside holding a glistening gold Fatima pendant with certificate of authenticity card resting gently nearby on warm stone surface." id="slide-img-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaAkAWxjfPj2n243odww3BQP1Dyuu0yDmRFtDEvYfyE5g-FsAXKhm3MaIpDZrzu7leNEVueGWP4WL-6Kp1pp5PCJja2LL0T5wPmHzJSt1h3KftRPMpI3xq0EiHW_-7Af3B0ViR-ZYTVgnLHo3XMLNWRBGihcYNg7nVyAK1JmMfwl76bRNxf5smtWJClKDSmbxQrg2zK_m51r8cH1HLnLxgJCFxyaNi44CQ-4jI2Lg"/>
+</div>
+</div>
+<!-- Floating Badges on Gallery -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
+<span class="bg-surface/95 backdrop-blur-md px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+          Plaqué Or 18k Certifié
+        </span>
+<span class="bg-tertiary/90 backdrop-blur-md px-2.5 py-1 rounded-full text-on-tertiary font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">bolt</span>
+          En Stock • Expédition 24h
+        </span>
+</div>
+<!-- Quick Action / Wishlist Floating Button -->
+<button aria-label="Favoris" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-surface/90 backdrop-blur-md flex items-center justify-center text-on-surface shadow-sm active:scale-95 transition-transform" id="like-btn" onclick="toggleLike()">
+<span class="material-symbols-outlined text-[20px] text-secondary" id="like-icon">favorite</span>
+</button>
+<!-- Slide Indicator Dots -->
+<div class="absolute bottom-3 inset-x-0 flex justify-center items-center gap-1.5 z-10">
+<button aria-label="Slide 1" class="indicator-dot w-5 h-1.5 rounded-full bg-primary-container transition-all" onclick="goToSlide(0)"></button>
+<button aria-label="Slide 2" class="indicator-dot w-1.5 h-1.5 rounded-full bg-surface-container-highest transition-all" onclick="goToSlide(1)"></button>
+<button aria-label="Slide 3" class="indicator-dot w-1.5 h-1.5 rounded-full bg-surface-container-highest transition-all" onclick="goToSlide(2)"></button>
+</div>
+</div>
+<!-- Thumbnail Strip -->
+<div class="flex items-center gap-2 mt-2.5 overflow-x-auto no-scrollbar">
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-sm p-0.5 bg-primary/20 transition-all" onclick="goToSlide(0)">
+<img class="w-full h-full object-cover rounded" data-alt="Miniature square crop of the 18k gold Fatima pendant displayed on shimmering ivory silk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4DBtNqG3E-uxwXr-6RlBden_YoyT1DV0nLTQXgWx16zOsDy1KQMzWjPEdWV28bL7KAvW7sJqbIqzJ_DwgxtMXwA7Q7rmO9cGGKCWNtLjfOBbiNrbmlgEh0ah6K-C70bbi5G5D45i4eRdU_G-SnDdJPI46JlcIF281yLqO2wFMEsSR0JVxqhFJGwSzXTRi9YKNnoRYfQuitXSiY5oLlDdGw0xOrixhDUe-rlLMvUk"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-sm p-0.5 opacity-60 hover:opacity-100 transition-all" onclick="goToSlide(1)">
+<img class="w-full h-full object-cover rounded" data-alt="Miniature square thumbnail of modern Algerian model wearing the gold pendant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxVlUdImVbKhVvNCCWvyz7j7YlT1N17omqv3mT8p8dhJzvpnMq3jMy4G_9pWr7kBrj3HLiq2m3Si2r3zwH5m3IdkM27crN_JKHHuNwlVEuyHlECcFL9ieJgQl9YaOt1zcmEd5vox8c9oFS__bYtvrscG88Uw4NCt3-3BCdP3FxNTdNZS75tybwFRHVK9nfz6_8BVc5umJNj-LKVZQMu5nTdl2z8BSld8b_47ej6eM"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden bg-surface-container shadow-sm p-0.5 opacity-60 hover:opacity-100 transition-all" onclick="goToSlide(2)">
+<img class="w-full h-full object-cover rounded" data-alt="Miniature square thumbnail of the Zayna branded ivory jewelry gift box with certificate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChxx1Lq-iF5In13aapcbIL1abBOiP-nerZpnS7uNzXptDGs40W79PCoG8JMyWI6LiiQ7nKpMo5x3xB0ELFgZ6xv6P0ws9bAp9M9XGpX6n_MndOMvRGufZ7Ph-A3Kj9EL0dkr9nV2c4cr3N9YfbvkB1nvViP4BAkYL_BqiS6tW_GNeG8EpIto8wJ5nfNyjRyZI1H27HS1OhRA23Lj7tv5IYhTTGmMDJuXUANik5s1c"/>
+</button>
+</div>
+</div>
+<!-- Product Title & Price Card -->
+<div class="px-margin mb-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase font-semibold">Haute Joaillerie • Khamsa</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium bg-tertiary-fixed/40 px-2 py-0.5 rounded">Réf: ZYN-FTM-18K</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold leading-tight mt-0.5">
+      Collier Pendentif Khamsa Fatima
+    </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Or Jaune 18K • Chaîne filigrane avec Zircons Brillants</p>
+<!-- Pricing Row -->
+<div class="flex items-baseline gap-space-sm mt-1">
+<span class="font-currency-display text-currency-display text-primary text-[24px]">6 800 DA</span>
+<span class="font-body-md text-body-md text-on-secondary line-through opacity-70">7 500 DA</span>
+<span class="font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-bold px-1.5 py-0.5 rounded">
+        -10% PROMO
+      </span>
+</div>
+</div>
+<!-- Cultural COD Assurance Card (Notice rose-nude tactile) -->
+<div class="px-margin mb-space-md">
+<div class="bg-secondary-container/60 rounded-xl p-space-md shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Paiement 100% à la livraison</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">الدفع عند الاستلام</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 leading-snug">
+            Tranquillité absolue : <strong>Vous ouvrez et inspectez votre bijou</strong> dans son écrin avant de payer un seul dinar au livreur !
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1 border-none text-tertiary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold">Garantie brillance 12 mois &amp; Échange gratuit sous 3 jours</span>
+</div>
+</div>
+</div>
+<!-- Interactive Wilaya & Delivery Fee Estimator -->
+<div class="px-margin mb-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<h2 class="font-headline-md text-headline-md text-on-surface text-[17px]">Calculateur de Livraison</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed/30 px-2 py-0.5 rounded-full">58 Wilayas</span>
+</div>
+<!-- Wilaya Selector -->
+<div class="flex flex-col gap-1 mt-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-medium" for="wilaya-select">Votre Wilaya de réception :</label>
+<div class="relative bg-surface rounded-lg shadow-sm">
+<select class="w-full h-12 bg-transparent text-on-surface font-body-md text-body-md px-3 pr-10 appearance-none focus:outline-none focus:ring-0" id="wilaya-select" onchange="updateDeliveryFees()">
+<option data-desk="350" data-home="500" data-time="24h - 48h" selected="" value="16">16 - Alger / الجزائر</option>
+<option data-desk="400" data-home="600" data-time="24h - 48h" value="09">09 - Blida / البليدة</option>
+<option data-desk="450" data-home="650" data-time="48h" value="31">31 - Oran / وهران</option>
+<option data-desk="450" data-home="650" data-time="48h" value="25">25 - Constantine / قسنطينة</option>
+<option data-desk="450" data-home="650" data-time="48h" value="19">19 - Sétif / سطيف</option>
+<option data-desk="400" data-home="600" data-time="24h - 48h" value="15">15 - Tizi Ouzou / تيزي وزو</option>
+<option data-desk="350" data-home="550" data-time="24h" value="35">35 - Boumerdès / بومرداس</option>
+<option data-desk="450" data-home="650" data-time="48h" value="06">06 - Béjaïa / بجاية</option>
+<option data-desk="600" data-home="850" data-time="72h" value="30">30 - Ouargla / ورقلة</option>
+<option data-desk="600" data-home="850" data-time="72h" value="47">47 - Ghardaïa / غرداية</option>
+<option data-desk="500" data-home="700" data-time="48h" value="13">13 - Tlemcen / تلمسان</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none text-[22px]">expand_more</span>
+</div>
+</div>
+<!-- Shipping Mode Toggles (Home vs Stop Desk) -->
+<div class="grid grid-cols-1 gap-2 mt-1">
+<!-- Option 1: A Domicile -->
+<label class="relative flex items-center justify-between p-3 rounded-lg bg-surface shadow-sm cursor-pointer transition-all" id="opt-home-label">
+<input checked="" class="hidden" id="delivery-home" name="delivery_mode" onchange="handleDeliveryModeChange()" type="radio" value="home"/>
+<div class="flex items-center gap-2.5">
+<div class="w-4 h-4 rounded-full bg-primary flex items-center justify-center" id="dot-home">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">home</span>
+                À Domicile (Yalidine Express)
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="delivery-time-home">Délai estimé : 24h - 48h</span>
+</div>
+</div>
+<span class="font-currency-display text-currency-display text-primary text-[15px] font-bold" id="delivery-price-home">500 DA</span>
+</label>
+<!-- Option 2: Stop Desk -->
+<label class="relative flex items-center justify-between p-3 rounded-lg bg-surface-container shadow-sm cursor-pointer transition-all opacity-85" id="opt-desk-label">
+<input class="hidden" id="delivery-desk" name="delivery_mode" onchange="handleDeliveryModeChange()" type="radio" value="desk"/>
+<div class="flex items-center gap-2.5">
+<div class="w-4 h-4 rounded-full bg-surface-container-highest flex items-center justify-center" id="dot-desk">
+<span class="w-1.5 h-1.5 rounded-full bg-transparent"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">storefront</span>
+                Stop Desk / Bureau Relais
+              </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Retrait rapide en agence</span>
+</div>
+</div>
+<span class="font-currency-display text-currency-display text-on-surface text-[15px] font-bold" id="delivery-price-desk">350 DA</span>
+</label>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant bg-surface-container/70 p-2 rounded-lg">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span class="font-body-sm text-body-sm">Réseau complet : 58 Wilayas desservies entre 400 DA et 900 DA.</span>
+</div>
+</div>
+</div>
+<!-- Jewelry Specifications & Craftsmanship -->
+<div class="px-margin mb-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">diamond</span>
+<h2 class="font-headline-md text-headline-md text-on-surface text-[17px]">Fiche Technique &amp; Matériaux</h2>
+</div>
+<div class="grid grid-cols-1 gap-2.5 mt-1">
+<!-- Spec Item 1 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">straighten</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Longueur de la chaîne</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">45 cm + 5 cm d'extension ajustable avec fermoir sécurisé mousqueton.</span>
+</div>
+</div>
+<!-- Spec Item 2 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">water_drop</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Composition &amp; Traitement</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Acier chirurgical 316L plaqué Or 18K • Hypoallergénique, Waterproof &amp; Anti-ternissement.</span>
+</div>
+</div>
+<!-- Spec Item 3 -->
+<div class="flex items-start gap-3 p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Finition Joaillière</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Poli miroir artisanal serti de zircons cubiques AAA ultra-étincelants.</span>
+</div>
+</div>
+</div>
+<!-- Included in Package Banner -->
+<div class="mt-2 p-3 rounded-lg bg-secondary-container/40 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Coffret Cadeau Zayna Offert</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Écrin de velours, pochon de voyage et carte d'authenticité inclus.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Customer Delight & Fast FAQ Accordion -->
+<div class="px-margin mb-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">help_outline</span>
+<h3 class="font-headline-md text-headline-md text-on-surface text-[17px]">Questions Fréquentes</h3>
+</div>
+<div class="space-y-1.5">
+<details class="group bg-surface rounded-lg p-3 cursor-pointer">
+<summary class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between list-none">
+<span>Le bijou change-t-il de couleur avec l'eau ?</span>
+<span class="material-symbols-outlined text-[18px] text-secondary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2">
+            Non ! Notre technologie de placage sous vide (PVD) résiste à l'eau, aux parfums et à la transpiration. Vous pouvez le porter quotidiennement en toute sérénité.
+          </p>
+</details>
+<details class="group bg-surface rounded-lg p-3 cursor-pointer">
+<summary class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between list-none">
+<span>Comment se déroule la commande ?</span>
+<span class="material-symbols-outlined text-[18px] text-secondary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-2">
+            Cliquez sur Commander ci-dessous, renseignez votre nom, numéro de téléphone et adresse. Notre équipe vous appelle sous 2 heures pour confirmer l'envoi.
+          </p>
+</details>
+</div>
+</div>
+</div>
+<!-- Fixed Bottom Bar for Mobile Checkout Experience -->
+<div class="fixed bottom-0 inset-x-0 z-40 bg-surface/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(201,162,39,0.12)] pb-safe">
+<div class="px-margin py-3 flex items-center gap-3">
+<!-- Price & Delivery Summary Block -->
+<div class="flex flex-col flex-shrink-0 min-w-[100px]">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Total Commande :</span>
+<div class="flex items-baseline gap-1">
+<span class="font-currency-display text-currency-display text-primary text-[20px] font-bold" id="bottom-total-price">7 300 DA</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary" id="bottom-shipping-sub">Livraison incluse</span>
+</div>
+<!-- High-Conversion Primary Gold CTA Button -->
+<button class="flex-1 h-12 bg-primary-container hover:bg-primary active:scale-[0.98] text-on-primary-container hover:text-on-primary font-label-lg text-label-lg rounded-full flex items-center justify-center gap-2 shadow-md transition-all uppercase tracking-wider font-bold" onclick="triggerFastCheckout()">
+<span>Commander (COD)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Toast Notification Modal for Micro-Interaction -->
+<div class="fixed top-20 inset-x-4 z-50 transform -translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="checkout-toast">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-xl flex items-center gap-3 border-none">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Confirmation Rapide</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Direction le formulaire express 58 Wilayas...</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Gallery Carousel State
+  let currentSlide = 0;
+  const totalSlides = 3;
+
+  function goToSlide(index) {
+    currentSlide = index;
+    const gallery = document.getElementById('gallery-container');
+    if (gallery) {
+      gallery.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Update Dots
+    const dots = document.querySelectorAll('.indicator-dot');
+    dots.forEach((dot, idx) => {
+      if (idx === currentSlide) {
+        dot.classList.remove('w-1.5', 'bg-surface-container-highest');
+        dot.classList.add('w-5', 'bg-primary-container');
+      } else {
+        dot.classList.remove('w-5', 'bg-primary-container');
+        dot.classList.add('w-1.5', 'bg-surface-container-highest');
+      }
+    });
+
+    // Update Thumbs
+    const thumbs = document.querySelectorAll('.thumb-btn');
+    thumbs.forEach((thumb, idx) => {
+      if (idx === currentSlide) {
+        thumb.classList.remove('opacity-60');
+        thumb.classList.add('bg-primary/20', 'opacity-100');
+      } else {
+        thumb.classList.remove('bg-primary/20', 'opacity-100');
+        thumb.classList.add('opacity-60');
+      }
+    });
+  }
+
+  // Wishlist Like Toggle
+  let isLiked = false;
+  function toggleLike() {
+    isLiked = !isLiked;
+    const icon = document.getElementById('like-icon');
+    if (isLiked) {
+      icon.innerText = 'favorite';
+      icon.classList.remove('text-secondary');
+      icon.classList.add('text-error');
+      icon.style.fontVariationSettings = "'FILL' 1";
+    } else {
+      icon.innerText = 'favorite';
+      icon.classList.remove('text-error');
+      icon.classList.add('text-secondary');
+      icon.style.fontVariationSettings = "'FILL' 0";
+    }
+  }
+
+  // Wilaya and Delivery Fee Calculation
+  const ITEM_PRICE = 6800;
+
+  function updateDeliveryFees() {
+    const select = document.getElementById('wilaya-select');
+    const selectedOption = select.options[select.selectedIndex];
+    const homeCost = parseInt(selectedOption.getAttribute('data-home'), 10);
+    const deskCost = parseInt(selectedOption.getAttribute('data-desk'), 10);
+    const delTime = selectedOption.getAttribute('data-time') || '24h - 48h';
+
+    document.getElementById('delivery-price-home').innerText = homeCost + ' DA';
+    document.getElementById('delivery-price-desk').innerText = deskCost + ' DA';
+    document.getElementById('delivery-time-home').innerText = 'Délai estimé : ' + delTime;
+
+    recalculateTotal();
+  }
+
+  function handleDeliveryModeChange() {
+    const isHome = document.getElementById('delivery-home').checked;
+    const homeLabel = document.getElementById('opt-home-label');
+    const deskLabel = document.getElementById('opt-desk-label');
+    const dotHome = document.getElementById('dot-home');
+    const dotDesk = document.getElementById('dot-desk');
+
+    if (isHome) {
+      homeLabel.classList.remove('bg-surface-container', 'opacity-85');
+      homeLabel.classList.add('bg-surface', 'opacity-100');
+      deskLabel.classList.remove('bg-surface', 'opacity-100');
+      deskLabel.classList.add('bg-surface-container', 'opacity-85');
+
+      dotHome.classList.remove('bg-surface-container-highest');
+      dotHome.classList.add('bg-primary');
+      dotHome.children[0].classList.remove('bg-transparent');
+      dotHome.children[0].classList.add('bg-on-primary');
+
+      dotDesk.classList.remove('bg-primary');
+      dotDesk.classList.add('bg-surface-container-highest');
+      dotDesk.children[0].classList.remove('bg-on-primary');
+      dotDesk.children[0].classList.add('bg-transparent');
+    } else {
+      deskLabel.classList.remove('bg-surface-container', 'opacity-85');
+      deskLabel.classList.add('bg-surface', 'opacity-100');
+      homeLabel.classList.remove('bg-surface', 'opacity-100');
+      homeLabel.classList.add('bg-surface-container', 'opacity-85');
+
+      dotDesk.classList.remove('bg-surface-container-highest');
+      dotDesk.classList.add('bg-primary');
+      dotDesk.children[0].classList.remove('bg-transparent');
+      dotDesk.children[0].classList.add('bg-on-primary');
+
+      dotHome.classList.remove('bg-primary');
+      dotHome.classList.add('bg-surface-container-highest');
+      dotHome.children[0].classList.remove('bg-on-primary');
+      dotHome.children[0].classList.add('bg-transparent');
+    }
+
+    recalculateTotal();
+  }
+
+  function recalculateTotal() {
+    const select = document.getElementById('wilaya-select');
+    const selectedOption = select.options[select.selectedIndex];
+    const isHome = document.getElementById('delivery-home').checked;
+    const shippingFee = isHome 
+      ? parseInt(selectedOption.getAttribute('data-home'), 10) 
+      : parseInt(selectedOption.getAttribute('data-desk'), 10);
+
+    const total = ITEM_PRICE + shippingFee;
+    const totalFormatted = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " DA";
+    document.getElementById('bottom-total-price').innerText = totalFormatted;
+  }
+
+  function triggerFastCheckout() {
+    const toast = document.getElementById('checkout-toast');
+    if (toast) {
+      toast.classList.remove('-translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('-translate-y-24', 'opacity-0');
+      }, 2500);
+    }
+  }
+
+  // Initialize display
+  recalculateTotal();
+</script></main></body></html>

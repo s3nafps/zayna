@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#006d44","on-primary-container":"#4b3a00","on-secondary-fixed":"#1e1b19","inverse-primary":"#ecc246","on-tertiary":"#ffffff","surface-tint":"#755b00","primary-container":"#c9a227","inverse-on-surface":"#f6f0ea","on-tertiary-fixed":"#002111","surface-dim":"#dfd9d4","secondary":"#635d5b","on-secondary-container":"#67615f","surface-variant":"#e7e1dc","on-surface":"#1d1b18","secondary-container":"#e7dedb","on-error-container":"#93000a","on-secondary":"#ffffff","surface-container-low":"#f9f2ed","on-primary":"#ffffff","surface-container":"#f3ede7","outline":"#7f7663","on-primary-fixed-variant":"#584400","primary-fixed":"#ffe08e","tertiary-container":"#54b985","error":"#ba1a1a","tertiary-fixed":"#92f7be","surface-container-high":"#ede7e2","on-secondary-fixed-variant":"#4b4644","on-primary-fixed":"#241a00","surface-container-highest":"#e7e1dc","error-container":"#ffdad6","surface-container-lowest":"#ffffff","secondary-fixed":"#e9e1de","on-error":"#ffffff","surface":"#fff8f3","inverse-surface":"#32302d","outline-variant":"#d1c5af","primary":"#755b00","on-surface-variant":"#4d4635","primary-fixed-dim":"#ecc246","tertiary-fixed-dim":"#76daa3","secondary-fixed-dim":"#cdc5c2","on-tertiary-fixed-variant":"#005232","on-background":"#1d1b18","background":"#fff8f3","on-tertiary-container":"#00462a","surface-bright":"#fff8f3"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-desktop":"2.5rem","margin":"1rem","space-xs":"0.25rem","gutter":"0.75rem"},"fontFamily":{"currency-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"headline-xl-mobile":["Playfair Display"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"currency-display":["18px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[22px]">diamond</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-semibold">Zayna</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-primary font-bold">Joaillerie Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs mb-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestion &amp; Wilayas</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_10px_rgba(201,162,39,0.12)]"><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Tableau de bord</span></a><a class="flex items-center justify-between px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="orders" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-label-lg text-label-lg">Commandes</span></div><span class="bg-surface-container-highest text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">COD</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="products" href="#"><span class="material-symbols-outlined text-[20px]">watch</span><span class="font-label-lg text-label-lg">Produits &amp; Or 18k</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="delivery-integrations" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-lg text-label-lg">Livraisons &amp; Transporteurs</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="shipping-rates" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-label-lg text-label-lg">Grille 58 Wilayas</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-lg text-label-lg">Clientes</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Paramètres</span></a></nav></div></div><div class="p-space-md bg-surface-container"><div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Yalidine / ZR Live</span></div><span class="font-label-sm text-label-sm text-tertiary font-bold">58 Wilayas</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[20px] text-primary">travel_explore</span><select class="h-12 pl-10 pr-8 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.04)] appearance-none cursor-pointer focus:outline-none"><option value="all">Toutes les wilayas (01-58)</option><option value="16">16 - Alger / الجزائر</option><option value="31">31 - Oran / وهران</option><option value="25">25 - Constantine / قسنطينة</option><option value="19">19 - Sétif / سطيف</option><option value="09">09 - Blida / البليدة</option><option value="06">06 - Béjaïa / بجاية</option><option value="15">15 - Tizi Ouzou / تيزي وزو</option><option value="13">13 - Tlemcen / تلمسان</option></select><span class="material-symbols-outlined absolute right-2 pointer-events-none text-[18px] text-outline">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-space-md py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant"><span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span><span class="font-label-sm text-label-sm font-semibold">Synchronisation Yalidine &amp; ZR Express active</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-1 px-3 py-1 bg-surface-container rounded-lg font-label-sm text-label-sm text-on-surface-variant"><span class="text-primary font-bold">FR</span><span class="text-outline">|</span><span>AR</span><span class="text-outline">|</span><span>EN</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Amira Benali</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Gérante Boutique Alger</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 bg-background min-h-screen"><div class="w-full max-w-[1440px] mx-auto px-space-xl py-space-xl"><div class="flex flex-col w-full">
+<!-- Subtle ambient decorative glow behind workspace -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 right-12 w-96 h-96 bg-primary-fixed/25 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-80 -left-20 w-80 h-80 bg-tertiary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Page Title & Micro Metadata Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Logistique &amp; Flux Cash on Delivery</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Bordereaux • 58 Wilayas</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">
+          Intégrations Transporteurs &amp; Logistique
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs leading-relaxed">
+          Connectez vos comptes expéditeurs en Algérie pour l'automatisation des bordereaux, l'envoi des colis de joaillerie et le suivi en temps réel du cash on delivery (COD).
+        </p>
+</div>
+<!-- Quick Action / Global Sync Trigger -->
+<div class="flex items-center gap-3 self-start md:self-auto shrink-0">
+<button class="group flex items-center gap-2 px-space-md py-3 rounded-lg bg-surface-container-lowest shadow-sm hover:shadow-md text-on-surface hover:text-primary transition-all" onclick="triggerGlobalSync(this)" type="button">
+<span class="material-symbols-outlined text-[19px] text-primary transition-transform duration-700" id="sync-icon">sync</span>
+<span class="font-label-md text-label-md font-semibold">Forcer la synchronisation</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-3 rounded-lg bg-primary text-on-primary shadow-sm hover:bg-on-primary-fixed-variant transition-colors" onclick="openDrawer('custom')" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Ajouter un transporteur</span>
+</button>
+</div>
+</div>
+<!-- Status Banner: Algerian Carriers Fleet -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-xl">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start sm:items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px] text-tertiary">hub</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Passerelles API Connectées</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+                Synchronisation active
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Réseau national 58 Wilayas opérationnel — 210 bordereaux édités et vérifiés sous inspection COD cette semaine.
+            </p>
+</div>
+</div>
+<!-- Telemetry Stats Strip -->
+<div class="flex items-center gap-space-md divide-x divide-surface-container-high shrink-0 self-end lg:self-auto">
+<div class="flex flex-col items-end pr-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Taux de Remise COD</span>
+<span class="font-currency-display text-currency-display text-tertiary">96.4%</span>
+</div>
+<div class="flex flex-col items-end pl-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Latence Moyenne API</span>
+<span class="font-currency-display text-currency-display text-primary">38 ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Providers Grid (2x2 + custom fleet card) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- Card 1: Yalidine Express -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all">
+<div>
+<!-- Header info -->
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center p-2.5 shrink-0 shadow-inner">
+<!-- Yalidine Logo Styled Marker -->
+<div class="w-full h-full rounded-lg bg-surface-container-lowest flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-black text-on-surface tracking-tighter leading-none">YD</span>
+<span class="font-label-sm text-[8px] uppercase tracking-widest text-primary font-extrabold leading-none mt-0.5">Yalidine</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Yalidine Express</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Réseau Hubs &amp; Stop Desk National</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Connecté &amp; Actif
+            </span>
+</div>
+<!-- Description & Details -->
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md line-clamp-2">
+            Automatisation directe des manifestes, étiquettes thermiques 10x15 et retraits en guichet dans 58 wilayas.
+          </p>
+<!-- Key Metrics Box -->
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low rounded-lg p-space-md mb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-medium">Bordereaux ce mois</span>
+<span class="font-currency-display text-currency-display text-on-surface mt-0.5">142 colis</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-medium">Centre d'expédition</span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5 truncate font-semibold">Oued Smar (16)</span>
+</div>
+</div>
+<!-- Webhook freshness indicator -->
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm px-1 mb-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">mark_email_read</span>
+<span>Dernier webhook reçu</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Il y a 2 min</span>
+</div>
+</div>
+<!-- Footer Control & Action -->
+<div class="pt-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center justify-between px-1">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Transporteur par défaut</span>
+<span class="font-body-sm text-body-sm text-outline">Assigné aux commandes 18k</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center gap-2 mt-space-xs">
+<button class="w-full flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold uppercase tracking-wider hover:bg-primary hover:text-on-primary shadow-sm transition-all" onclick="openDrawer('yalidine')" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+              Configurer l'API
+            </button>
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Télécharger le journal" type="button">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: ZR Express -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center p-2.5 shrink-0 shadow-inner">
+<div class="w-full h-full rounded-lg bg-surface-container-lowest flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-black text-primary tracking-tighter leading-none">ZR</span>
+<span class="font-label-sm text-[8px] uppercase tracking-widest text-on-surface font-extrabold leading-none mt-0.5">Express</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">ZR Express</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Réseau Spécialisé Grand Sud &amp; Est</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Connecté
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md line-clamp-2">
+            Idéal pour le transport sécurisé et remise contre signature à Ouargla, Constantine, Sétif et Annaba.
+          </p>
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low rounded-lg p-space-md mb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-medium">Bordereaux ce mois</span>
+<span class="font-currency-display text-currency-display text-on-surface mt-0.5">68 colis</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-medium">Couverture clé</span>
+<span class="font-label-md text-label-md text-on-surface mt-0.5 truncate font-semibold">Sud &amp; Hauts Plateaux</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm px-1 mb-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Synchronisation COD</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">100% à jour</span>
+</div>
+</div>
+<div class="pt-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center justify-between px-1">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Transporteur de secours</span>
+<span class="font-body-sm text-body-sm text-outline">Bascule automatique en cas de panne</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center gap-2 mt-space-xs">
+<button class="w-full flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold transition-all" onclick="openDrawer('yalidine')" type="button">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+              Configurer l'API
+            </button>
+<button class="p-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Tester" type="button">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Maystro Delivery -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center p-2.5 shrink-0 shadow-inner">
+<div class="w-full h-full rounded-lg bg-surface-container-lowest flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-black text-secondary tracking-tighter leading-none">MY</span>
+<span class="font-label-sm text-[8px] uppercase tracking-widest text-outline font-extrabold leading-none mt-0.5">Maystro</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Maystro Delivery</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Logistique Urbaine &amp; Dernier Kilomètre</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+              Non Connecté
+            </span>
+</div>
+<div class="mb-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-primary-fixed/30 text-on-primary-fixed-variant font-label-sm text-label-sm font-bold mb-2">
+<span class="material-symbols-outlined text-[15px] text-primary">local_shipping</span>
+              Livraison express jour-même Alger/Blida
+            </span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Permet l'envoi direct depuis le coffre de la boutique pour les clientes premium à Hydra, Ben Aknoun et Tipaza.
+            </p>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md mb-space-md flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline font-medium">Bordereaux ce mois</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">0 colis (En attente)</span>
+</div>
+</div>
+<div class="pt-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-outline">Clé API requise pour activer le routage</span>
+</div>
+<button class="w-full flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold uppercase tracking-wider transition-all" onclick="openDrawer('yalidine')" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+            Connecter Maystro
+          </button>
+</div>
+</div>
+<!-- Card 4: Noest Express (Error state) -->
+<div class="group flex flex-col justify-between bg-surface-container-lowest rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-start justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-xl bg-surface-container flex items-center justify-center p-2.5 shrink-0 shadow-inner">
+<div class="w-full h-full rounded-lg bg-surface-container-lowest flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md font-black text-error tracking-tighter leading-none">NO</span>
+<span class="font-label-sm text-[8px] uppercase tracking-widest text-error font-extrabold leading-none mt-0.5">Noest</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Noest Express</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lignes Grand Ouest &amp; Oranie</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+              Erreur Clé API
+            </span>
+</div>
+<div class="bg-error-container/40 p-space-md rounded-lg mb-space-md flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0">error</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-error">Jeton secret expiré (401 Unauthorized)</span>
+<p class="font-body-sm text-body-sm text-on-error-container mt-0.5">
+                La régénération du token API Noest est requise pour rétablir la transmission des colis vers Oran et Tlemcen.
+              </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm bg-surface-container-low rounded-lg p-space-md mb-space-md">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-medium">Dernier succès</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Hier, 18:40</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline font-medium">Bordereaux en attente</span>
+<span class="font-currency-display text-currency-display text-error">4 colis bloqués</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<button class="w-full flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-error text-on-error hover:bg-on-error-container font-label-md text-label-md font-bold uppercase tracking-wider transition-all shadow-sm" onclick="openDrawer('yalidine')" type="button">
+<span class="material-symbols-outlined text-[18px]">key_off</span>
+            Reconfigurer le Jeton
+          </button>
+</div>
+</div>
+<!-- Card 5: Custom Delivery Fleet Card (+) -->
+<div class="group flex flex-col justify-between bg-surface-container-low rounded-xl p-space-lg shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="flex items-center gap-3 mb-space-md">
+<div class="w-14 h-14 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[30px]">moped</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Livreurs Privés &amp; Flotte Locale</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Webhook &amp; API Personnalisée</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+            Intégrez vos livreurs dédiés sur Alger Centre, Hydra et Chéraga ou connectez une passerelle d'expédition sur-mesure pour vos pièces haute joaillerie.
+          </p>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface mb-space-md">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Signature sur mobile &amp; accusé de réception en main propre</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Encaissement cash garanti et versement direct au coffre</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span>Support JSON / REST Webhook universel</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-md">
+<button class="w-full flex items-center justify-center gap-2 px-space-md py-3 rounded-lg bg-surface-container-lowest hover:bg-primary-container hover:text-on-primary-container text-on-surface font-label-md text-label-md font-bold uppercase tracking-wider shadow-sm transition-all" onclick="openDrawer('custom')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+            Ajouter un transporteur personnalisé
+          </button>
+</div>
+</div>
+<!-- Quick Delivery Rules Summary Card -->
+<div class="flex flex-col justify-between bg-gradient-to-br from-surface-container to-surface-container-high rounded-xl p-space-lg shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Règles Métier Zayna</span>
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-2">Politique Cash on Delivery (COD)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+            Chaque colis d'or 18k est scellé sous étiquette inviolable Zayna. L'inspection physique par la cliente avant paiement est autorisée sur les 58 Wilayas.
+          </p>
+<div class="space-y-2.5">
+<div class="p-3 bg-surface-container-lowest rounded-lg flex items-center justify-between shadow-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Vérification bordereau</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Obligatoire</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg flex items-center justify-between shadow-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Assurance valeur déclarée</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Jusqu'à 450 000 DA</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md mt-space-md">
+<a class="inline-flex items-center gap-1.5 font-label-sm text-label-sm font-bold text-primary hover:text-on-primary-fixed-variant transition-colors" href="#">
+<span>Consulter la grille tarifaire des 58 Wilayas</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Active Drawer / Configuration Modal (Displayed for Yalidine Express API by default) -->
+<div class="fixed inset-0 z-50 flex justify-end bg-inverse-surface/40 backdrop-blur-sm transition-opacity duration-300" id="config-drawer">
+<!-- Drawer Panel -->
+<div class="relative w-full max-w-2xl h-full bg-surface-container-lowest shadow-2xl flex flex-col overflow-hidden animate-slide-in">
+<!-- Drawer Header -->
+<div class="px-space-xl py-space-lg bg-surface-container flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center font-bold shadow-sm" id="drawer-icon-container">
+<span class="material-symbols-outlined text-[24px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold" id="drawer-title">Configuration Yalidine Express API</h3>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold" id="drawer-badge">Officiel v2.4</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Passerelle de télétransmission des commandes &amp; impression thermique</p>
+</div>
+</div>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors" onclick="closeDrawer()" type="button">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<!-- Tab Switching (Yalidine vs Flotte Personnalisée) -->
+<div class="px-space-xl pt-space-md bg-surface-container-lowest flex items-center gap-4">
+<button class="pb-3 font-label-md text-label-md font-bold text-primary relative" id="tab-btn-yalidine" onclick="switchDrawerTab('yalidine')" type="button">
+            Paramètres Yalidine
+            <span class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" id="tab-indicator-yalidine"></span>
+</button>
+<button class="pb-3 font-label-md text-label-md font-medium text-on-surface-variant hover:text-on-surface relative" id="tab-btn-custom" onclick="switchDrawerTab('custom')" type="button">
+            Transporteur Personnalisé (Custom API)
+            <span class="hidden absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" id="tab-indicator-custom"></span>
+</button>
+</div>
+<!-- Drawer Content Scroll Area -->
+<div class="flex-1 overflow-y-auto px-space-xl py-space-lg space-y-space-lg">
+<!-- TAB 1: YALIDINE CONFIG -->
+<div class="space-y-space-lg" id="tab-content-yalidine">
+<!-- Connection Status Pill + Latency Ping -->
+<div class="p-space-md rounded-xl bg-tertiary/10 flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-md text-label-md font-bold text-tertiary">Connexion réussie - Latence 42ms</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold hover:bg-surface-container shadow-xs transition-colors flex items-center gap-1.5" onclick="testConnection(this)" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">wifi_protected_setup</span>
+<span>Tester la connexion</span>
+</button>
+</div>
+<!-- Credentials Box -->
+<div class="space-y-space-md">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-outline font-bold">Identifiants d'Accès Sécurisés</h4>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="yal-api-id">Identifiant API (API ID)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[18px]">badge</span>
+<input class="w-full h-12 pl-11 pr-4 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="yal-api-id" type="text" value="yal_prod_99214"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fourni par votre chargé de compte Yalidine Oued Smar.</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="yal-api-token">Jeton Secret API (API Token)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[18px]">lock</span>
+<input class="w-full h-12 pl-11 pr-12 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="yal-api-token" type="password" value="sk_live_8917240182470129840217"/>
+<button class="absolute right-3.5 text-outline hover:text-on-surface" onclick="togglePasswordVisibility('yal-api-token', this)" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chiffré selon le standard AES-256 pour la sécurité des transactions bijoux.</span>
+</div>
+</div>
+<!-- Environment Mode Selection -->
+<div class="space-y-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Mode Environnement</span>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<input checked="" class="accent-primary w-4 h-4" name="env-mode" type="radio" value="live"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Production (Live)</span>
+<span class="font-body-sm text-body-sm text-outline">Bordereaux et courses réels</span>
+</div>
+</label>
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<input class="accent-primary w-4 h-4" name="env-mode" type="radio" value="sandbox"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Bac à sable (Sandbox)</span>
+<span class="font-body-sm text-body-sm text-outline">Tests sans envoi physique</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Collection / Drop-off Preference -->
+<div class="space-y-space-sm">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Type de collecte des colis</span>
+<div class="grid grid-cols-2 gap-3">
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<input checked="" class="accent-primary w-4 h-4" name="pickup-type" type="radio" value="dropoff"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Dépôt en agence (Hub)</span>
+<span class="font-body-sm text-body-sm text-outline">Remise directe par nos coursiers</span>
+</div>
+</label>
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<input class="accent-primary w-4 h-4" name="pickup-type" type="radio" value="pickup"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Ramassage Atelier</span>
+<span class="font-body-sm text-body-sm text-outline">Camionnette sécurisée à 16h</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Automation Toggles -->
+<div class="space-y-space-sm pt-2">
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-outline font-bold">Automatismes &amp; Synchronisation</h4>
+<div class="space-y-3">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">receipt_long</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Créer automatiquement le bordereau</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dès qu'une commande est validée après appel client</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">update</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Synchroniser le suivi de livraison</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fréquence optimale toutes les 15 minutes</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle 3 -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">price_change</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Mise à jour des tarifs des 58 Wilayas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Actualise les frais de port à domicile et stop desk</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 2: CUSTOM CARRIER FORM -->
+<div class="hidden space-y-space-lg" id="tab-content-custom">
+<div class="p-space-md rounded-xl bg-surface-container-low">
+<h4 class="font-label-md text-label-md text-on-surface font-semibold mb-1">Connexion API REST / Webhook sur mesure</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Pour vos transporteurs régionaux indépendants (ex: Sud Transport, Express Kabylie) ou logiciels de gestion de flotte propriétaire.
+              </p>
+</div>
+<div class="space-y-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="custom-carrier-name">Nom du transporteur</label>
+<input class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="custom-carrier-name" placeholder="Ex: Chéraga VIP Express" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="custom-carrier-endpoint">URL API de base (Base Endpoint)</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[18px]">dns</span>
+<input class="w-full h-12 pl-11 pr-4 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="custom-carrier-endpoint" placeholder="https://api.votre-transporteur.dz/v1" type="url"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="custom-auth-type">Type d'authentification</label>
+<select class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="custom-auth-type">
+<option value="bearer">Bearer Token (Header Authorization)</option>
+<option value="apikey">X-API-KEY (Header)</option>
+<option value="basic">ID Client + Secret (Basic Auth)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="custom-token">Clé d'autorisation / Token</label>
+<input class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="custom-token" placeholder="••••••••••••••••••••••••" type="password"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md font-semibold text-on-surface" for="custom-webhook-secret">Secret Webhook pour retours de statuts COD</label>
+<input class="w-full h-12 px-4 bg-surface-container-low rounded-lg text-on-surface font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="custom-webhook-secret" placeholder="whsec_algeria_jewels_..." type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Action Footer -->
+<div class="px-space-xl py-space-md bg-surface-container flex items-center justify-between shadow-lg">
+<button class="px-space-md py-3 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-semibold transition-colors" onclick="closeDrawer()" type="button">
+            Annuler
+          </button>
+<div class="flex items-center gap-3">
+<button class="flex items-center gap-2 px-space-xl py-3 rounded-lg bg-primary text-on-primary hover:bg-on-primary-fixed-variant shadow-sm transition-all" onclick="saveSettings(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Enregistrer les modifications</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Micro-interactions and Drawer State Controls
+    function openDrawer(mode) {
+      const drawer = document.getElementById('config-drawer');
+      drawer.classList.remove('hidden');
+      drawer.classList.add('flex');
+      if (mode === 'custom') {
+        switchDrawerTab('custom');
+      } else {
+        switchDrawerTab('yalidine');
+      }
+    }
+
+    function closeDrawer() {
+      const drawer = document.getElementById('config-drawer');
+      drawer.classList.add('hidden');
+      drawer.classList.remove('flex');
+    }
+
+    function switchDrawerTab(tab) {
+      const yalidineContent = document.getElementById('tab-content-yalidine');
+      const customContent = document.getElementById('tab-content-custom');
+      const yalidineBtn = document.getElementById('tab-btn-yalidine');
+      const customBtn = document.getElementById('tab-btn-custom');
+      const yalidineIndicator = document.getElementById('tab-indicator-yalidine');
+      const customIndicator = document.getElementById('tab-indicator-custom');
+      const drawerTitle = document.getElementById('drawer-title');
+      const drawerBadge = document.getElementById('drawer-badge');
+
+      if (tab === 'yalidine') {
+        yalidineContent.classList.remove('hidden');
+        customContent.classList.add('hidden');
+        
+        yalidineBtn.classList.add('font-bold', 'text-primary');
+        yalidineBtn.classList.remove('text-on-surface-variant', 'font-medium');
+        customBtn.classList.add('text-on-surface-variant', 'font-medium');
+        customBtn.classList.remove('font-bold', 'text-primary');
+
+        yalidineIndicator.classList.remove('hidden');
+        customIndicator.classList.add('hidden');
+
+        drawerTitle.innerText = "Configuration Yalidine Express API";
+        drawerBadge.innerText = "Officiel v2.4";
+      } else {
+        yalidineContent.classList.add('hidden');
+        customContent.classList.remove('hidden');
+
+        customBtn.classList.add('font-bold', 'text-primary');
+        customBtn.classList.remove('text-on-surface-variant', 'font-medium');
+        yalidineBtn.classList.add('text-on-surface-variant', 'font-medium');
+        yalidineBtn.classList.remove('font-bold', 'text-primary');
+
+        customIndicator.classList.remove('hidden');
+        yalidineIndicator.classList.add('hidden');
+
+        drawerTitle.innerText = "Nouveau Transporteur Sur-Mesure";
+        drawerBadge.innerText = "Custom Webhook";
+      }
+    }
+
+    function togglePasswordVisibility(fieldId, triggerBtn) {
+      const input = document.getElementById(fieldId);
+      const icon = triggerBtn.querySelector('.material-symbols-outlined');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.innerText = 'visibility_off';
+      } else {
+        input.type = 'password';
+        icon.innerText = 'visibility';
+      }
+    }
+
+    function triggerGlobalSync(button) {
+      const icon = document.getElementById('sync-icon');
+      icon.classList.add('rotate-180');
+      button.disabled = true;
+      const originalText = button.querySelector('span:not(.material-symbols-outlined)').innerText;
+      button.querySelector('span:not(.material-symbols-outlined)').innerText = 'Synchronisation...';
+      
+      setTimeout(() => {
+        icon.classList.remove('rotate-180');
+        button.querySelector('span:not(.material-symbols-outlined)').innerText = 'Bordereaux à jour !';
+        setTimeout(() => {
+          button.querySelector('span:not(.material-symbols-outlined)').innerText = originalText;
+          button.disabled = false;
+        }, 1500);
+      }, 1000);
+    }
+
+    function testConnection(button) {
+      const originalContent = button.innerHTML;
+      button.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Test en cours...</span>';
+      button.disabled = true;
+
+      setTimeout(() => {
+        button.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span><span>Ping 38ms (OK)</span>';
+        setTimeout(() => {
+          button.innerHTML = originalContent;
+          button.disabled = false;
+        }, 2000);
+      }, 800);
+    }
+
+    function saveSettings(button) {
+      const originalHTML = button.innerHTML;
+      button.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Enregistrement...</span>';
+      button.disabled = true;
+
+      setTimeout(() => {
+        button.innerHTML = '<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Paramètres Enregistrés</span>';
+        setTimeout(() => {
+          button.innerHTML = originalHTML;
+          button.disabled = false;
+          closeDrawer();
+        }, 1000);
+      }, 700);
+    }
+  </script>
+</div></div></main></div></body></html>

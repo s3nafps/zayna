@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed": "#92f7be", "surface-container-highest": "#e7e1dc", "error-container": "#ffdad6", "surface-container-low": "#f9f2ed", "error": "#ba1a1a", "on-error-container": "#93000a", "surface": "#fff8f3", "on-secondary-container": "#67615f", "inverse-primary": "#ecc246", "surface-container": "#f3ede7", "outline-variant": "#d1c5af", "on-tertiary-fixed-variant": "#005232", "on-secondary-fixed-variant": "#4b4644", "primary": "#755b00", "surface-variant": "#e7e1dc", "inverse-surface": "#32302d", "on-tertiary-fixed": "#002111", "surface-dim": "#dfd9d4", "tertiary-fixed-dim": "#76daa3", "outline": "#7f7663", "secondary-container": "#e7dedb", "primary-container": "#c9a227", "surface-container-lowest": "#ffffff", "on-background": "#1d1b18", "tertiary": "#006d44", "secondary": "#635d5b", "inverse-on-surface": "#f6f0ea", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#584400", "on-secondary-fixed": "#1e1b19", "on-primary-container": "#4b3a00", "on-surface": "#1d1b18", "primary-fixed": "#ffe08e", "on-primary-fixed": "#241a00", "surface-container-high": "#ede7e2", "on-secondary": "#ffffff", "secondary-fixed-dim": "#cdc5c2", "on-surface-variant": "#4d4635", "primary-fixed-dim": "#ecc246", "secondary-fixed": "#e9e1de", "tertiary-container": "#54b985", "background": "#fff8f3", "surface-bright": "#fff8f3", "on-tertiary-container": "#00462a", "on-error": "#ffffff", "on-primary": "#ffffff", "surface-tint": "#755b00" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "1rem", "margin-desktop": "2.5rem", "margin": "1rem", "space-sm": "0.5rem", "gutter": "0.75rem", "gutter-desktop": "1.5rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "currency-display": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-md": ["Playfair Display"], "headline-xl-mobile": ["Playfair Display"], "headline-xl": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "currency-display": ["18px", { "lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(201,162,39,0.06)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Retour" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Zayna Jewelry Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Vfu0MHcZJypg7ZDvHn6nVaUEvO-28_BqNT7otbpwWS0sZuHrIkyCzK4VvX_NVGFRbXG6DRtSJZpMxNfag6dw68Ai6P4wjKdc-QEJinyYRETrZ7xgPRbX1C88e4GSUw3-hqrj8tnVGJ69Cgruhnk3ERKKWxTCC3_HtAZ5yQBR8GvZDacoxRs3dNLorMAza60fuPofd1P4mpDrG-mI0Dib2lgM1yMAlHWAwpdv7EXp4"/><h1 class="font-headline-md text-headline-md text-on-surface truncate max-w-[180px]">Checkout Flow</h1></div><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-safe">
+<!-- Top Express Guarantee Bar -->
+<section class="px-margin pt-space-sm pb-space-xs">
+<div class="bg-primary/10 rounded-full px-space-md py-space-xs flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-md text-label-md">Commande Express • Sans carte</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">100% الدفع عند الاستلام</span>
+</div>
+</section>
+<!-- Main Order Form Container -->
+<div class="px-margin flex flex-col gap-space-md mt-space-xs">
+<!-- Mini Order Summary Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Récapitulatif du panier</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Stock Express Alger
+        </span>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="relative w-20 h-24 rounded-lg overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Exquisite 18k Algerian gold Khamsa pendant necklace resting on warm ivory silk velvet with subtle filigree details, studio jewelry photography, radiant warm bullion illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPVVnUOgaz-g3mfa4n1OPlWkjby6wms_XFe_O7U6vA9veAIeTE9sqLwXHonGP01JwPBo2d-VY4JZuYcApmqlpKB4SjTmy3DzMy8ydHdYFMxt_yyqMYPFp6k8n6ulnxXHvkI6sk8yegDmV6jjYgMAu2SyLQ66egiM2FYRCtGaF7rw0qL1VppDPMSjnXi3OlVEc4DL4pdr4gPz6Xdx4swTo68o_rWuBUEoJjydedVD8"/>
+<div class="absolute bottom-1 right-1 bg-surface-container-lowest/90 px-1 py-0.5 rounded text-[10px] font-semibold text-primary">
+            18k
+          </div>
+</div>
+<div class="flex flex-col flex-1 min-w-0 justify-between py-0.5">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Collier Khamsa Fatima</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Finition Or Jaune 18k filigrané</p>
+</div>
+<div class="flex items-center justify-between mt-2">
+<span class="bg-surface-container text-on-surface-variant text-[11px] font-medium px-2 py-0.5 rounded">Quantité: 1</span>
+<span class="font-currency-display text-currency-display text-primary">6 800 DA</span>
+</div>
+</div>
+</div>
+<!-- Free Gift Pouch Note -->
+<div class="bg-surface-container-low rounded-lg p-space-xs flex items-center gap-space-sm mt-1">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">featured_seasonal_and_gifts</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Écrin de luxe &amp; pochette velours offerts</span>
+<span class="font-body-sm text-[11px] leading-tight text-on-surface-variant">Prêt à offrir avec certificat d'authenticité Zayna</span>
+</div>
+</div>
+</div>
+<!-- Algerian Call Guarantee Banner -->
+<div class="bg-surface-container-high rounded-xl p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0">support_agent</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md text-on-surface">Confirmation téléphonique sécurisée</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Notre conseillère vous appelle sous 2h pour vérifier l'adresse avant expédition.
+        </p>
+</div>
+</div>
+<!-- Customer Information Form -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">person_pin</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Vos Coordonnées</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">معلومات المشتري</span>
+</div>
+<!-- Nom & Prénom -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex justify-between" for="full_name">
+<span>Nom &amp; Prénom</span>
+<span class="text-on-surface-variant font-normal">الاسم الكامل</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">badge</span>
+<input class="w-full h-12 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-low transition-colors shadow-sm" id="full_name" placeholder="Ex. Amira Benali" type="text" value="Amira Benali"/>
+</div>
+</div>
+<!-- Primary Phone -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex justify-between" for="primary_phone">
+<span class="flex items-center gap-1">
+            Numéro de Téléphone (Mobile)
+            <span class="text-error font-bold">*</span>
+</span>
+<span class="text-on-surface-variant font-normal">رقم الهاتف للاتصال</span>
+</label>
+<div class="relative flex items-center">
+<div class="absolute left-3 flex items-center gap-1.5 pointer-events-none">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">DZ (+213)</span>
+</div>
+<input class="w-full h-12 pl-28 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-low transition-colors shadow-sm" id="primary_phone" placeholder="05 / 06 / 07 XX XX XX XX" type="tel" value="06 61 45 89 20"/>
+</div>
+<p class="font-body-sm text-[11px] text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+          Numéro requis pour la confirmation par notre opératrice
+        </p>
+</div>
+<!-- Secondary Phone (Optional) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface" for="secondary_phone">
+            Numéro secondaire <span class="text-on-surface-variant font-normal">(Recommandé)</span>
+</label>
+<span class="text-on-surface-variant font-label-sm text-label-sm">رقم هاتف احتياطي</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">phone_iphone</span>
+<input class="w-full h-12 pl-10 pr-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-low transition-colors shadow-sm" id="secondary_phone" placeholder="Numéro d'un proche (mari, parent, bureau)" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Algerian Shipping Destination -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Destination de Livraison</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">عنوان التوصيل</span>
+</div>
+<!-- Wilaya & Commune Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Wilaya Selector -->
+<div class="flex flex-col gap-1.5 min-w-0">
+<label class="font-label-md text-label-md text-on-surface truncate" for="wilaya_select">Wilaya / الولاية</label>
+<div class="relative flex items-center">
+<select class="w-full h-12 px-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md appearance-none outline-none focus:bg-surface-container shadow-sm truncate" id="wilaya_select" onchange="updateWilayaFees(this.value)">
+<option selected="" value="16">16 - Alger / الجزائر</option>
+<option value="09">09 - Blida / البليدة</option>
+<option value="31">31 - Oran / وهران</option>
+<option value="25">25 - Constantine / قسنطينة</option>
+<option value="15">15 - Tizi Ouzou / تيزي وزو</option>
+<option value="19">19 - Sétif / سطيف</option>
+<option value="06">06 - Béjaïa / بجاية</option>
+<option value="01">01 - Adrar / أدرار</option>
+<option value="47">47 - Ghardaïa / غرداية</option>
+<option value="58">58 - El Meniaa / المنيعة</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-on-surface-variant pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Commune Input -->
+<div class="flex flex-col gap-1.5 min-w-0">
+<label class="font-label-md text-label-md text-on-surface truncate" for="commune_input">Commune / البلدية</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container shadow-sm truncate" id="commune_input" placeholder="Ex. Hydra, Sidi Yahia" type="text" value="Hydra"/>
+</div>
+</div>
+</div>
+<!-- Detailed Address -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex justify-between" for="detailed_address">
+<span>Adresse précise ou repère</span>
+<span class="text-on-surface-variant font-normal">العنوان أو معلم قريب</span>
+</label>
+<div class="relative flex items-start">
+<textarea class="w-full p-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:bg-surface-container-low transition-colors shadow-sm resize-none" id="detailed_address" placeholder="Rue, n° de villa, bâtiment, ou repère (ex: en face de la pharmacie centrale)" rows="2"></textarea>
+</div>
+</div>
+</div>
+<!-- Mode de Livraison (Yalidine Express) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Mode d'Expédition</h3>
+</div>
+<span class="bg-surface-container-high px-2 py-0.5 rounded text-[11px] font-medium text-on-surface">Yalidine Express</span>
+</div>
+<!-- Option A: Domicile (Selected) -->
+<label class="cursor-pointer relative p-space-md rounded-xl bg-primary/10 transition-all flex items-start justify-between gap-space-sm shadow-sm" id="shipping_home_card" onclick="selectShipping('home')">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5" id="home_radio_indicator">
+<div class="w-2 h-2 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">🏠 Livraison à Domicile</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed text-[10px] px-1.5 py-0.2 rounded font-semibold">24h - 48h</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Le livreur Yalidine vous remet le colis directement à votre porte.
+            </p>
+</div>
+</div>
+<span class="font-currency-display text-currency-display text-primary whitespace-nowrap" id="home_fee_display">500 DA</span>
+</label>
+<!-- Option B: Stop Desk Yalidine -->
+<label class="cursor-pointer relative p-space-md rounded-xl bg-surface-container-low transition-all flex items-start justify-between gap-space-sm" id="shipping_desk_card" onclick="selectShipping('desk')">
+<div class="flex items-start gap-space-sm">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 mt-0.5" id="desk_radio_indicator">
+<div class="w-2 h-2 rounded-full bg-surface-container-highest" id="desk_radio_dot"></div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface font-bold">🏢 Récupération au Bureau Stop Desk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Bureau Yalidine Alger (Hydra / Bir Mourad Rais). Retrait flexible en 72h.
+            </p>
+</div>
+</div>
+<span class="font-currency-display text-currency-display text-on-surface whitespace-nowrap" id="desk_fee_display">350 DA</span>
+</label>
+</div>
+<!-- Payment Guarantee COD Badge -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">payments</span>
+<h3 class="font-label-lg text-label-lg text-on-surface">Paiement 100% Sécurisé</h3>
+</div>
+<span class="bg-tertiary/15 text-tertiary font-label-sm text-label-sm px-2 py-0.5 rounded-full">Sans Carte Bancaire</span>
+</div>
+<div class="bg-surface-container p-space-md rounded-xl flex items-start gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-tertiary flex items-center justify-center shrink-0 text-on-tertiary mt-0.5">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">💵 Paiement Cash à la Livraison (COD)</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Vous ne réglez rien à la commande. Vous inspectez l'emballage et payez en espèces (Dinar Algérien) au livreur dès la réception de votre bijou.
+          </p>
+</div>
+</div>
+</div>
+<!-- Pricing Summary Ledger -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Commande</h3>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-md text-body-md text-on-surface-variant">Sous-total bijou (1 article)</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">6 800 DA</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1" id="pricing_shipping_label">
+          Frais de livraison (Alger Domicile)
+        </span>
+<span class="font-body-md text-body-md text-on-surface font-semibold" id="pricing_shipping_val">500 DA</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-md text-body-md text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">loyalty</span> Réduction Bienvenue Zayna
+        </span>
+<span class="font-body-md text-body-md text-tertiary font-bold">-300 DA</span>
+</div>
+<div class="h-px bg-surface-container my-1"></div>
+<div class="flex justify-between items-baseline pt-1">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Net à Payer au Livreur</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">المبلغ الصافي عند الاستلام</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-currency-display text-[26px] leading-tight text-primary font-bold" id="grand_total_display">7 000 DA</span>
+<span class="font-body-sm text-[11px] text-tertiary font-medium">TTC • Aucun frais caché</span>
+</div>
+</div>
+</div>
+<!-- Primary Action Button & Security Microcopy -->
+<div class="flex flex-col gap-space-sm pt-space-xs pb-space-lg">
+<button class="w-full h-14 rounded-xl bg-primary-container hover:bg-primary text-on-primary-container hover:text-on-primary transition-all duration-200 flex items-center justify-center gap-space-sm shadow-md active:scale-[0.99]" id="confirm_order_btn" onclick="handleCheckoutSubmission()" type="button">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wide font-bold" id="cta_btn_text">
+          Confirmer ma Commande • 7 000 DA
+        </span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Trust assurances below CTA -->
+<div class="flex items-center justify-center gap-space-md text-center pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">autorenew</span>
+<span class="font-label-sm text-label-sm">Échange sous 3 jours</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-outline"></div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm">Or 18k Garanti</span>
+</div>
+<div class="w-1 h-1 rounded-full bg-outline"></div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">phone_in_talk</span>
+<span class="font-label-sm text-label-sm">Appel avant envoi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client Behavior Script -->
+<script>
+    let currentShippingMode = 'home';
+    let basePrice = 6800;
+    let discount = 300;
+    let currentShippingFee = 500;
+
+    function selectShipping(mode) {
+      currentShippingMode = mode;
+      const homeCard = document.getElementById('shipping_home_card');
+      const deskCard = document.getElementById('shipping_desk_card');
+      const homeRadio = document.getElementById('home_radio_indicator');
+      const deskRadio = document.getElementById('desk_radio_indicator');
+      const deskDot = document.getElementById('desk_radio_dot');
+      const pricingShipLabel = document.getElementById('pricing_shipping_label');
+      const pricingShipVal = document.getElementById('pricing_shipping_val');
+
+      if (mode === 'home') {
+        currentShippingFee = 500;
+        homeCard.className = "cursor-pointer relative p-space-md rounded-xl bg-primary/10 transition-all flex items-start justify-between gap-space-sm shadow-sm";
+        deskCard.className = "cursor-pointer relative p-space-md rounded-xl bg-surface-container-low transition-all flex items-start justify-between gap-space-sm";
+        
+        homeRadio.className = "w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5";
+        homeRadio.innerHTML = '<div class="w-2 h-2 rounded-full bg-surface-container-lowest"></div>';
+        
+        deskRadio.className = "w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 mt-0.5";
+        deskRadio.innerHTML = '<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>';
+        
+        pricingShipLabel.textContent = "Frais de livraison (Alger Domicile)";
+        pricingShipVal.textContent = "500 DA";
+      } else {
+        currentShippingFee = 350;
+        deskCard.className = "cursor-pointer relative p-space-md rounded-xl bg-primary/10 transition-all flex items-start justify-between gap-space-sm shadow-sm";
+        homeCard.className = "cursor-pointer relative p-space-md rounded-xl bg-surface-container-low transition-all flex items-start justify-between gap-space-sm";
+        
+        deskRadio.className = "w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0 mt-0.5";
+        deskRadio.innerHTML = '<div class="w-2 h-2 rounded-full bg-surface-container-lowest"></div>';
+        
+        homeRadio.className = "w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0 mt-0.5";
+        homeRadio.innerHTML = '<div class="w-2 h-2 rounded-full bg-surface-container-highest"></div>';
+        
+        pricingShipLabel.textContent = "Frais de retrait (Stop Desk Yalidine)";
+        pricingShipVal.textContent = "350 DA";
+      }
+      recalculateTotal();
+    }
+
+    function updateWilayaFees(wilayaCode) {
+      const communeInput = document.getElementById('commune_input');
+      const pricingShipLabel = document.getElementById('pricing_shipping_label');
+      
+      if (wilayaCode === '16') {
+        communeInput.value = 'Hydra';
+      } else if (wilayaCode === '31') {
+        communeInput.value = 'Oran Centre';
+      } else if (wilayaCode === '25') {
+        communeInput.value = 'Ali Mendjeli';
+      } else {
+        communeInput.value = '';
+      }
+
+      if (currentShippingMode === 'home') {
+        pricingShipLabel.textContent = "Frais de livraison (Wilaya " + wilayaCode + " Domicile)";
+      } else {
+        pricingShipLabel.textContent = "Frais de retrait (Bureau Wilaya " + wilayaCode + ")";
+      }
+    }
+
+    function recalculateTotal() {
+      const netTotal = basePrice + currentShippingFee - discount;
+      const formattedTotal = netTotal.toLocaleString('fr-FR') + ' DA';
+      document.getElementById('grand_total_display').textContent = formattedTotal;
+      document.getElementById('cta_btn_text').textContent = 'Confirmer ma Commande • ' + formattedTotal;
+    }
+
+    function handleCheckoutSubmission() {
+      const btn = document.getElementById('confirm_order_btn');
+      const name = document.getElementById('full_name').value.trim();
+      const phone = document.getElementById('primary_phone').value.trim();
+
+      if (!name || !phone) {
+        alert('Veuillez renseigner votre Nom et Numéro de téléphone pour la confirmation.');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[22px]">progress_activity</span> <span class="font-label-lg">Enregistrement de la commande...</span>';
+
+      setTimeout(function() {
+        btn.className = "w-full h-14 rounded-xl bg-tertiary text-on-tertiary transition-all duration-200 flex items-center justify-center gap-space-sm shadow-md";
+        btn.innerHTML = '<span class="material-symbols-outlined text-[24px]">task_alt</span> <span class="font-label-lg uppercase tracking-wide">Commande confirmée avec succès !</span>';
+      }, 1200);
+    }
+  </script>
+</div></main></body></html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#006d44","on-primary-container":"#4b3a00","on-secondary-fixed":"#1e1b19","inverse-primary":"#ecc246","on-tertiary":"#ffffff","surface-tint":"#755b00","primary-container":"#c9a227","inverse-on-surface":"#f6f0ea","on-tertiary-fixed":"#002111","surface-dim":"#dfd9d4","secondary":"#635d5b","on-secondary-container":"#67615f","surface-variant":"#e7e1dc","on-surface":"#1d1b18","secondary-container":"#e7dedb","on-error-container":"#93000a","on-secondary":"#ffffff","surface-container-low":"#f9f2ed","on-primary":"#ffffff","surface-container":"#f3ede7","outline":"#7f7663","on-primary-fixed-variant":"#584400","primary-fixed":"#ffe08e","tertiary-container":"#54b985","error":"#ba1a1a","tertiary-fixed":"#92f7be","surface-container-high":"#ede7e2","on-secondary-fixed-variant":"#4b4644","on-primary-fixed":"#241a00","surface-container-highest":"#e7e1dc","error-container":"#ffdad6","surface-container-lowest":"#ffffff","secondary-fixed":"#e9e1de","on-error":"#ffffff","surface":"#fff8f3","inverse-surface":"#32302d","outline-variant":"#d1c5af","primary":"#755b00","on-surface-variant":"#4d4635","primary-fixed-dim":"#ecc246","tertiary-fixed-dim":"#76daa3","secondary-fixed-dim":"#cdc5c2","on-tertiary-fixed-variant":"#005232","on-background":"#1d1b18","background":"#fff8f3","on-tertiary-container":"#00462a","surface-bright":"#fff8f3"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-desktop":"2.5rem","margin":"1rem","space-xs":"0.25rem","gutter":"0.75rem"},"fontFamily":{"currency-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"headline-xl-mobile":["Playfair Display"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"currency-display":["18px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[22px]">diamond</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-semibold">Zayna</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-primary font-bold">Joaillerie Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs mb-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestion &amp; Wilayas</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_10px_rgba(201,162,39,0.12)]"><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Tableau de bord</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-3 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_10px_rgba(201,162,39,0.12)]" data-path="orders" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-label-lg text-label-lg">Commandes</span></div><span class="bg-surface-container-highest text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">COD</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="products" href="#"><span class="material-symbols-outlined text-[20px]">watch</span><span class="font-label-lg text-label-lg">Produits &amp; Or 18k</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="delivery-integrations" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-lg text-label-lg">Livraisons &amp; Transporteurs</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="shipping-rates" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-label-lg text-label-lg">Grille 58 Wilayas</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-lg text-label-lg">Clientes</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Paramètres</span></a></nav></div></div><div class="p-space-md bg-surface-container"><div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Yalidine / ZR Live</span></div><span class="font-label-sm text-label-sm text-tertiary font-bold">58 Wilayas</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[20px] text-primary">travel_explore</span><select class="h-12 pl-10 pr-8 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.04)] appearance-none cursor-pointer focus:outline-none"><option value="all">Toutes les wilayas (01-58)</option><option value="16">16 - Alger / الجزائر</option><option value="31">31 - Oran / وهران</option><option value="25">25 - Constantine / قسنطينة</option><option value="19">19 - Sétif / سطيف</option><option value="09">09 - Blida / البليدة</option><option value="06">06 - Béjaïa / بجاية</option><option value="15">15 - Tizi Ouzou / تيزي وزو</option><option value="13">13 - Tlemcen / تلمسان</option></select><span class="material-symbols-outlined absolute right-2 pointer-events-none text-[18px] text-outline">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-space-md py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant"><span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span><span class="font-label-sm text-label-sm font-semibold">Synchronisation Yalidine &amp; ZR Express active</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-1 px-3 py-1 bg-surface-container rounded-lg font-label-sm text-label-sm text-on-surface-variant"><span class="text-primary font-bold">FR</span><span class="text-outline">|</span><span>AR</span><span class="text-outline">|</span><span>EN</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Amira Benali</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Gérante Boutique Alger</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 bg-background min-h-screen"><div class="w-full max-w-[1440px] mx-auto px-space-xl py-space-xl"><div class="flex flex-col w-full relative">
+<div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-lg mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Atelier &amp; Expéditions 58 Wilayas</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+          Direct API Yalidine / ZR
+        </span>
+</div>
+<div class="flex items-baseline gap-space-md flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-serif">Gestion des Commandes</h1>
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-on-primary-container font-label-md text-label-md font-bold">
+          248 Commandes actives
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">
+          Dernière synchronisation: il y a 2 min
+        </span>
+</div>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm w-full xl:w-auto">
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 h-12 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Exporter CSV</span>
+</button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 h-12 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">print</span>
+<span>Bordereaux Groupés (PDF)</span>
+</button>
+<button class="flex-1 sm:flex-none flex items-center justify-center gap-2 h-12 px-space-md rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-label-md text-label-md font-bold transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Nouvelle Commande</span>
+</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex items-center gap-2 overflow-x-auto pb-space-sm mb-space-md no-scrollbar">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold whitespace-nowrap shadow-sm">
+        Toutes (248)
+      </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+        Nouvelles (14)
+      </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+        Confirmées (32)
+      </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+        En Préparation (18)
+      </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+        Expédiées (86)
+      </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+        Livrées (92)
+      </button>
+<button class="px-4 py-2 rounded-lg bg-error-container/40 hover:bg-error-container text-on-error-container font-label-md text-label-md whitespace-nowrap transition-colors">
+        Injoignables (4)
+      </button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-colors">
+        Annulées/Retours (2)
+      </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
+<div class="md:col-span-5 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[20px] text-outline">search</span>
+<input class="w-full h-11 pl-11 pr-4 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md placeholder:text-outline/70 focus:outline-none focus:bg-surface-container transition-all" placeholder="Rechercher par n° commande, nom cliente, téléphone DZ..." type="text" value=""/>
+</div>
+<div class="md:col-span-2 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-primary">location_on</span>
+<select class="w-full h-11 pl-9 pr-8 bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg appearance-none cursor-pointer focus:outline-none">
+<option value="all">Wilaya (Toutes 58)</option>
+<option value="16">16 - Alger / الجزائر</option>
+<option value="31">31 - Oran / وهران</option>
+<option value="25">25 - Constantine / قسنطينة</option>
+<option value="19">19 - Sétif / سطيف</option>
+<option value="09">09 - Blida / البليدة</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 pointer-events-none text-[16px] text-outline">expand_more</span>
+</div>
+<div class="md:col-span-3 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-tertiary">local_shipping</span>
+<select class="w-full h-11 pl-9 pr-8 bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg appearance-none cursor-pointer focus:outline-none">
+<option value="all">Tous transporteurs</option>
+<option value="yalidine">Yalidine Express (Direct API)</option>
+<option value="zr">ZR Express</option>
+<option value="maystro">Maystro Delivery</option>
+<option value="coursier">Coursier Boutique Alger</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 pointer-events-none text-[16px] text-outline">expand_more</span>
+</div>
+<div class="md:col-span-2 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-outline">calendar_today</span>
+<select class="w-full h-11 pl-9 pr-8 bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg appearance-none cursor-pointer focus:outline-none">
+<option value="today">Aujourd'hui</option>
+<option selected="" value="7days">7 derniers jours</option>
+<option value="month">Ce mois</option>
+<option value="custom">Période personnalisée</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 pointer-events-none text-[16px] text-outline">expand_more</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest/80 rounded-xl px-space-md py-3 mb-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-md bg-primary-container text-on-primary-container font-bold font-label-sm text-label-sm flex items-center justify-center">
+        3
+      </div>
+<span class="font-label-md text-label-md text-on-surface font-bold">
+        Commandes sélectionnées
+      </span>
+<span class="text-outline text-body-sm font-body-sm hidden sm:inline">|</span>
+<span class="text-outline text-body-sm font-body-sm hidden sm:inline">Total COD: 17 100 DA</span>
+</div>
+<div class="flex items-center flex-wrap gap-2 w-full md:w-auto">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Confirmer (3)</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">send</span>
+<span>Transférer au transporteur</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">label</span>
+<span>Étiquettes thermiques 10x15</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface transition-colors" title="Annuler la sélection" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-space-lg items-start">
+<div class="flex-1 w-full bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 pl-4 pr-2 w-10">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</th>
+<th class="py-3.5 px-3 font-semibold">N° Commande</th>
+<th class="py-3.5 px-3 font-semibold">Date &amp; Heure</th>
+<th class="py-3.5 px-3 font-semibold">Cliente &amp; Wilaya</th>
+<th class="py-3.5 px-3 font-semibold">Articles Bijouterie</th>
+<th class="py-3.5 px-3 font-semibold">Montant COD</th>
+<th class="py-3.5 px-3 font-semibold">Transporteur</th>
+<th class="py-3.5 px-3 font-semibold">Statut</th>
+<th class="py-3.5 pr-4 pl-2 text-right font-semibold">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md">
+<tr class="bg-primary-container/10 hover:bg-primary-container/15 transition-colors cursor-pointer group" onclick="toggleSlideOver(true)">
+<td class="py-4 pl-4 pr-2" onclick="event.stopPropagation()">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-currency-display text-[15px] font-bold text-on-surface">#ZY-1094</span>
+<span class="material-symbols-outlined text-[16px] text-primary" title="Sélection active">arrow_right_alt</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">verified</span> Vérifié tel
+                </span>
+</td>
+<td class="py-4 px-3 text-on-surface-variant text-body-sm font-body-sm whitespace-nowrap">
+<span class="font-semibold text-on-surface">24 Mai 2024</span><br/>
+<span class="text-outline">10:14 (Il y a 32m)</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Amira Benali</span>
+<a class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-1" href="tel:0661458920" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[13px]">phone</span> 0661 45 89 20
+                  </a>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">16 - Alger (Hydra)</span>
+</div>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A delicate handmade Algerian Khamsa Fatima pendant crafted in 18k yellow gold with fine filigree engraving resting on warm silk fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAprKPPl3uCbAWYxg91ZLcRnNDWpD4CV4AvtzbUsMsGJve7Ui7uEwBtgUE07SFCAwYALOO3Y0-0b5OvDkKvB_EAJd3_j0g8qdlch7XpEpadPkh9fvsK5e1u6VyWR1eMueCi5fLzDzeRC9nbvae57RhZyEYppZtVce1nk52VowQ1ib_jwjt28-7WVPi33vT5aZKklL9X9mmVsO-822dbIrLKUaDbYy9hp38GGYJe0s8"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">1x Collier Khamsa Fatima</span>
+<span class="font-label-sm text-label-sm text-outline">Or 18k Certifié • 3.20g</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="font-currency-display text-currency-display text-on-surface">7 000 DA</span>
+<span class="block font-label-sm text-label-sm text-tertiary font-semibold">COD Cash</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md font-bold text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                    Yalidine Express
+                  </div>
+<span class="font-body-sm text-body-sm font-mono text-outline tracking-tight">YAL-9842104-DZ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">À Domicile</span>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-container animate-ping"></span>
+                  En tournée Alger
+                </span>
+</td>
+<td class="py-4 pr-4 pl-2 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-tertiary/10 hover:bg-tertiary text-tertiary hover:text-on-tertiary transition-colors" title="Appeler la cliente" type="button">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Imprimer l'étiquette" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="toggleSlideOver(true)" title="Ouvrir le détail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group" onclick="toggleSlideOver(true)">
+<td class="py-4 pl-4 pr-2" onclick="event.stopPropagation()">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-currency-display text-[15px] font-bold text-on-surface">#ZY-1093</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">check</span> Validé 24h
+                </span>
+</td>
+<td class="py-4 px-3 text-on-surface-variant text-body-sm font-body-sm whitespace-nowrap">
+<span class="font-semibold text-on-surface">24 Mai 2024</span><br/>
+<span class="text-outline">09:45 (Il y a 1h)</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Karima Touati</span>
+<a class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-1" href="tel:0550123456" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[13px]">phone</span> 0550 12 34 56
+                  </a>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">31 - Oran (Es Senia)</span>
+</div>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="An exquisite solitaire emerald ring with fine micro-pavé diamonds on yellow gold band, set on a warm off-white marble backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Vy6A1Xqxqwij_SgksTLsPCaPJpHuq66OoA6nrW7v49ewp9NiB050Eeib6woMkpoO_IpH--Nl8Gcg21BkIkAmb3awa_bLqu09hRWL3OHi7orM5ySlY_vxSkD85G-taht6LoGX-apeoG9Ni4FbZy0xTtkj30B4aGt5SCoVbu_2BQVf71kai_mG-bSGzueE4SMIbny3Ohu6gXF466jr02gwXz-z3h-bTgDCZzq0L5E"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">1x Solitaire Émeraude</span>
+<span class="font-label-sm text-label-sm text-outline">Taille 54 • Émeraude 0.8ct</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="font-currency-display text-currency-display text-on-surface">4 200 DA</span>
+<span class="block font-label-sm text-label-sm text-tertiary font-semibold">COD Cash</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md font-bold text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                    ZR Express
+                  </div>
+<span class="font-body-sm text-body-sm font-mono text-outline tracking-tight">ZR-77192-DZ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stop Desk Oran Centre</span>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                  Confirmée
+                </span>
+</td>
+<td class="py-4 pr-4 pl-2 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-tertiary/10 hover:bg-tertiary text-tertiary hover:text-on-tertiary transition-colors" title="Appeler la cliente" type="button">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Imprimer l'étiquette" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="toggleSlideOver(true)" title="Ouvrir le détail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group" onclick="toggleSlideOver(true)">
+<td class="py-4 pl-4 pr-2" onclick="event.stopPropagation()">
+<input checked="" class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-currency-display text-[15px] font-bold text-on-surface">#ZY-1092</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Appel requis
+                </span>
+</td>
+<td class="py-4 px-3 text-on-surface-variant text-body-sm font-body-sm whitespace-nowrap">
+<span class="font-semibold text-on-surface">24 Mai 2024</span><br/>
+<span class="text-outline">09:20 (Il y a 1h 25)</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Yasmine Mansouri</span>
+<a class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-1" href="tel:0770998877" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[13px]">phone</span> 0770 99 88 77
+                  </a>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">25 - Constantine (Ali Mendjeli)</span>
+</div>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A heavy Algerian Berber stylized open cuff bangle in polished solid gold, high detail geometric engravings, displayed against clean linen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs2HmQn8oWecBF0rxz-sQ-TKP8DdG8YoAHBey2pRxDpQ6MWvm4TRxw1OJ_5EcItvGti3JSqZhaLlHhPot5mS3iX2a0t4939su47Utxy79idWewd4ZZd2Oj74SF9voihYFxM51-KM_X_Hxo_Y3RhF8SouriDqO3WoViHcPa87Cy5wC0Te-GnTwDLrKUZ3q-eD97031Fsv-lyQZ_mdpViOs63eOHCzSzHjrdIzpEJOI"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">1x Jonc Berbère Stylisé</span>
+<span class="font-label-sm text-label-sm text-outline">Vermeil 18k Doré • Réglable</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="font-currency-display text-currency-display text-on-surface">5 900 DA</span>
+<span class="block font-label-sm text-label-sm text-tertiary font-semibold">COD Cash</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md font-bold text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                    Yalidine Express
+                  </div>
+<span class="font-body-sm text-body-sm text-outline italic">En attente validation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Livraison Domicile</span>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">phone_in_talk</span>
+                  Nouvelle (À appeler)
+                </span>
+</td>
+<td class="py-4 pr-4 pl-2 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-tertiary text-on-tertiary hover:bg-tertiary-container transition-colors shadow-sm" title="Appeler la cliente" type="button">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Confirmer directement" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="toggleSlideOver(true)" title="Ouvrir le détail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer group" onclick="toggleSlideOver(true)">
+<td class="py-4 pl-4 pr-2" onclick="event.stopPropagation()">
+<input class="w-4 h-4 accent-primary rounded cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-1.5">
+<span class="font-currency-display text-[15px] font-bold text-on-surface">#ZY-1091</span>
+</div>
+<span class="font-label-sm text-label-sm text-error font-bold flex items-center gap-1 mt-0.5">
+                  Tentative 2/3
+                </span>
+</td>
+<td class="py-4 px-3 text-on-surface-variant text-body-sm font-body-sm whitespace-nowrap">
+<span class="font-semibold text-on-surface">24 Mai 2024</span><br/>
+<span class="text-outline">08:30 (Il y a 2h 15)</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Leila Belkacem</span>
+<a class="text-error hover:underline font-label-sm text-label-sm flex items-center gap-1" href="tel:0662112233" onclick="event.stopPropagation()">
+<span class="material-symbols-outlined text-[13px]">phone_missed</span> 0662 11 22 33
+                  </a>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">19 - Sétif (Centre)</span>
+</div>
+</td>
+<td class="py-4 px-3">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Traditional Algerian wedding bridal parure necklace with drop pearls and ornate gold filigree floral motifs displayed on velvet bust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMuXyzGayLY_H7GfJpu8ZaKAVVsZMFwWL01gE9XHn0xaC5WlW3fqcgKMExRtX-fPWrvicMuDQXTnNMgAk_X2okqgeS4CKqf-tevCb4soM6z5Vv_XWKqZGqZgT52sBGl4wrZfAOUo2mFqdNoCQDSRn91G6F1mtN5cVsvYgUMqAziaB0ycq67-tIJxKsSFTzFoib9VwOJA8k1v4Ieb5L0Pf07xzBVYUBb8I6fP3Tyb4"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">1x Parure Cérémonie</span>
+<span class="font-label-sm text-label-sm text-outline">Collier + Boucles • Or 18k</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="font-currency-display text-currency-display text-on-surface">14 500 DA</span>
+<span class="block font-label-sm text-label-sm text-tertiary font-semibold">COD Cash</span>
+</td>
+<td class="py-4 px-3">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 font-label-md text-label-md font-bold text-on-surface">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                    Yalidine Express
+                  </div>
+<span class="font-body-sm text-body-sm text-outline italic">Bloqué avant confirmation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Stop Desk Sétif</span>
+</div>
+</td>
+<td class="py-4 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">phone_disabled</span>
+                  Injoignable (2/3)
+                </span>
+</td>
+<td class="py-4 pr-4 pl-2 text-right whitespace-nowrap" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-2 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error transition-colors shadow-sm" title="Rappeler" type="button">
+<span class="material-symbols-outlined text-[18px]">phone_callback</span>
+</button>
+<button class="p-2 rounded-lg bg-tertiary/10 text-tertiary hover:bg-tertiary hover:text-on-tertiary transition-colors" title="Envoyer WhatsApp" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-2 rounded-lg hover:bg-surface-container text-primary transition-colors" onclick="toggleSlideOver(true)" title="Ouvrir le détail" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Affichage de <span class="font-bold text-on-surface">1 à 4</span> sur <span class="font-bold text-on-surface">248</span> commandes
+        </span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container text-outline hover:text-on-surface disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm">
+            1
+          </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container text-on-surface font-label-sm text-label-sm">
+            2
+          </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container text-on-surface font-label-sm text-label-sm">
+            3
+          </button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container text-on-surface font-label-sm text-label-sm">
+            62
+          </button>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center bg-surface-container text-on-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-[460px] flex-shrink-0 bg-surface-container-lowest rounded-xl shadow-xl flex flex-col overflow-hidden transition-all duration-300" id="slideOverPanel">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container/20 text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px] text-primary">diamond</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-[18px] text-on-surface font-serif font-bold">Commande #ZY-1094</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[10px] font-bold">
+                EN TOURNÉE
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Créée via checkout rapide mobile</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface flex items-center justify-center transition-colors" onclick="toggleSlideOver(false)" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md bg-tertiary-container/15 flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[22px] text-tertiary">payments</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-bold">
+              Paiement à la livraison (COD)
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inspecter avant paiement accepté</span>
+</div>
+</div>
+<span class="font-currency-display text-[20px] font-bold text-on-surface">
+          7 000 DA
+        </span>
+</div>
+<div class="p-space-md flex flex-col gap-space-md overflow-y-auto max-h-[calc(100vh-280px)]">
+<div class="grid grid-cols-2 gap-2">
+<a class="flex items-center justify-center gap-2 h-11 px-3 rounded-xl bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold shadow-md hover:bg-tertiary-container transition-all" href="tel:0661458920">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+<span>Appeler (0661...)</span>
+</a>
+<a class="flex items-center justify-center gap-2 h-11 px-3 rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-bold transition-all shadow-sm" href="https://wa.me/213661458920" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-tertiary">chat</span>
+<span>Message WhatsApp</span>
+</a>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase font-bold text-outline">Statut de la commande</label>
+<div class="relative flex items-center">
+<select class="w-full h-11 pl-3 pr-8 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg appearance-none cursor-pointer focus:outline-none shadow-sm">
+<option selected="" value="in_delivery">En cours de livraison (En tournée)</option>
+<option value="new">Nouvelle commande (À appeler)</option>
+<option value="confirmed">Confirmée par téléphone</option>
+<option value="preparing">En préparation bijouterie</option>
+<option value="shipped">Expédiée transporteur</option>
+<option value="delivered">Livrée &amp; Encaissée (7 000 DA)</option>
+<option value="failed">Tentative échouée / Client absent</option>
+<option value="return">Retour colis atelier</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 pointer-events-none text-[18px] text-outline">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline">Fiche Cliente &amp; Destination</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">1ère Commande</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Amira Benali</span>
+<span class="font-label-sm text-label-sm text-outline">Langue préférée: FR/AR</span>
+</div>
+<div class="flex items-start gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0 mt-0.5">home_pin</span>
+<div>
+<p class="font-semibold text-on-surface">Villa 14, Rue des Pins, Hydra, Alger</p>
+<p class="text-outline">Wilaya 16 - Alger / الجزائر • Code postal 16035</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline">Bijoux &amp; Pièces or</span>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-2">
+<div class="flex items-center gap-space-sm bg-surface-container-lowest p-2 rounded-lg">
+<div class="w-12 h-12 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A delicate handmade Algerian Khamsa Fatima pendant crafted in 18k yellow gold with fine filigree engraving resting on warm silk fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB51TJelWtIGF13DoVsTC5tQCPo0AjMovf80ns1x_iiU7mR7xiIr6JilZIntH3m8i-h4K2LxnA8jBbCzECsSMiIHxAR1nfkWlMnQtj2tt5WE8-E3oOJcJMmO94IHOdhMp69zoKRFmD3-8gahZcwxB0G0a4DxgAchlDeRF0DfQt8OqaJKgU28znWtz1y6PLdHJ4hyq2hd3aR4x9aBK8jjoon7MN46cszhQdSTunQY44"/>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate block">Collier Khamsa Fatima Or 18k</span>
+<span class="font-label-sm text-label-sm text-outline">Chaîne Forçat 45cm • Poinçon officiel</span>
+</div>
+<div class="text-right">
+<span class="font-currency-display text-[15px] font-bold text-on-surface">6 500 DA</span>
+<span class="block font-label-sm text-label-sm text-outline">Qté: 1</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-2 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span>Sous-total bijoux</span>
+<span class="font-semibold text-on-surface">6 500 DA</span>
+</div>
+<div class="flex items-center justify-between px-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>Frais de livraison à domicile (Alger 16)</span>
+<span class="font-semibold text-on-surface">500 DA</span>
+</div>
+<div class="flex items-center justify-between px-2 pt-2 bg-surface-container-high/60 rounded-md">
+<span class="font-label-md text-label-md font-bold text-on-surface">Total à percevoir à la livraison</span>
+<span class="font-currency-display text-currency-display text-primary font-bold">7 000 DA</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline">Logistique &amp; Transporteur</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              API Synchronisée
+            </span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-3">
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-center gap-2 shadow-sm cursor-pointer ring-1 ring-primary">
+<span class="w-3 h-3 rounded-full bg-primary flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Yalidine Express</span>
+<span class="font-label-sm text-[10px] text-tertiary">Compte Pro #DZ-881</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low opacity-60 hover:opacity-100 flex items-center gap-2 cursor-pointer transition-opacity">
+<span class="w-3 h-3 rounded-full bg-outline/40 flex-shrink-0"></span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">ZR Express</span>
+<span class="font-label-sm text-[10px] text-outline">Option alternative</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-outline">Numéro de bordereau Yalidine</label>
+<div class="flex gap-2">
+<input class="flex-1 h-10 px-3 bg-surface-container-lowest font-mono text-body-sm font-bold text-on-surface rounded-lg shadow-sm focus:outline-none" readonly="" type="text" value="YAL-9842104-DZ"/>
+<button class="px-3 h-10 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary-container/90 font-label-sm text-label-sm font-bold flex items-center gap-1 transition-colors shadow-sm" title="Régénérer et renvoyer le flux" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span class="hidden sm:inline">Régénérer</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline">Suivi en direct (Live Yalidine)</span>
+<span class="font-label-sm text-[11px] text-outline">Scan ID: #44091</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md">
+<div class="relative pl-6 space-y-4">
+<div class="absolute left-2.5 top-1 bottom-1 w-0.5 bg-surface-container-highest"></div>
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-primary-container/20"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">En cours de livraison chez le destinataire</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Livreur Rachid K. • Camionnette DZ-16-04</span>
+<span class="font-label-sm text-[10px] text-outline mt-0.5">Aujourd'hui à 11:20 • Hub Alger Oued Smar</span>
+</div>
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Arrivé au Centre de Tri Régional</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Pris en charge au hub principal Oued Smar</span>
+<span class="font-label-sm text-[10px] text-outline mt-0.5">Aujourd'hui à 08:05</span>
+</div>
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Colis ramassé à l'atelier Zayna</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Boutique Didouche Mourad, Alger</span>
+<span class="font-label-sm text-[10px] text-outline mt-0.5">Hier à 17:40</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase font-bold text-outline">Notes Internes &amp; Instructions Particulières</span>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-2">
+<div class="p-2.5 bg-surface-container-lowest rounded-lg text-body-sm text-body-sm text-on-surface shadow-sm">
+<div class="flex items-center gap-1.5 text-primary font-bold font-label-sm text-label-sm mb-1">
+<span class="material-symbols-outlined text-[15px]">sticky_note_2</span>
+                Note de confirmation téléphonique:
+              </div>
+<p class="italic text-on-surface-variant">
+                « La cliente a demandé livraison après 14h impérativement car elle sera au travail en matinée. Elle a confirmé vouloir ouvrir le paquet devant le coursier. »
+              </p>
+</div>
+<div class="flex gap-2">
+<input class="flex-1 h-9 px-3 bg-surface-container-lowest text-body-sm text-on-surface rounded-lg placeholder:text-outline/60 focus:outline-none" placeholder="Ajouter une instruction interne..." type="text"/>
+<button class="px-3 h-9 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors" type="button">
+                Enregistrer
+              </button>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex items-center justify-between gap-space-sm">
+<button class="flex-1 h-11 rounded-xl bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Bordereau PDF</span>
+</button>
+<button class="flex-1 h-11 rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-label-md text-label-md font-bold flex items-center justify-center gap-2 transition-colors shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+<span>Sauvegarder</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleSlideOver(show) {
+    const panel = document.getElementById('slideOverPanel');
+    if (!panel) return;
+    if (show) {
+      panel.classList.remove('hidden');
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      panel.classList.add('hidden');
+    }
+  }
+</script></div></main></div></body></html>
