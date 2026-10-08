@@ -33,7 +33,7 @@ The owner asked for two things beyond the phases below: the **Android app** and 
 - [x] E-dash: KPI, 7-day, top-wilaya and alert metrics as pure functions, with tests (Africa/Algiers day boundaries)
 - [x] E-dash: desktop dashboard at `/admin` (1024px and up) and the mobile seller layout (COD pipeline and quick actions)
 - [x] E-orders: read-only orders list with status tabs, so the dashboard links work
-- [x] E-android: Capacitor 8.5.3 shell for the back-office (`dz.zayna.admin`), app name "Zayna", Android back button (`NativeBackButton`), offline and not-configured screen in the bundled loader. The loader opens `APP_URL/admin`. The app icon is still Capacitor's default.
+- [x] E-android: Capacitor 8.5.3 shell for the back-office (`dz.zayna.admin`), app name "Zayna", Android back button (`NativeBackButton`), offline and not-configured screen in the bundled loader. The loader opens `APP_URL/admin`. The app icon is a placeholder: a gold Z on brand gold, at every density. Swap in the real logo once it arrives (A5).
 - [x] E-android: Android SDK (platform 36, build-tools 36.0.0) installed in the sandbox. Debug APK built with Gradle 8.14.3, and it passes the package, SDK and permission checks (only INTERNET). Android job added to CI, not run on GitHub yet. Not run on a device or emulator: this sandbox has no KVM.
 - [ ] E-android: release signing and the Play Store listing need a keystore and developer account from the owner (not done)
 
