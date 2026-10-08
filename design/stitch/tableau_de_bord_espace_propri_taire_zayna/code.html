@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#006d44","on-primary-container":"#4b3a00","on-secondary-fixed":"#1e1b19","inverse-primary":"#ecc246","on-tertiary":"#ffffff","surface-tint":"#755b00","primary-container":"#c9a227","inverse-on-surface":"#f6f0ea","on-tertiary-fixed":"#002111","surface-dim":"#dfd9d4","secondary":"#635d5b","on-secondary-container":"#67615f","surface-variant":"#e7e1dc","on-surface":"#1d1b18","secondary-container":"#e7dedb","on-error-container":"#93000a","on-secondary":"#ffffff","surface-container-low":"#f9f2ed","on-primary":"#ffffff","surface-container":"#f3ede7","outline":"#7f7663","on-primary-fixed-variant":"#584400","primary-fixed":"#ffe08e","tertiary-container":"#54b985","error":"#ba1a1a","tertiary-fixed":"#92f7be","surface-container-high":"#ede7e2","on-secondary-fixed-variant":"#4b4644","on-primary-fixed":"#241a00","surface-container-highest":"#e7e1dc","error-container":"#ffdad6","surface-container-lowest":"#ffffff","secondary-fixed":"#e9e1de","on-error":"#ffffff","surface":"#fff8f3","inverse-surface":"#32302d","outline-variant":"#d1c5af","primary":"#755b00","on-surface-variant":"#4d4635","primary-fixed-dim":"#ecc246","tertiary-fixed-dim":"#76daa3","secondary-fixed-dim":"#cdc5c2","on-tertiary-fixed-variant":"#005232","on-background":"#1d1b18","background":"#fff8f3","on-tertiary-container":"#00462a","surface-bright":"#fff8f3"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-desktop":"2.5rem","margin":"1rem","space-xs":"0.25rem","gutter":"0.75rem"},"fontFamily":{"currency-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"headline-xl-mobile":["Playfair Display"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"currency-display":["18px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[22px]">diamond</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-semibold">Zayna</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-primary font-bold">Joaillerie Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs mb-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestion &amp; Wilayas</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_10px_rgba(201,162,39,0.12)]"><a aria-current="page" class="flex items-center gap-3 px-space-md py-3 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_10px_rgba(201,162,39,0.12)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Tableau de bord</span></a><a class="flex items-center justify-between px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="orders" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-label-lg text-label-lg">Commandes</span></div><span class="bg-surface-container-highest text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">COD</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="products" href="#"><span class="material-symbols-outlined text-[20px]">watch</span><span class="font-label-lg text-label-lg">Produits &amp; Or 18k</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="delivery-integrations" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-lg text-label-lg">Livraisons &amp; Transporteurs</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="shipping-rates" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-label-lg text-label-lg">Grille 58 Wilayas</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-lg text-label-lg">Clientes</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Paramètres</span></a></nav></div></div><div class="p-space-md bg-surface-container"><div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Yalidine / ZR Live</span></div><span class="font-label-sm text-label-sm text-tertiary font-bold">58 Wilayas</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[20px] text-primary">travel_explore</span><select class="h-12 pl-10 pr-8 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.04)] appearance-none cursor-pointer focus:outline-none"><option value="all">Toutes les wilayas (01-58)</option><option value="16">16 - Alger / الجزائر</option><option value="31">31 - Oran / وهران</option><option value="25">25 - Constantine / قسنطينة</option><option value="19">19 - Sétif / سطيف</option><option value="09">09 - Blida / البليدة</option><option value="06">06 - Béjaïa / بجاية</option><option value="15">15 - Tizi Ouzou / تيزي وزو</option><option value="13">13 - Tlemcen / تلمسان</option></select><span class="material-symbols-outlined absolute right-2 pointer-events-none text-[18px] text-outline">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-space-md py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant"><span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span><span class="font-label-sm text-label-sm font-semibold">Synchronisation Yalidine &amp; ZR Express active</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-1 px-3 py-1 bg-surface-container rounded-lg font-label-sm text-label-sm text-on-surface-variant"><span class="text-primary font-bold">FR</span><span class="text-outline">|</span><span>AR</span><span class="text-outline">|</span><span>EN</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Amira Benali</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Gérante Boutique Alger</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 bg-background min-h-screen"><div class="w-full max-w-[1440px] mx-auto px-space-xl py-space-xl"><div class="flex flex-col w-full">
+<!-- Sub-Header Command Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl p-space-md bg-surface-container-lowest rounded-xl shadow-[0_4px_24px_-4px_rgba(201,162,39,0.07)]">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="inline-flex p-1 bg-surface-container rounded-lg">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" id="btn-today" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          Aujourd'hui (24 Mai 2024)
+        </button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" id="btn-week" type="button">
+          Cette Semaine
+        </button>
+</div>
+<div class="flex items-center gap-2 px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">public</span>
+<span class="font-label-md text-label-md">58 Wilayas (Toutes)</span>
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+</div>
+<div class="hidden xl:flex items-center gap-2 pl-3">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Flux réconcilié Yalidine &amp; ZR Express (09:42 UTC+1)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Exporter (Excel / CSV)</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_2px_12px_rgba(201,162,39,0.22)] hover:opacity-95 transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Bordereaux de Livraison</span>
+</button>
+</div>
+</div>
+<!-- Metric KPI Cards (6 Grid Layout) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-md mb-space-xl">
+<!-- KPI 1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(201,162,39,0.06)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Nouvelles Commandes</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">42</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +18%
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">vs hier (35 cmd)</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary"></div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(201,162,39,0.06)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">À Confirmer</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">14</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Urgent</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Temps moy. appel: 18 min</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary-fixed-dim"></div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(201,162,39,0.06)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Expédiées / En Route</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold">28</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">En tournée</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Yalidine (21) · ZR (7)</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-secondary"></div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(201,162,39,0.06)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Livrées avec Succès</span>
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg text-tertiary font-semibold">89</span>
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold">91.2%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Objectif mensuel: &gt;90%</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-tertiary"></div>
+</div>
+<!-- KPI 5 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(201,162,39,0.06)] flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Retours &amp; Échecs</span>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[18px]">assignment_return</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-headline-lg text-headline-lg text-error font-semibold">4</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">4.1%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">2 refus client · 2 injoignables</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-error"></div>
+</div>
+<!-- KPI 6 (COD High Value) -->
+<div class="p-space-md bg-gradient-to-br from-surface-container-lowest via-surface-container-lowest to-surface-container-low rounded-xl shadow-[0_4px_20px_-2px_rgba(201,162,39,0.12)] flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">COD à Encaisser</span>
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-1 mb-1">
+<span class="font-currency-display text-[22px] text-on-surface leading-tight font-bold">612 400</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">DA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Espèces en transit livreurs</p>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-primary-container"></div>
+</div>
+</div>
+<!-- Two-Column Analytics Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Main Chart (65%) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_24px_-4px_rgba(201,162,39,0.06)] flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-space-lg">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[20px]">insights</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Évolution des Ventes &amp; Commandes COD</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Performances des 7 derniers jours sur le territoire national algérien</p>
+</div>
+<div class="flex items-center gap-1 p-1 bg-surface-container rounded-lg self-start sm:self-auto">
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-xs transition-all font-bold" id="toggle-vol" type="button">
+            Par Volume (Cmds)
+          </button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" id="toggle-da" type="button">
+            Par Montant (DA)
+          </button>
+</div>
+</div>
+<!-- Rich Inline SVG Dual-Axis Chart -->
+<div class="w-full relative pt-2">
+<div class="flex justify-between items-center mb-3 px-2">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Chiffre d'Affaires COD</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Commandes Livrées</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-currency-display text-on-surface text-currency-display">3 420 000 DA</span>
+<span class="font-body-sm text-body-sm text-tertiary ml-2 font-semibold">▲ +12.4%</span>
+</div>
+</div>
+<div class="w-full h-64 relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 680 220">
+<defs>
+<lineargradient id="goldAreaGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#C9A227" stop-opacity="0.32"></stop>
+<stop offset="100%" stop-color="#C9A227" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="tertiaryAreaGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#006D44" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#006D44" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#E7DEDB" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="30" y2="30"></line>
+<line stroke="#E7DEDB" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="80" y2="80"></line>
+<line stroke="#E7DEDB" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="130" y2="130"></line>
+<line stroke="#E7DEDB" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="180" y2="180"></line>
+<!-- Daily Histogram Bars (Orders completed) -->
+<rect fill="#E7DEDB" height="75" opacity="0.6" rx="3" width="28" x="25" y="105"></rect>
+<rect fill="#E7DEDB" height="90" opacity="0.6" rx="3" width="28" x="120" y="90"></rect>
+<rect fill="#E7DEDB" height="100" opacity="0.6" rx="3" width="28" x="215" y="80"></rect>
+<rect fill="#E7DEDB" height="120" opacity="0.6" rx="3" width="28" x="310" y="60"></rect>
+<rect fill="#E7DEDB" height="110" opacity="0.6" rx="3" width="28" x="405" y="70"></rect>
+<rect fill="#E7DEDB" height="135" opacity="0.6" rx="3" width="28" x="500" y="45"></rect>
+<rect fill="#E7DEDB" height="145" opacity="0.9" rx="3" width="28" x="595" y="35"></rect>
+<!-- Area & Line: Revenue Trend in Gold -->
+<path d="M 39 120 C 134 110, 229 95, 324 75 C 419 85, 514 55, 609 38 L 609 180 L 39 180 Z" fill="url(#goldAreaGradient)"></path>
+<path d="M 39 120 C 134 110, 229 95, 324 75 C 419 85, 514 55, 609 38" fill="none" stroke="#C9A227" stroke-linecap="round" stroke-width="3"></path>
+<!-- Area & Line: Delivery Success in Tertiary Green -->
+<path d="M 39 140 C 134 130, 229 110, 324 95 C 419 105, 514 78, 609 60 L 609 180 L 39 180 Z" fill="url(#tertiaryAreaGradient)"></path>
+<path d="M 39 140 C 134 130, 229 110, 324 95 C 419 105, 514 78, 609 60" fill="none" stroke="#006D44" stroke-dasharray="4 3" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Data Pins / Knots -->
+<circle cx="39" cy="120" fill="#C9A227" r="4"></circle>
+<circle cx="134" cy="108" fill="#C9A227" r="4"></circle>
+<circle cx="229" cy="94" fill="#C9A227" r="4"></circle>
+<circle cx="324" cy="75" fill="#C9A227" r="4"></circle>
+<circle cx="419" cy="85" fill="#C9A227" r="4"></circle>
+<circle cx="514" cy="55" fill="#C9A227" r="4"></circle>
+<circle cx="609" cy="38" fill="#C9A227" r="6" stroke="#FAF8F5" stroke-width="2"></circle>
+</svg>
+</div>
+<!-- Chart X-Axis Labels -->
+<div class="flex justify-between items-center pt-2 px-6 font-label-sm text-label-sm text-on-surface-variant font-medium">
+<span>Sam (18 Mai)</span>
+<span>Dim (19 Mai)</span>
+<span>Lun (20 Mai)</span>
+<span>Mar (21 Mai)</span>
+<span>Mer (22 Mai)</span>
+<span>Jeu (23 Mai)</span>
+<span class="text-primary font-bold">Ven (Aujourd'hui)</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-2 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Confirmation téléphonique avant expédition: <strong>98.4% acceptée</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Panier Moyen: <strong>24 800 DA</strong></span>
+</div>
+</div>
+<!-- Right Ranking: Top Wilayas (35%) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_24px_-4px_rgba(201,162,39,0.06)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">leaderboard</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Top Wilayas</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Par C.A.</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Volume des ventes et taux de livraison par région</p>
+<!-- Ranking List -->
+<div class="flex flex-col gap-3">
+<!-- Wilaya 1: Alger -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center justify-center">1</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">16 - Alger / الجزائر</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-1.5 py-0.5 rounded">94%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-1.5">
+<span>148 commandes</span>
+<span class="font-currency-display text-on-surface font-semibold text-body-md">1 120 000 DA</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Wilaya 2: Oran -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center">2</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">31 - Oran / وهران</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-1.5 py-0.5 rounded">91%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-1.5">
+<span>92 commandes</span>
+<span class="font-currency-display text-on-surface font-semibold text-body-md">680 000 DA</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 61%;"></div>
+</div>
+</div>
+<!-- Wilaya 3: Constantine -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center">3</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">25 - Constantine / قسنطينة</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold bg-surface-container-highest px-1.5 py-0.5 rounded">89%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-1.5">
+<span>64 commandes</span>
+<span class="font-currency-display text-on-surface font-semibold text-body-md">450 000 DA</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 40%;"></div>
+</div>
+</div>
+<!-- Wilaya 4: Sétif -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center">4</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">19 - Sétif / سطيف</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-1.5 py-0.5 rounded">92%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-1.5">
+<span>51 commandes</span>
+<span class="font-currency-display text-on-surface font-semibold text-body-md">385 000 DA</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 34%;"></div>
+</div>
+</div>
+<!-- Wilaya 5: Blida -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center">5</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">09 - Blida / البليدة</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-1.5 py-0.5 rounded">90%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-1.5">
+<span>46 commandes</span>
+<span class="font-currency-display text-on-surface font-semibold text-body-md">310 000 DA</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 27%;"></div>
+</div>
+</div>
+<!-- Wilaya 6: Tizi Ouzou -->
+<div class="p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center justify-center">6</span>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">15 - Tizi Ouzou / تيزي وزو</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-1.5 py-0.5 rounded">93%</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant mb-1.5">
+<span>38 commandes</span>
+<span class="font-currency-display text-on-surface font-semibold text-body-md">260 000 DA</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-fixed-dim h-full rounded-full" style="width: 23%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-3 flex items-center justify-between">
+<a class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" href="#">
+          Voir les 58 Wilayas
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+<span class="font-body-sm text-body-sm text-outline">Régions Sud: 14 cmd</span>
+</div>
+</div>
+</div>
+<!-- Operational Alerts & Recent Shipments Table -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-[0_4px_24px_-4px_rgba(201,162,39,0.06)]">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-space-lg">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-[22px]">notifications_active</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Alertes Opérationnelles &amp; Commandes en Cours</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Actions immédiates requises : confirmation client et transmission aux coursiers (Yalidine / ZR Express)</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+          5 nécessitent un appel
+        </span>
+</div>
+</div>
+<!-- Responsive Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-label-md text-label-md uppercase tracking-wider">
+<th class="py-3 px-4 rounded-l-lg">ID &amp; Horodatage</th>
+<th class="py-3 px-4">Cliente &amp; Téléphone</th>
+<th class="py-3 px-4">Bijou / Pièce Joaillerie</th>
+<th class="py-3 px-4">Wilaya &amp; Destination</th>
+<th class="py-3 px-4">Montant COD</th>
+<th class="py-3 px-4">Statut Logistique</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Actions Directes</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-label-sm">
+<div class="font-bold text-on-surface">#ZY-8941</div>
+<div class="text-outline">Il y a 12 min</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Sarah Belkacem</div>
+<div class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">call</span>
+                0550 42 19 XX
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a delicate 18k solid yellow gold bridal solitaire ring with brilliant cut diamond resting on rich velvet ivory cushion with warm luxury studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-_m0udx6lExiPzjFFiA14YVIFWUe8HoYywNED608auBQLEFPo4gOItMW1Vm7fFckdgdtjHdrTEXmnAupTH73e-vnigeGYnWAmFx1FO74lTyMTKmUsseOovDSsmFG19B4YTr71i_2h8AoDDhlRi-cfeAjG2cMGZmTSfhnqMNCUS84WLKVf1mKVkLuaSf5DZDWbm3qoIe-H8TgXJs_h7FejAi2oklPq1Zd3a3GU9U"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[180px]">Bague Solitaire 'Nour' 18k</div>
+<div class="text-primary font-label-sm text-label-sm">Or Jaune 18k · T54</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md text-on-surface">16 - Alger (Hydra)</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">À Domicile</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-currency-display text-on-surface font-bold text-body-lg">48 500 DA</div>
+<div class="text-tertiary font-label-sm text-label-sm">Livraison Gratuite</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                À Appeler (1er essai)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-lg bg-primary-container text-on-primary-container hover:opacity-90 shadow-sm" title="Appeler la cliente" type="button">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface" title="Confirmer et imprimer" type="button">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-label-sm">
+<div class="font-bold text-on-surface">#ZY-8938</div>
+<div class="text-outline">Il y a 34 min</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Yasmine Mansouri</div>
+<div class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">call</span>
+                0661 18 90 XX
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Traditional modern Algerian filigree gold bracelet in 18k vermeil displayed in an archival luxury boutique setting with fine warm golden glimmers and soft silk shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQgWdVi8_rDdmI_N7mEXZgUWUPe2IkrrVa7UJmrMpQ8hpq6Wld-5oqzyP9yTaZmpcIjDNHbUU4WGlPjWg6WkUIxsLuv0I-pZQTF9Nur3cEVuQlCG3hX-Pumkc9KNyMA86Us7BA-AvCSg7MPvlxnKpORBk6YYmemBcWqTaJ3aLBMVnfa2-uyRG8KnBvpUApxLMd69Qey3o4ZyPrHs8KnpgM2BrmPxlWz9dCoNPD148"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[180px]">Bracelet Filigrane 'Chahra'</div>
+<div class="text-primary font-label-sm text-label-sm">Or 18 Carats · 18cm</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md text-on-surface">31 - Oran (Akid Lotfi)</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-secondary font-semibold">Stop Desk ZR Express</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-currency-display text-on-surface font-bold text-body-lg">36 000 DA</div>
+<div class="text-on-surface-variant font-label-sm text-label-sm">+ 450 DA Bureau</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                Confirmée · Prêt Envoi
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">local_shipping</span>
+                  Expédier ZR
+                </button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-label-sm">
+<div class="font-bold text-on-surface">#ZY-8929</div>
+<div class="text-outline">Il y a 1h 15m</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Meriem Chaoui</div>
+<div class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">call</span>
+                0770 91 34 XX
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Exquisite pair of handcrafted gold chandelier earrings with natural emerald drops on an ivory textured parchment surface in soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnvWuZp1vMoP-hU3RcBzEJtvu2jmgk4UyrwaTAF6MJMvsmly1nYOpmvJS5w8pz-4ZE7vvZmqAPUUbyos3PK9aF0dCaeG_HSCKHXhZPT8sEzl9XRfRJdVzRlLbqq9nUtUb3g7z1GCK8oukf6p51SbZhp0pAHk49dPZQP_bfpXwwDufbH3t8bhpRvw57IVudqvNBJyo-uCn9JcCJvQWbL6Drt2GkgNl7pX8XAoA6VGM"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[180px]">Boucles d'Oreilles 'Zaphira'</div>
+<div class="text-primary font-label-sm text-label-sm">Or 18k &amp; Émeraude</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md text-on-surface">25 - Constantine (Ziadia)</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">À Domicile Yalidine</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-currency-display text-on-surface font-bold text-body-lg">52 900 DA</div>
+<div class="text-tertiary font-label-sm text-label-sm">Livraison Gratuite</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+                En tournée Yalidine
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface" title="Suivi Tracking Yalidine" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-label-sm">
+<div class="font-bold text-on-surface">#ZY-8915</div>
+<div class="text-outline">Il y a 2h 40m</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Khadidja B.</div>
+<div class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">phone_missed</span>
+                0542 33 11 XX
+              </div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="High luxury gold necklace chain with intricate Berber talisman pendant resting flat on a polished limestone slab surrounded by diffused golden rays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCV1JUKt3ICPUlvD48tKvLGnyvhHbtBBXQAVNsI0HVJ5fQovukegzoA4NRQjlqibCw0zqzY7RXKbeWqw2gstOO9v7RVpxIVR5aALGaMBq086e7vvbcdLuNzc3zsM6fDiOgUGBB9kNJe_W72BwkX6chrffhbU1sqpf69VWG2hIXU1ic8ymdaw6YIT_0WaMyHnj5GKdJF8IyzK_XEwv0ZWAsGfiaaBMtNwMxevzGY18"/>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-medium truncate max-w-[180px]">Pendentif Khomsa Impériale</div>
+<div class="text-primary font-label-sm text-label-sm">Or 18k Massif</div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-label-md text-label-md text-on-surface">19 - Sétif (Centre-Ville)</div>
+<span class="inline-block px-1.5 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">À Domicile</span>
+</td>
+<td class="py-3.5 px-4">
+<div class="font-currency-display text-on-surface font-bold text-body-lg">74 000 DA</div>
+<div class="text-tertiary font-label-sm text-label-sm">Livraison Gratuite</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Injoignable (2e rappel)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface" title="Relance par WhatsApp" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</button>
+<button class="p-2 rounded-lg bg-primary-container text-on-primary-container hover:opacity-90" title="Rappeler" type="button">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Navigation -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-space-md mt-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Affichage de 4 sur 42 commandes enregistrées aujourd'hui</span>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors disabled:opacity-50" disabled="" type="button">Précédent</button>
+<span class="font-label-sm text-label-sm font-bold text-primary px-2">Page 1 / 11</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">Suivant</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for the Dashboard
+  document.addEventListener('DOMContentLoaded', () => {
+    const btnToday = document.getElementById('btn-today');
+    const btnWeek = document.getElementById('btn-week');
+    const toggleVol = document.getElementById('toggle-vol');
+    const toggleDa = document.getElementById('toggle-da');
+
+    if (btnToday && btnWeek) {
+      btnToday.addEventListener('click', () => {
+        btnToday.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        btnToday.classList.remove('text-on-surface-variant');
+        btnWeek.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        btnWeek.classList.add('text-on-surface-variant');
+      });
+
+      btnWeek.addEventListener('click', () => {
+        btnWeek.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        btnWeek.classList.remove('text-on-surface-variant');
+        btnToday.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+        btnToday.classList.add('text-on-surface-variant');
+      });
+    }
+
+    if (toggleVol && toggleDa) {
+      toggleVol.addEventListener('click', () => {
+        toggleVol.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-bold');
+        toggleVol.classList.remove('text-on-surface-variant');
+        toggleDa.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-bold');
+        toggleDa.classList.add('text-on-surface-variant');
+      });
+
+      toggleDa.addEventListener('click', () => {
+        toggleDa.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-bold');
+        toggleDa.classList.remove('text-on-surface-variant');
+        toggleVol.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-xs', 'font-bold');
+        toggleVol.classList.add('text-on-surface-variant');
+      });
+    }
+  });
+</script></div></main></div></body></html>

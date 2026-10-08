@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#006d44","on-primary-container":"#4b3a00","on-secondary-fixed":"#1e1b19","inverse-primary":"#ecc246","on-tertiary":"#ffffff","surface-tint":"#755b00","primary-container":"#c9a227","inverse-on-surface":"#f6f0ea","on-tertiary-fixed":"#002111","surface-dim":"#dfd9d4","secondary":"#635d5b","on-secondary-container":"#67615f","surface-variant":"#e7e1dc","on-surface":"#1d1b18","secondary-container":"#e7dedb","on-error-container":"#93000a","on-secondary":"#ffffff","surface-container-low":"#f9f2ed","on-primary":"#ffffff","surface-container":"#f3ede7","outline":"#7f7663","on-primary-fixed-variant":"#584400","primary-fixed":"#ffe08e","tertiary-container":"#54b985","error":"#ba1a1a","tertiary-fixed":"#92f7be","surface-container-high":"#ede7e2","on-secondary-fixed-variant":"#4b4644","on-primary-fixed":"#241a00","surface-container-highest":"#e7e1dc","error-container":"#ffdad6","surface-container-lowest":"#ffffff","secondary-fixed":"#e9e1de","on-error":"#ffffff","surface":"#fff8f3","inverse-surface":"#32302d","outline-variant":"#d1c5af","primary":"#755b00","on-surface-variant":"#4d4635","primary-fixed-dim":"#ecc246","tertiary-fixed-dim":"#76daa3","secondary-fixed-dim":"#cdc5c2","on-tertiary-fixed-variant":"#005232","on-background":"#1d1b18","background":"#fff8f3","on-tertiary-container":"#00462a","surface-bright":"#fff8f3"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-desktop":"2.5rem","margin":"1rem","space-xs":"0.25rem","gutter":"0.75rem"},"fontFamily":{"currency-display":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"headline-xl-mobile":["Playfair Display"],"label-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"label-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"currency-display":["18px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"0em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"0em","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center gap-space-sm bg-surface-container-low"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined text-[22px]">diamond</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-semibold">Zayna</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-primary font-bold">Joaillerie Admin</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs mb-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestion &amp; Wilayas</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_10px_rgba(201,162,39,0.12)]"><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Tableau de bord</span></a><a class="flex items-center justify-between px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="orders" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="font-label-lg text-label-lg">Commandes</span></div><span class="bg-surface-container-highest text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">COD</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="products" href="#"><span class="material-symbols-outlined text-[20px]">watch</span><span class="font-label-lg text-label-lg">Produits &amp; Or 18k</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="delivery-integrations" href="#"><span class="material-symbols-outlined text-[20px]">local_shipping</span><span class="font-label-lg text-label-lg">Livraisons &amp; Transporteurs</span></a><a aria-current="page" class="flex items-center gap-3 px-space-md py-3 transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_2px_10px_rgba(201,162,39,0.12)]" data-path="shipping-rates" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-label-lg text-label-lg">Grille 58 Wilayas</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="customers" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-label-lg text-label-lg">Clientes</span></a><a class="flex items-center gap-3 px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Paramètres</span></a></nav></div></div><div class="p-space-md bg-surface-container"><div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Yalidine / ZR Live</span></div><span class="font-label-sm text-label-sm text-tertiary font-bold">58 Wilayas</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-[20px] text-primary">travel_explore</span><select class="h-12 pl-10 pr-8 bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.04)] appearance-none cursor-pointer focus:outline-none"><option value="all">Toutes les wilayas (01-58)</option><option value="16">16 - Alger / الجزائر</option><option value="31">31 - Oran / وهران</option><option value="25">25 - Constantine / قسنطينة</option><option value="19">19 - Sétif / سطيف</option><option value="09">09 - Blida / البليدة</option><option value="06">06 - Béjaïa / بجاية</option><option value="15">15 - Tizi Ouzou / تيزي وزو</option><option value="13">13 - Tlemcen / تلمسان</option></select><span class="material-symbols-outlined absolute right-2 pointer-events-none text-[18px] text-outline">expand_more</span></div><div class="hidden xl:flex items-center gap-2 px-space-md py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant"><span class="material-symbols-outlined text-[16px] text-tertiary">cloud_done</span><span class="font-label-sm text-label-sm font-semibold">Synchronisation Yalidine &amp; ZR Express active</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-1 px-3 py-1 bg-surface-container rounded-lg font-label-sm text-label-sm text-on-surface-variant"><span class="text-primary font-bold">FR</span><span class="text-outline">|</span><span>AR</span><span class="text-outline">|</span><span>EN</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="flex items-center gap-3 pl-2"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Amira Benali</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Gérante Boutique Alger</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 bg-background min-h-screen"><div class="w-full max-w-[1440px] mx-auto px-space-xl py-space-xl"><div class="flex flex-col w-full gap-space-lg">
+<!-- Header Section with Luxury Accents -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm">
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-widest">58 Wilayas Algérie</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Synchronisation Multi-transporteurs COD</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Grille Tarifaire des 58 Wilayas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Gérez les frais d'expédition à domicile et en bureau de retrait (Stop Desk) selon la wilaya et la convention logistique active.</p>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">sync</span>
+<span>Importer API Yalidine</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm transition-all" onclick="document.getElementById('bulk-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">price_change</span>
+<span>Ajustement Groupé (+/- DA)</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exporter (CSV / Excel)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Key Metrics & Sparklines -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Moyenne À Domicile</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">home_pin</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-currency-display text-currency-display text-on-surface text-[24px]">620</span>
+<span class="font-label-md text-label-md text-primary font-bold">DA</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/40 px-2 py-0.5 rounded-full font-semibold">Stable</span>
+</div>
+<!-- Sparkline Home -->
+<div class="h-6 w-full pt-1">
+<svg class="w-full h-full text-primary" fill="none" viewbox="0 0 120 20">
+<path d="M0 15 C 20 18, 30 8, 50 10 C 70 12, 90 4, 120 7" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Moyenne Stop Desk</span>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">storefront</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-currency-display text-currency-display text-on-surface text-[24px]">380</span>
+<span class="font-label-md text-label-md text-primary font-bold">DA</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">-38% vs Domicile</span>
+</div>
+<!-- Sparkline Stop Desk -->
+<div class="h-6 w-full pt-1">
+<svg class="w-full h-full text-secondary" fill="none" viewbox="0 0 120 20">
+<path d="M0 12 C 25 15, 45 6, 75 10 C 95 14, 110 5, 120 6" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Couverture Nationale</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/60 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-currency-display text-currency-display text-on-surface text-[24px]">58 / 58</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Wilayas</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed px-2 py-0.5 rounded-full font-bold">100% Actives</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Délai Moyen Constaté</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-currency-display text-currency-display text-on-surface text-[24px]">48h</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Nord &amp; Centre 24h</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary bg-primary-fixed px-2 py-0.5 rounded-full font-bold">Colis Précieux</span>
+</div>
+<!-- Donut mini metric -->
+<div class="flex items-center gap-2 pt-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Assurance vol/perte 100% garantie</span>
+</div>
+</div>
+</div>
+<!-- Carrier Selection Bar + Tabs -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-2 overflow-x-auto pb-1 lg:pb-0">
+<button class="carrier-tab flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold shadow-sm transition-all" onclick="selectCarrier(this, 'yalidine')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Yalidine Express</span>
+<span class="font-label-sm text-label-sm text-primary px-1.5 py-0.2 rounded bg-primary-fixed font-bold">Par Défaut</span>
+</button>
+<button class="carrier-tab flex items-center gap-2 px-space-md py-2.5 rounded-lg hover:bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all" onclick="selectCarrier(this, 'zr')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>ZR Express</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1.5 rounded bg-surface-container">Hub Ouest</span>
+</button>
+<button class="carrier-tab flex items-center gap-2 px-space-md py-2.5 rounded-lg hover:bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md transition-all" onclick="selectCarrier(this, 'maystro')" type="button">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Maystro Delivery</span>
+<span class="font-label-sm text-label-sm text-tertiary px-1.5 rounded bg-tertiary-fixed font-semibold">Grand Alger &amp; Fast</span>
+</button>
+</div>
+<!-- Cash on delivery banner pill -->
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant self-start lg:self-center">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_open</span>
+<span class="font-label-sm text-label-sm font-semibold">Encaissement COD activé pour les 58 Wilayas</span>
+</div>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<!-- Quick Search Input -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[20px] text-outline">search</span>
+<input class="w-full h-11 pl-11 pr-10 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="wilaya-search" onkeyup="filterWilayas()" placeholder="Filtrer par code ou nom (ex: 16 Alger, 31 Oran, 09 Blida, ورقلة...)" type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" onclick="clearSearch()" type="button">
+<span class="material-symbols-outlined text-[18px]">backspace</span>
+</button>
+</div>
+<!-- Zone Filter Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 xl:pb-0">
+<button class="zone-pill whitespace-nowrap px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm" onclick="filterByZone(this, 'all')" type="button">
+        Toutes les zones (58)
+      </button>
+<button class="zone-pill whitespace-nowrap px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all" onclick="filterByZone(this, 'Zone Centre')" type="button">
+        Centre &amp; Proximité
+      </button>
+<button class="zone-pill whitespace-nowrap px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all" onclick="filterByZone(this, 'Zone Ouest')" type="button">
+        Nord &amp; Ouest
+      </button>
+<button class="zone-pill whitespace-nowrap px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all" onclick="filterByZone(this, 'Zone Est')" type="button">
+        Hauts Plateaux &amp; Est
+      </button>
+<button class="zone-pill whitespace-nowrap px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all" onclick="filterByZone(this, 'Zone Sud')" type="button">
+        Sud &amp; Sahara
+      </button>
+</div>
+</div>
+<!-- Editable Shipping Rates Data Table Container -->
+<div class="overflow-hidden rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left" id="rates-table">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-space-md w-20">Code</th>
+<th class="py-3.5 px-space-md min-w-[220px]">Wilaya (FR / AR)</th>
+<th class="py-3.5 px-space-md min-w-[140px]">Zone Logistique</th>
+<th class="py-3.5 px-space-md min-w-[190px]">Tarif Domicile</th>
+<th class="py-3.5 px-space-md min-w-[190px]">Tarif Stop Desk</th>
+<th class="py-3.5 px-space-md w-36">Délai Estimé</th>
+<th class="py-3.5 px-space-md w-32 text-center">Statut COD</th>
+<th class="py-3.5 px-space-md w-28 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1: Alger -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="16" data-name="16 Alger الجزائر" data-zone="Zone Centre">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed/50 font-label-md text-label-md font-bold text-on-primary-fixed flex items-center justify-center">16</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Alger</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">الجزائر العاصمة</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Zone Centre
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="500"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="350"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-semibold text-tertiary">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 24h Express
+              </span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Blida -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="09" data-name="09 Blida البليدة" data-zone="Zone Centre">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">09</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Blida</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">البليدة</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Zone Centre
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="550"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="400"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">24h - 48h</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Oran -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="31" data-name="31 Oran وهران" data-zone="Zone Ouest">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">31</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Oran</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">وهران الباهية</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Zone Ouest
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="650"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="450"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">48h</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Constantine -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="25" data-name="25 Constantine قسنطينة" data-zone="Zone Est">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">25</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Constantine</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">قسنطينة</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Zone Est
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="650"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="450"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">48h</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Sétif -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="19" data-name="19 Sétif سطيف" data-zone="Zone Est">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">19</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Sétif</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">سطيف العالي</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Zone Est
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="600"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="400"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">48h</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Tizi Ouzou -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="15" data-name="15 Tizi Ouzou تيزي وزو" data-zone="Zone Centre">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">15</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Tizi Ouzou</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">تيزي وزو</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Zone Centre
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="600"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="400"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">24h - 48h</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Ouargla -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="30" data-name="30 Ouargla ورقلة" data-zone="Zone Sud">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">30</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Ouargla</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">ورقلة</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Zone Sud
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="950"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="650"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">72h</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: Ghardaïa -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="47" data-name="47 Ghardaïa غرداية" data-zone="Zone Sud">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">47</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Ghardaïa</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">غرداية</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/40 text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Zone Sud
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="900"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="600"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">72h</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 9: Tamanrasset -->
+<tr class="wilaya-row hover:bg-surface-container-low/60 transition-colors" data-code="11" data-name="11 Tamanrasset تمنراست" data-zone="Grand Sud">
+<td class="py-3 px-space-md">
+<span class="w-8 h-8 rounded-lg bg-surface-container font-label-md text-label-md font-bold text-on-surface flex items-center justify-center">11</span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Tamanrasset</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-arabic">تمنراست (الهقار)</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                Grand Sud
+              </span>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="1200"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-2">
+<div class="relative w-28">
+<input class="rate-input w-full h-9 pl-2.5 pr-8 bg-surface-container-low rounded font-currency-display text-currency-display text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container text-right" type="number" value="850"/>
+<span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-outline">DA</span>
+</div>
+<button class="w-7 h-7 rounded bg-surface-container hover:bg-primary-container hover:text-on-primary-container flex items-center justify-center text-outline transition-all" onclick="flashSaved(this)" title="Sauvegarder" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="font-label-sm text-label-sm text-secondary font-medium">4 - 5 jours</span>
+</td>
+<td class="py-3 px-space-md text-center">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-all" title="Réinitialiser au tarif officiel" type="button">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface hover:bg-surface-container transition-all" title="Historique des ajustements" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Bulk Summary Footer -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-md text-label-md text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span>Affichage de <strong class="text-on-surface font-semibold">9</strong> sur <strong class="text-on-surface font-semibold">58 wilayas</strong> répertoriées</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="text-tertiary font-semibold">Tous les prix sont en Dinars Algériens (DA TTC)</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-sm" type="button">1</button>
+<button class="px-3 py-1.5 rounded hover:bg-surface-container text-on-surface-variant transition-colors" type="button">2</button>
+<button class="px-3 py-1.5 rounded hover:bg-surface-container text-on-surface-variant transition-colors" type="button">3</button>
+<button class="px-3 py-1.5 rounded hover:bg-surface-container text-on-surface-variant transition-colors" type="button">4</button>
+<span class="px-2 text-outline">...</span>
+<button class="px-3 py-1.5 rounded hover:bg-surface-container text-on-surface-variant transition-colors" type="button">6</button>
+</div>
+</div>
+</div>
+<!-- Trust & COD Policy Assurance Notice Banner -->
+<div class="rounded-xl p-space-md bg-tertiary-fixed/30 text-on-surface flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-tertiary">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-bold text-on-tertiary-fixed-variant">Protocole Bijouterie Cash On Delivery (COD) &amp; Assurance Joaillerie</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 max-w-4xl">
+          Les commissions d'encaissement COD (moyenne 1.5% - 2%) et les assurances pour colis précieux or 18k / diamants sont automatiquement déduites de vos bordereaux de versement hebdomadaires selon la convention du transporteur sélectionné.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-3 shrink-0 self-end md:self-center">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Garantie Livraison</span>
+<span class="px-3 py-1.5 rounded bg-surface-container-lowest font-label-md text-label-md text-tertiary font-bold shadow-sm">
+        0 DA en cas de casse déclarée
+      </span>
+</div>
+</div>
+<!-- Modal: Bulk Rate Adjustment (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4" id="bulk-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Ajustement Groupé des Frais</h2>
+</div>
+<button class="text-outline hover:text-on-surface p-1 rounded" onclick="document.getElementById('bulk-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Appliquez une augmentation ou une réduction uniforme sur les 58 wilayas ou sur une zone logistique spécifique.</p>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Zone Cible</label>
+<select class="h-11 px-3 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md focus:outline-none">
+<option>Toutes les 58 Wilayas</option>
+<option>Zone Centre (Alger, Blida, Tipaza, Boumerdès...)</option>
+<option>Zone Ouest (Oran, Mostaganem, Tlemcen...)</option>
+<option>Zone Est (Constantine, Annaba, Sétif...)</option>
+<option>Zone Sud &amp; Grand Sud (Ouargla, Tamanrasset...)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Type d'ajustement</label>
+<select class="h-11 px-3 bg-surface-container-low rounded-lg text-on-surface font-body-md text-body-md focus:outline-none">
+<option>Augmenter (+ DA)</option>
+<option>Réduire (- DA)</option>
+<option>Pourcentage (+/- %)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Montant (DA)</label>
+<input class="h-11 px-3 bg-surface-container-low rounded-lg text-on-surface font-currency-display text-currency-display focus:outline-none text-right" type="number" value="50"/>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<input checked="" class="w-4 h-4 rounded text-primary" id="apply-both" type="checkbox"/>
+<label class="font-label-md text-label-md text-on-surface" for="apply-both">Appliquer simultanément au Stop Desk et Domicile</label>
+</div>
+<div class="flex items-center justify-end gap-2 pt-space-sm">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md" onclick="document.getElementById('bulk-modal').classList.add('hidden')" type="button">
+          Annuler
+        </button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary shadow-sm" onclick="applyBulkModification()" type="button">
+          Valider la modification
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Filter Wilayas by search query
+  function filterWilayas() {
+    const query = document.getElementById('wilaya-search').value.toLowerCase().trim();
+    const rows = document.querySelectorAll('.wilaya-row');
+    rows.forEach(row => {
+      const rowText = (row.getAttribute('data-name') + ' ' + row.getAttribute('data-code')).toLowerCase();
+      if (rowText.includes(query)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  function clearSearch() {
+    document.getElementById('wilaya-search').value = '';
+    filterWilayas();
+  }
+
+  // Filter Wilayas by Zone
+  function filterByZone(button, zone) {
+    document.querySelectorAll('.zone-pill').forEach(pill => {
+      pill.className = 'zone-pill whitespace-nowrap px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-sm text-label-sm transition-all';
+    });
+    button.className = 'zone-pill whitespace-nowrap px-3 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold shadow-sm';
+
+    const rows = document.querySelectorAll('.wilaya-row');
+    rows.forEach(row => {
+      if (zone === 'all' || row.getAttribute('data-zone') === zone) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Switch Carrier Tab
+  function selectCarrier(button, carrierKey) {
+    document.querySelectorAll('.carrier-tab').forEach(tab => {
+      tab.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+      tab.classList.add('text-on-surface-variant');
+    });
+    button.classList.add('bg-surface-container-lowest', 'text-on-surface', 'font-semibold', 'shadow-sm');
+    button.classList.remove('text-on-surface-variant');
+  }
+
+  // Flash save confirmation for inline edits
+  function flashSaved(btn) {
+    const originalContent = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">done_all</span>';
+    btn.classList.add('bg-tertiary-fixed');
+    setTimeout(() => {
+      btn.innerHTML = originalContent;
+      btn.classList.remove('bg-tertiary-fixed');
+    }, 1200);
+  }
+
+  // Apply bulk modifications simulation
+  function applyBulkModification() {
+    document.getElementById('bulk-modal').classList.add('hidden');
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-6 right-6 z-50 bg-tertiary text-on-tertiary px-4 py-3 rounded-lg shadow-xl flex items-center gap-2 font-label-md text-label-md';
+    toast.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified</span> Grille tarifaire mise à jour avec succès sur les wilayas sélectionnées';
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3500);
+  }
+</script></div></main></div></body></html>
