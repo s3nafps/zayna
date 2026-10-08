@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "shop": "المتجر",
+    "cart": "السلة",
+    "track": "تتبع",
+    "seller": "البائع"
+  },
+  "header": {
+    "switchLocale": "تغيير اللغة",
+    "search": "بحث",
+    "cart": "السلة",
+    "account": "الحساب",
+    "shippingNotice": "توصيل إلى 58 ولاية • الدفع عند الاستلام"
+  },
+  "locales": {
+    "ar": "AR",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "cod": {
+    "title": "الدفع عند الاستلام",
+    "body": "افحص طردك قبل الدفع.",
+    "badge": "الدفع عند الاستلام"
+  },
+  "status": {
+    "NEW": "جديدة",
+    "CONFIRMED": "مؤكدة",
+    "UNREACHABLE": "غير قابلة للوصول",
+    "CANCELLED": "ملغاة",
+    "PREPARING": "قيد التحضير",
+    "SHIPPED": "تم الشحن",
+    "IN_TRANSIT": "في الطريق",
+    "OUT_FOR_DELIVERY": "في طور التوصيل",
+    "AT_STOPDESK": "في مكتب الاستلام",
+    "DELIVERED": "تم التسليم",
+    "COD_SETTLED": "تم استلام المبلغ",
+    "RETURNED": "مرتجعة",
+    "FAILED": "فشلت"
+  },
+  "location": {
+    "wilayaLabel": "الولاية",
+    "wilayaPlaceholder": "اختر الولاية",
+    "communeLabel": "البلدية",
+    "communePlaceholder": "اختر البلدية",
+    "communeNeedsWilaya": "اختر الولاية أولاً"
+  },
+  "product": {
+    "addToCart": "أضف"
+  },
+  "admin": {
+    "brand": "زينة",
+    "nav": {
+      "dashboard": "لوحة التحكم",
+      "orders": "الطلبات",
+      "cod": "الدفع عند الاستلام",
+      "products": "المنتجات",
+      "carriers": "شركات النقل",
+      "shippingRates": "أسعار 58 ولاية",
+      "customers": "الزبائن",
+      "settings": "الإعدادات"
+    },
+    "login": {
+      "title": "تسجيل الدخول",
+      "intro": "لوحة المالك والبائعين",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "submit": "دخول",
+      "submitting": "جارٍ الدخول…",
+      "errors": {
+        "invalid": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+        "rateLimited": "محاولات كثيرة. أعيدوا المحاولة بعد دقائق.",
+        "server": "حدث خطأ. أعيدوا المحاولة."
+      }
+    },
+    "logout": "تسجيل الخروج",
+    "comingSoon": "قريباً",
+    "roles": {
+      "OWNER": "المالك",
+      "AGENT": "البائع"
+    },
+    "dashboard": {
+      "title": "لوحة التحكم",
+      "updated": "آخر تحديث {date} الساعة {time}",
+      "range": {
+        "label": "الفترة",
+        "today": "اليوم",
+        "week": "آخر 7 أيام"
+      },
+      "kpi": {
+        "heading": "المؤشرات الرئيسية",
+        "newToday": "طلبات جديدة",
+        "newTodayHint": "أُنشئت اليوم",
+        "toConfirm": "بانتظار التأكيد",
+        "toConfirmHint": "يلزم اتصال",
+        "inRoute": "في الطريق",
+        "inRouteHint": "لدى شركات النقل",
+        "delivered": "تم التسليم",
+        "deliveredHint": "نسبة التسليم: {rate}",
+        "deliveredShort": "نسبة التسليم",
+        "returns": "مرتجعات وإخفاقات",
+        "returnsHint": "نسبة الإرجاع: {rate}",
+        "codInTransit": "الدفع عند الاستلام قيد النقل",
+        "codInTransitHint": "يُحصَّل عند التسليم"
+      },
+      "chart": {
+        "title": "الطلبات خلال 7 أيام",
+        "summary": "{count} طلب خلال 7 أيام",
+        "columns": {
+          "day": "اليوم",
+          "orders": "الطلبات",
+          "amount": "المبلغ"
+        }
+      },
+      "wilayas": {
+        "title": "أهم الولايات",
+        "empty": "لا توجد طلبات في هذه الفترة.",
+        "columns": {
+          "wilaya": "الولاية",
+          "orders": "الطلبات",
+          "amount": "المبلغ"
+        }
+      },
+      "alerts": {
+        "title": "للاتصال ({count})",
+        "body": "الطلبات الجديدة وغير القابلة للوصول، الأقدم أولاً.",
+        "empty": "لا توجد طلبات تحتاج إلى اتصال."
+      },
+      "mobile": {
+        "todaySales": "مبيعات اليوم",
+        "pipeline": "مسار الدفع عند الاستلام",
+        "actions": "إجراءات سريعة",
+        "confirm": "تأكيد",
+        "allOrders": "كل الطلبات"
+      },
+      "pipeline": {
+        "toConfirm": "بانتظار التأكيد",
+        "unreachable": "غير قابلة للوصول",
+        "ready": "جاهزة للشحن",
+        "inRoute": "في الطريق",
+        "delivered": "تم التسليم",
+        "returns": "مرتجعات"
+      }
+    },
+    "orders": {
+      "title": "الطلبات",
+      "subtitle": "{count} طلب",
+      "filtersLabel": "تصفية الطلبات",
+      "filters": {
+        "all": "الكل",
+        "toConfirm": "بانتظار التأكيد",
+        "unreachable": "غير قابلة للوصول",
+        "ready": "جاهزة",
+        "inRoute": "في الطريق",
+        "delivered": "تم التسليم",
+        "returns": "مرتجعات"
+      },
+      "columns": {
+        "number": "الرقم",
+        "date": "التاريخ",
+        "customer": "العميل",
+        "wilaya": "الولاية",
+        "total": "المبلغ",
+        "status": "الحالة"
+      },
+      "empty": "لا توجد طلبات في هذه القائمة.",
+      "pagination": {
+        "label": "التنقل بين الصفحات",
+        "previous": "السابق",
+        "next": "التالي",
+        "page": "الصفحة {page} من {pages}"
+      }
+    }
+  },
+  "common": {
+    "emptyTable": "لا توجد بيانات",
+    "pageSoon": "هذه الصفحة ستتوفر في مرحلة لاحقة."
+  },
+  "preview": {
+    "title": "معاينة المكونات",
+    "fixtureNote": "بيانات تجريبية فقط. لا يوجد محتوى حقيقي."
+  },
+  "store": {
+    "home": {
+      "title": "وصل حديثاً",
+      "mockNotice": "عرض توضيحي: منتجات وهمية، وليست بيانات Shopify.",
+      "unavailable": "لم يتم ربط الكتالوج بعد.",
+      "empty": "لا توجد منتجات حالياً."
+    },
+    "product": {
+      "material": "المادة",
+      "back": "العودة إلى المتجر"
+    }
+  }
+}
