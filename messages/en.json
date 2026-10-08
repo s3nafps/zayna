@@ -179,5 +179,17 @@
   "preview": {
     "title": "Component preview",
     "fixtureNote": "Test fixtures only. No real content."
+  },
+  "store": {
+    "home": {
+      "title": "New in",
+      "mockNotice": "Demo catalogue: made-up products, not Shopify data.",
+      "unavailable": "The catalogue is not connected yet.",
+      "empty": "No products yet."
+    },
+    "product": {
+      "material": "Material",
+      "back": "Back to shop"
+    }
   }
 }

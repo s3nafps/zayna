@@ -26,7 +26,7 @@ export default defineConfig({
     command: `pnpm exec next start -p ${PORT}`,
     url: `http://localhost:${PORT}/fr`,
     reuseExistingServer: !process.env.CI,
-    env: { ZAYNA_PREVIEW: "1" },
+    env: { ZAYNA_PREVIEW: "1", CATALOG_SOURCE: "mock" },
     timeout: 120_000,
   },
 });
