@@ -183,7 +183,14 @@ The storefront shows these claims to customers, so they need to be confirmed. Se
 
 ### D. Access and data (blocks the named phases)
 
-- **D1. Shopify (blocks Phase 2).** I need the store domain. I need a Dev Dashboard app with client ID and secret, installed on the store, since the token expires every 24 hours. I need a Storefront API token from a Headless channel. I also need to confirm that a payment gateway named exactly "Cash on Delivery (COD)" exists in the store, because orders reference it.
+- **D1. Shopify (blocks Phase 2).**
+  - **Done:** Dev Dashboard app "Zayna COD Manager" is created and installed on the store `zayna-bijoux-dz`. Scopes: read/write orders, customers and fulfillments, plus read-only Storefront product listings and inventory.
+  - **Credentials:** the owner shared the app's client ID and secret in chat. They are not in the repo and not in this sandbox. Keep them in a password manager and in the deployment environment. The owner has been advised to rotate the secret, because it was pasted into a chat.
+  - **Still needed:**
+    1. A Storefront API token. The owner couldn't find it under the app's settings. Brief §8 says to issue it from the Headless sales channel, so that's the next place to look. The Admin API covers orders, so Phase 2 checkout can start without it. Catalog reads need it.
+    2. The exact `.myshopify.com` domain. Confirm it is `zayna-bijoux-dz.myshopify.com`.
+    3. Confirmation that a payment gateway named exactly "Cash on Delivery (COD)" exists in the store.
+  - **Not blocking yet:** the App URL and redirect URL are placeholders (`https://example.com`). They must be replaced with the real domain (D6) before install callbacks work. The client-credentials token flow doesn't use them.
 - **D2. Default-carrier rate card (blocks Phase 2 checkout).** Home and stop-desk prices for all 58 wilayas. Without them checkout can't price an order. **Option:** I seed placeholder rates marked TEST and block production launch until they're replaced.
 - **D3. Commune list (blocks Phase 1 seed).** I need a list of all communes with FR and AR names. I can't verify commune names offline. **Options:** an export you approve, or the Yalidine communes endpoint once Yalidine is connected (Phase 4).
 - **D4. Yalidine (blocks Phase 4).** API ID, API token, and sandbox access if available.
