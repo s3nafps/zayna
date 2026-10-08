@@ -214,7 +214,7 @@ The storefront shows these claims to customers, so they need to be confirmed. Se
   - **Credentials:** the owner shared the app's client ID and secret in chat. They are not in the repo and not in this sandbox. Keep them in a password manager and in the deployment environment. The owner has been advised to rotate the secret, because it was pasted into a chat.
   - **Still needed:**
     1. A Storefront API token. The owner couldn't find it under the app's settings. Brief §8 says to issue it from the Headless sales channel, so that's the next place to look. The Admin API covers orders, so Phase 2 checkout can start without it. Catalog reads need it.
-    2. The exact `.myshopify.com` domain. Confirm it is `zayna-bijoux-dz.myshopify.com`.
+    2. ~~The exact `.myshopify.com` domain.~~ **Confirmed by the owner: `zayna-bijoux-dz.myshopify.com`.**
     3. Confirmation that a payment gateway named exactly "Cash on Delivery (COD)" exists in the store.
   - **Not blocking yet:** the App URL and redirect URL are placeholders (`https://example.com`). They must be replaced with the real domain (D6) before install callbacks work. The client-credentials token flow doesn't use them.
 - **D2. Default-carrier rate card (blocks Phase 2 checkout).** Home and stop-desk prices for all 58 wilayas. Without them checkout can't price an order. **Option:** I seed placeholder rates marked TEST and block production launch until they're replaced.
