@@ -87,6 +87,10 @@ jobs:
   android:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      # postinstall runs prisma generate, and prisma.config.ts requires DATABASE_URL.
+      # Generate does not connect. This job never uses a database.
+      DATABASE_URL: postgresql://build:build@127.0.0.1:5432/zayna?schema=public
     steps:
       - uses: actions/checkout@v5
 
