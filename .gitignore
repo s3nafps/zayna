@@ -1,0 +1,36 @@
+# dependencies and build output
+node_modules
+.next
+out
+coverage
+*.tsbuildinfo
+next-env.d.ts
+
+# generated Prisma client (run `prisma generate`)
+src/generated
+
+# test output
+playwright-report
+test-results
+
+# secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Prisma agent-skill docs installed by tooling. Not project code.
+.agents/
+.claude/
+.windsurf/
+skills-lock.json
+
+# Android (Capacitor). The native project is committed. Build outputs and machine paths are not.
+android/app/build/
+android/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+android/app/release/
+*.jks
+*.keystore
+www/app-config.js

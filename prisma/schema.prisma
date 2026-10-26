@@ -1,0 +1,240 @@
+// Zayna data model. Source: build brief §4.
+// Money is always integer DZD. Phones are stored normalized as 0[5-7]XXXXXXXX.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum OrderSource {
+  STOREFRONT
+  SHOPIFY_THEME
+  MANUAL
+  FACEBOOK
+  INSTAGRAM
+}
+
+enum DeliveryType {
+  HOME
+  STOPDESK
+}
+
+// Internal order lifecycle. Each courier adapter maps its raw statuses onto these.
+enum OrderStatus {
+  NEW
+  CONFIRMED
+  UNREACHABLE
+  CANCELLED
+  PREPARING
+  SHIPPED
+  IN_TRANSIT
+  OUT_FOR_DELIVERY
+  AT_STOPDESK
+  DELIVERED
+  COD_SETTLED
+  RETURNED
+  FAILED
+}
+
+enum CarrierType {
+  YALIDINE
+  GUEPEX
+  ZR_EXPRESS
+  PROCOLIS
+  ECOTRACK
+  MAYSTRO
+  NOEST
+  CUSTOM
+}
+
+enum UserRole {
+  OWNER
+  AGENT
+}
+
+enum OrderEventKind {
+  STATUS_CHANGE
+  CALL_ATTEMPT
+  NOTE
+  CARRIER_UPDATE
+  SHOPIFY_SYNC
+}
+
+enum ActorType {
+  USER
+  SYSTEM
+  SHOPIFY
+  CARRIER
+}
+
+model Wilaya {
+  code     String         @id @db.Char(2) // "01" to "58"
+  nameFr   String
+  nameAr   String
+  // Display grouping only (Centre, Ouest, Est, Sud). Set by the owner, not inferred.
+  zone     String?
+  communes Commune[]
+  rates    ShippingRate[]
+  orders   Order[]
+}
+
+model Commune {
+  id         Int        @id @default(autoincrement())
+  wilayaCode String     @db.Char(2)
+  wilaya     Wilaya     @relation(fields: [wilayaCode], references: [code])
+  nameFr     String
+  nameAr     String
+  postalCode String?
+  stopDesks  StopDesk[]
+  orders     Order[]
+
+  @@unique([wilayaCode, nameFr])
+  @@index([wilayaCode])
+}
+
+model Carrier {
+  id            String      @id @default(cuid())
+  type          CarrierType
+  displayName   String
+  // AES-256-GCM payload from src/lib/crypto. Never returned to the browser.
+  credentials   Json?
+  isDefault     Boolean     @default(false)
+  isEnabled     Boolean     @default(false)
+  autoSync      Boolean     @default(false)
+  lastTestAt    DateTime?
+  lastTestOk    Boolean?
+  // Treat as a secret. Encrypted like credentials in Phase 4.
+  webhookSecret String?
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  rates     ShippingRate[]
+  stops     StopDesk[]
+  orders    Order[]
+  shipments Shipment[]
+}
+
+model StopDesk {
+  id         String   @id @default(cuid())
+  carrierId  String
+  carrier    Carrier  @relation(fields: [carrierId], references: [id])
+  communeId  Int?
+  commune    Commune? @relation(fields: [communeId], references: [id])
+  externalId String?
+  name       String
+  address    String?
+  orders     Order[]
+
+  @@unique([carrierId, externalId])
+}
+
+model ShippingRate {
+  id         String  @id @default(cuid())
+  carrierId  String
+  carrier    Carrier @relation(fields: [carrierId], references: [id])
+  wilayaCode String  @db.Char(2)
+  wilaya     Wilaya  @relation(fields: [wilayaCode], references: [code])
+  homePrice  Int
+  deskPrice  Int
+  isEnabled  Boolean @default(true)
+
+  @@unique([carrierId, wilayaCode])
+}
+
+model Order {
+  id                   String       @id @default(cuid())
+  shopifyOrderId       String?      @unique
+  number               String       @unique // ZY-xxxx
+  source               OrderSource
+  customerName         String
+  phone                String
+  secondaryPhone       String?
+  wilayaCode           String       @db.Char(2)
+  wilaya               Wilaya       @relation(fields: [wilayaCode], references: [code])
+  communeId            Int?
+  commune              Commune?     @relation(fields: [communeId], references: [id])
+  address              String?
+  deliveryType         DeliveryType
+  stopDeskId           String?
+  stopDesk             StopDesk?    @relation(fields: [stopDeskId], references: [id])
+  items                Json // snapshot at order time
+  subtotal             Int
+  shippingFee          Int
+  total                Int
+  status               OrderStatus  @default(NEW)
+  confirmationAttempts Int          @default(0)
+  notes                String?
+  carrierId            String?
+  carrier              Carrier?     @relation(fields: [carrierId], references: [id])
+  trackingNumber       String?
+  labelUrl             String?
+  createdAt            DateTime     @default(now())
+  updatedAt            DateTime     @updatedAt
+
+  events    OrderEvent[]
+  shipments Shipment[]
+
+  @@index([status])
+  @@index([phone])
+  @@index([createdAt])
+}
+
+model OrderEvent {
+  id          String         @id @default(cuid())
+  orderId     String
+  order       Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  kind        OrderEventKind
+  fromStatus  OrderStatus?
+  toStatus    OrderStatus?
+  actorType   ActorType
+  actorUserId String?
+  actor       User?          @relation(fields: [actorUserId], references: [id])
+  message     String?
+  meta        Json?
+  createdAt   DateTime       @default(now())
+
+  @@index([orderId, createdAt])
+}
+
+model Shipment {
+  id           String       @id @default(cuid())
+  orderId      String
+  order        Order        @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  carrierId    String
+  carrier      Carrier      @relation(fields: [carrierId], references: [id])
+  externalId   String?
+  tracking     String?
+  rawStatus    String?
+  mappedStatus OrderStatus?
+  history      Json?
+  codAmount    Int
+  codCollected Int?
+  codSettledAt DateTime?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  @@unique([carrierId, externalId])
+}
+
+model PhoneReputation {
+  phone          String   @id
+  ordersCount    Int      @default(0)
+  deliveredCount Int      @default(0)
+  returnedCount  Int      @default(0)
+  isBlocked      Boolean  @default(false)
+  updatedAt      DateTime @updatedAt
+}
+
+model User {
+  id           String       @id @default(cuid())
+  email        String       @unique
+  passwordHash String
+  role         UserRole     @default(AGENT)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  events       OrderEvent[]
+}
